@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(lsof:*)",
+      "Bash(node:*)",
+      "Bash(start index.html)",
+      "Bash(python:*)",
+      "Bash(start http://localhost:8000)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

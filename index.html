@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANO Research Institute for IT and Digital Economy</title>
+    <script src="translations.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .app {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .header {
+            border-bottom: 1px solid #e5e5e5;
+            padding: 0 32px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+
+        .language-selector {
+            display: flex;
+            gap: 8px;
+            margin-left: 32px;
+        }
+
+        .lang-btn {
+            background: none;
+            border: 1px solid #e5e5e5;
+            color: #666;
+            cursor: pointer;
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .lang-btn:hover,
+        .lang-btn.active {
+            border-color: #1a1a1a;
+            color: #1a1a1a;
+        }
+
+        .logo {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .nav {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-item {
+            font-size: 14px;
+            color: #666;
+            cursor: pointer;
+            transition: color 0.2s;
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            color: #1a1a1a;
+            border-bottom-color: #1a1a1a;
+        }
+
+        /* Main Content */
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .section {
+            display: none;
+            flex-direction: column;
+            height: 100%;
+            padding: 32px;
+        }
+
+        .section.active {
+            display: flex;
+        }
+
+        /* Home Section */
+        .home-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: #666;
+            max-width: 600px;
+            margin-bottom: 32px;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+            margin-top: 48px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        /* Projects Section */
+        .projects-header {
+            margin-bottom: 24px;
+            flex-shrink: 0;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .section-subtitle {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .projects-container {
+            flex: 1;
+            display: flex;
+            gap: 24px;
+            overflow: hidden;
+        }
+
+        .projects-sidebar {
+            width: 280px;
+            border-right: 1px solid #e5e5e5;
+            padding-right: 24px;
+            flex-shrink: 0;
+        }
+
+        .filters {
+            margin-bottom: 16px;
+        }
+
+        .filter-btn {
+            display: block;
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 8px 12px;
+            font-size: 13px;
+            color: #666;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-bottom: 4px;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #f5f5f5;
+            color: #1a1a1a;
+        }
+
+        .projects-list {
+            height: calc(100vh - 200px);
+            overflow-y: auto;
+        }
+
+        .project-item {
+            padding: 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-bottom: 8px;
+            border: 1px solid transparent;
+        }
+
+        .project-item:hover,
+        .project-item.active {
+            background: #f8f9fa;
+            border-color: #e5e5e5;
+        }
+
+        .project-item-title {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+
+        .project-item-status {
+            font-size: 10px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #666;
+        }
+
+        .status-pilot { color: #856404; }
+        .status-scale { color: #0c5460; }
+        .status-completed { color: #155724; }
+
+        /* Project Detail */
+        .project-detail {
+            flex: 1;
+            padding-left: 24px;
+            display: flex;
+            flex-direction: column;
+            height: calc(100vh - 140px);
+            overflow: hidden;
+        }
+
+        .project-header {
+            margin-bottom: 20px;
+            flex-shrink: 0;
+        }
+
+        .project-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .project-title-ru {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .project-status {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .status-pilot-bg {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status-scale-bg {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+
+        .status-completed-bg {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .project-content {
+            flex: 1;
+            overflow-y: auto;
+            padding-right: 8px;
+        }
+
+        .project-content::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .project-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .project-content::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 2px;
+        }
+
+        .project-summary {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background: #f8f9fa;
+            color: #495057;
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        .project-kpis {
+            border-top: 1px solid #f0f0f0;
+            padding-top: 16px;
+        }
+
+        .kpis-title {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .kpi {
+            font-size: 12px;
+            color: #28a745;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            color: #999;
+            text-align: center;
+        }
+
+        .empty-state-title {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .empty-state-text {
+            font-size: 13px;
+        }
+
+        /* About Section */
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .about-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 32px;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .about-features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .feature {
+            text-align: left;
+        }
+
+        .feature-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .feature-text {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Projects Grid Layout */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+            padding: 24px 0;
+        }
+
+        .project-card {
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+            height: 200px;
+            position: relative;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-color: #1a1a1a;
+        }
+
+        .project-card-content {
+            padding: 20px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-card-header {
+            margin-bottom: 16px;
+        }
+
+        .project-card-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            line-height: 1.3;
+            color: #1a1a1a;
+        }
+
+        .project-card-summary {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .project-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .project-card-status {
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .project-card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-top: 12px;
+        }
+
+        .project-card-tag {
+            background: #f8f9fa;
+            color: #495057;
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        /* Expanded card overlay */
+        .project-card-expanded {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90vw;
+            max-width: 800px;
+            max-height: 90vh;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            z-index: 1000;
+            overflow-y: auto;
+            animation: expandCard 0.3s ease;
+        }
+
+        @keyframes expandCard {
+            from {
+                transform: translate(-50%, -50%) scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+        }
+
+        .project-card-expanded-content {
+            padding: 32px;
+        }
+
+        .project-card-expanded-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
+
+        .project-card-expanded-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .project-card-expanded-title-ru {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #666;
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s;
+        }
+
+        .close-btn:hover {
+            background: #f5f5f5;
+            color: #1a1a1a;
+        }
+
+        .project-card-expanded-summary {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .project-card-expanded-kpis {
+            border-top: 1px solid #f0f0f0;
+            padding-top: 16px;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="logo">ANO Research Institute for IT and Digital Economy</div>
+            <nav class="nav">
+                <div class="nav-item" onclick="showSection('about')" id="nav-about">About</div>
+                <div class="nav-item" onclick="showSection('projects')" id="nav-projects">Projects</div>
+                <div class="nav-item" onclick="showSection('home')" id="nav-home">Home</div>
+            </nav>
+            <div class="language-selector">
+                <button class="lang-btn active" onclick="changeLanguage('en')">EN</button>
+                <button class="lang-btn" onclick="changeLanguage('ru')">RU</button>
+                <button class="lang-btn" onclick="changeLanguage('el')">EL</button>
+            </div>
+        </header>
+
+        <main class="main">
+            <!-- About Section -->
+            <section class="section active" id="about">
+                <div class="about-content">
+                    <h2 class="about-title" id="about-title">Research Institute</h2>
+                    <p class="about-text" id="about-text">
+                        We focus on digital transformation in construction industry through cutting-edge research, 
+                        innovative technology solutions, and strategic partnerships with industry leaders.
+                    </p>
+                    <p class="about-description" id="about-description" style="font-size: 14px; line-height: 1.6; color: #666; margin-bottom: 24px; text-align: center;">
+                        Our institute develops innovative solutions that bridge the gap between traditional industries and modern digital ecosystems.
+                    </p>
+                    <p class="about-mission" id="about-mission" style="font-size: 14px; line-height: 1.6; color: #666; margin-bottom: 32px; text-align: center; font-style: italic;">
+                        Our mission is to accelerate digital transformation through research and development.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-title" id="feature-digital-title">Digital Construction</div>
+                            <div class="feature-text" id="feature-digital-text">Unified platforms integrating all construction processes from planning to completion</div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-title" id="feature-fintech-title">Financial Technology</div>
+                            <div class="feature-text" id="feature-fintech-text">Secure payment processing systems and blockchain-based transaction platforms</div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-title" id="feature-security-title">Security Systems</div>
+                            <div class="feature-text" id="feature-security-text">Advanced video surveillance networks with AI-powered analytics and access control</div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-title" id="feature-ai-title">AI & Analytics</div>
+                            <div class="feature-text" id="feature-ai-text">Machine learning solutions for predictive maintenance and process optimization</div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-title" id="feature-govtech-title">GovTech Solutions</div>
+                            <div class="feature-text" id="feature-govtech-text">Government technology platforms improving transparency and efficiency</div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-title" id="feature-data-title">Data Infrastructure</div>
+                            <div class="feature-text" id="feature-data-text">Scalable data lake architectures and unified data environments</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Home Section -->
+            <section class="section" id="home">
+                <div class="home-content">
+                    <h1 class="hero-title">Digital Construction Future</h1>
+                    <p class="hero-subtitle">
+                        Advancing digital transformation in construction through innovative technology solutions, 
+                        unified data environments, and intelligent automation systems.
+                    </p>
+                    <p class="hero-description" id="hero-description" style="font-size: 14px; line-height: 1.6; color: #666; max-width: 700px; margin-bottom: 16px;">
+                        Our institute specializes in creating cutting-edge digital ecosystems that integrate construction management, 
+                        financial technology solutions, comprehensive security and surveillance systems, and advanced data analytics platforms.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">11</div>
+                            <div class="stat-label">Active Projects</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">85%</div>
+                            <div class="stat-label">Efficiency Improvement</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">500TB</div>
+                            <div class="stat-label">Data Processed Monthly</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section class="section" id="projects">
+                <div class="projects-header">
+                    <h2 class="section-title" id="projects-title">Projects</h2>
+                    <p class="section-subtitle" id="projects-subtitle">Digital construction and automation solutions</p>
+                </div>
+                
+                <div class="filters">
+                    <button class="filter-btn active" onclick="filterProjects('all')" id="filter-all">All Projects</button>
+                    <button class="filter-btn" onclick="filterProjects('pilot')" id="filter-pilot">Pilot</button>
+                    <button class="filter-btn" onclick="filterProjects('scale')" id="filter-scale">Scale</button>
+                    <button class="filter-btn" onclick="filterProjects('completed')" id="filter-completed">Completed</button>
+                    <button class="filter-btn" onclick="filterProjects('ai')" id="filter-ai">AI & ML</button>
+                    <button class="filter-btn" onclick="filterProjects('digital-construction')" id="filter-digital">Digital Construction</button>
+                </div>
+                
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Projects will be loaded here -->
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        let projectsData = [];
+        let filteredProjects = [];
+        let currentLanguage = 'en';
+
+        // Load projects data
+        async function loadProjects() {
+            try {
+                const response = await fetch('projects.index.json');
+                const data = await response.json();
+                projectsData = data.projects;
+                filteredProjects = projectsData;
+                renderProjectsGrid();
+            } catch (error) {
+                console.error('Error loading projects:', error);
+                document.getElementById('projectsGrid').innerHTML = '<div style="padding: 20px; color: #999; text-align: center;">Failed to load projects</div>';
+            }
+        }
+
+        // Change language
+        function changeLanguage(lang) {
+            currentLanguage = lang;
+            
+            // Update language buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Update translations
+            updateTranslations();
+            
+            // Re-render projects with new language
+            renderProjectsGrid();
+        }
+
+        // Update translations
+        function updateTranslations() {
+            const t = translations[currentLanguage];
+            
+            // Update logo
+            document.querySelector('.logo').textContent = t.logo;
+            
+            // Update navigation
+            document.getElementById('nav-about').textContent = t.nav.about;
+            document.getElementById('nav-projects').textContent = t.nav.projects;
+            document.getElementById('nav-home').textContent = t.nav.home;
+            
+            // Update home section
+            document.querySelector('.hero-title').textContent = t.home.title;
+            document.querySelector('.hero-subtitle').textContent = t.home.subtitle;
+            document.querySelectorAll('.stat-label')[0].textContent = t.home.stats.activeProjects;
+            document.querySelectorAll('.stat-label')[1].textContent = t.home.stats.efficiency;
+            document.querySelectorAll('.stat-label')[2].textContent = t.home.stats.dataProcessed;
+            
+            // Update projects section
+            document.getElementById('projects-title').textContent = t.projects.title;
+            document.getElementById('projects-subtitle').textContent = t.projects.subtitle;
+            document.getElementById('filter-all').textContent = t.projects.filters.all;
+            document.getElementById('filter-pilot').textContent = t.projects.filters.pilot;
+            document.getElementById('filter-scale').textContent = t.projects.filters.scale;
+            document.getElementById('filter-completed').textContent = t.projects.filters.completed;
+            document.getElementById('filter-ai').textContent = t.projects.filters.ai;
+            document.getElementById('filter-digital').textContent = t.projects.filters.digitalConstruction;
+            
+            // Update about section
+            document.getElementById('about-title').textContent = t.about.title;
+            document.getElementById('about-text').textContent = t.about.subtitle;
+            document.getElementById('feature-digital-title').textContent = t.about.features.digitalConstruction.title;
+            document.getElementById('feature-digital-text').textContent = t.about.features.digitalConstruction.text;
+            document.getElementById('feature-ai-title').textContent = t.about.features.aiAnalytics.title;
+            document.getElementById('feature-ai-text').textContent = t.about.features.aiAnalytics.text;
+            document.getElementById('feature-bim-title').textContent = t.about.features.bimIntegration.title;
+            document.getElementById('feature-bim-text').textContent = t.about.features.bimIntegration.text;
+            document.getElementById('feature-govtech-title').textContent = t.about.features.govTech.title;
+            document.getElementById('feature-govtech-text').textContent = t.about.features.govTech.text;
+        }
+
+        // Show section
+        function showSection(sectionName) {
+            // Update nav
+            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Update sections
+            document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionName).classList.add('active');
+        }
+
+        // Filter projects
+        function filterProjects(filter) {
+            // Update filter buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            if (filter === 'all') {
+                filteredProjects = projectsData;
+            } else if (filter === 'ai') {
+                filteredProjects = projectsData.filter(project => 
+                    project.tags.some(tag => tag.includes('AI') || tag.includes('machine learning') || tag.includes('predictive analytics'))
+                );
+            } else if (filter === 'digital-construction') {
+                filteredProjects = projectsData.filter(project => 
+                    project.tags.some(tag => tag.includes('digital construction') || tag.includes('BIM') || tag.includes('construction control'))
+                );
+            } else {
+                filteredProjects = projectsData.filter(project => project.status === filter);
+            }
+            
+            renderProjectsGrid();
+        }
+
+        // Render projects grid
+        function renderProjectsGrid() {
+            const gridContainer = document.getElementById('projectsGrid');
+            gridContainer.innerHTML = filteredProjects.map(project => {
+                const title = currentLanguage === 'ru' ? project.title_ru : project.title_en;
+                const summary = currentLanguage === 'ru' ? project.summary_ru : project.summary_en;
+                
+                return `
+                    <div class="project-card" onclick="showProjectExpanded('${project.slug}')">
+                        <div class="project-card-content">
+                            <div class="project-card-header">
+                                <div class="project-card-title">${title}</div>
+                                <div class="project-card-summary">${summary}</div>
+                            </div>
+                            <div class="project-card-footer">
+                                <div class="project-card-status status-${project.status}-bg">${project.status}</div>
+                            </div>
+                            <div class="project-card-tags">
+                                ${project.tags.slice(0, 3).map(tag => `<span class="project-card-tag">${tag}</span>`).join('')}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Show expanded project
+        function showProjectExpanded(slug) {
+            const project = projectsData.find(p => p.slug === slug);
+            if (!project) return;
+            
+            const title = currentLanguage === 'ru' ? project.title_ru : project.title_en;
+            const summary = currentLanguage === 'ru' ? project.summary_ru : project.summary_en;
+            const otherTitle = currentLanguage === 'ru' ? project.title_en : project.title_ru;
+            
+            // Create overlay
+            const overlay = document.createElement('div');
+            overlay.className = 'overlay';
+            overlay.onclick = closeProjectExpanded;
+            
+            // Create expanded card
+            const expandedCard = document.createElement('div');
+            expandedCard.className = 'project-card-expanded';
+            expandedCard.innerHTML = `
+                <div class="project-card-expanded-content">
+                    <div class="project-card-expanded-header">
+                        <div>
+                            <h3 class="project-card-expanded-title">${title}</h3>
+                            <div class="project-card-expanded-title-ru">${otherTitle}</div>
+                            <div class="project-status status-${project.status}-bg">${project.status}</div>
+                        </div>
+                        <button class="close-btn" onclick="closeProjectExpanded()">×</button>
+                    </div>
+                    
+                    <div class="project-card-expanded-summary">
+                        ${summary}
+                    </div>
+                    
+                    <div class="project-tags">
+                        ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                    
+                    <div class="project-card-expanded-kpis">
+                        <div class="kpis-title">Key Performance Indicators</div>
+                        ${project.kpis.map(kpi => `<div class="kpi">• ${kpi}</div>`).join('')}
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(overlay);
+            document.body.appendChild(expandedCard);
+        }
+
+        // Close expanded project
+        function closeProjectExpanded() {
+            const overlay = document.querySelector('.overlay');
+            const expandedCard = document.querySelector('.project-card-expanded');
+            
+            if (overlay) overlay.remove();
+            if (expandedCard) expandedCard.remove();
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeProjectExpanded();
+            }
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            loadProjects();
+            updateTranslations();
+        });
+    </script>
+</body>
+</html>

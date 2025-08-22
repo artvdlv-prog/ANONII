@@ -1,0 +1,202 @@
+{
+  "projects": [
+    {
+      "slug": "cipus-platform",
+      "title_en": "ЦиПУС Digital Construction Management Platform",
+      "title_ru": "ЦиПУС (Цифровая платформа управления строительством)",
+      "summary_en": "Unified digital environment for construction project participants. Provides end-to-end data exchange between customers, contractors and regulatory authorities. Features project management, resource planning, quality control, document workflow (KS-2, KS-3, AOSR), plan-fact analytics, and integrated procurement with AI and predictive analytics.",
+      "summary_ru": "Единая цифровая среда для участников строительных проектов. Обеспечивает сквозной обмен данными между заказчиком, подрядчиком и контролирующими органами. Реализует управление проектами, планирование ресурсов, контроль качества, документооборот и аналитику с применением ИИ.",
+      "tags": ["digital construction", "project management", "AI analytics", "document workflow", "resource planning"],
+      "status": "scale",
+      "kpis": [
+        "50% reduction in project documentation time",
+        "35% improvement in resource utilization",
+        "40% faster regulatory compliance"
+      ],
+      "seo": {
+        "title": "ЦиПУС Digital Construction Platform | Project Management",
+        "description": "Unified digital construction management platform with AI analytics, reducing documentation time by 50% and improving resource utilization."
+      }
+    },
+    {
+      "slug": "gazprom-digital-platform",
+      "title_en": "Gazprom Unified Digital Platform",
+      "title_ru": "Единая цифровая платформа Газпром ЦПС",
+      "summary_en": "Integrated investment project management system. Combines construction control services, document workflow, digital models (BIM/CIM), personnel and equipment monitoring, aerial photography and remote supervision. Reduces commissioning time and operational costs.",
+      "summary_ru": "Интегрированная система управления инвестиционными проектами. Объединяет сервисы для контроля строительства, документооборота, цифровых моделей (BIM/ЦИМ), мониторинга персонала и техники, аэрофотосъёмки и дистанционного надзора.",
+      "tags": ["BIM", "investment projects", "remote supervision", "aerial monitoring", "digital models"],
+      "status": "scale",
+      "kpis": [
+        "25% reduction in commissioning time",
+        "40% improvement in process transparency",
+        "30% decrease in operational costs"
+      ],
+      "seo": {
+        "title": "Gazprom Digital Platform | Investment Project Management",
+        "description": "Integrated digital platform for Gazprom reducing commissioning time by 25% and operational costs through BIM integration."
+      }
+    },
+    {
+      "slug": "aeromonitoring-system",
+      "title_en": "Aeromonitoring System",
+      "title_ru": "Система \"Аэромониторинг\"",
+      "summary_en": "IT solution for operational construction control using unmanned aerial vehicles. Enables 4x faster data collection from construction sites, identifies violations and tracks compliance with project solutions. Applied for gas transportation and industrial facilities.",
+      "summary_ru": "ИТ-решение для оперативного контроля строительства с использованием беспилотных летательных аппаратов. Позволяет в 4 раза быстрее получать актуальные данные с площадок, выявлять нарушения и отслеживать соответствие проектным решениям.",
+      "tags": ["UAV", "aerial monitoring", "construction control", "real-time data", "compliance tracking"],
+      "status": "completed",
+      "kpis": [
+        "400% faster data collection",
+        "90% improvement in violation detection",
+        "60% reduction in inspection costs"
+      ],
+      "seo": {
+        "title": "Aeromonitoring System | UAV Construction Control",
+        "description": "Drone-based construction monitoring system achieving 4x faster data collection and 90% improvement in violation detection."
+      }
+    },
+    {
+      "slug": "digital-construction-control",
+      "title_en": "Digital Construction Control System",
+      "title_ru": "Система цифрового строительного контроля",
+      "summary_en": "Creates unified information space for construction supervision. Automates quality control processes, records defects and generates analytical reports in real time. Reduces defect elimination time and reporting workload by 50%.",
+      "summary_ru": "Создаёт единое информационное пространство для строительного надзора. Автоматизирует процессы контроля качества, фиксирует замечания и формирует аналитическую отчётность в реальном времени. Сокращение трудозатрат на отчётность до 50%.",
+      "tags": ["construction control", "quality assurance", "real-time reporting", "defect tracking", "supervision automation"],
+      "status": "scale",
+      "kpis": [
+        "50% reduction in reporting workload",
+        "60% faster defect elimination",
+        "80% improvement in control transparency"
+      ],
+      "seo": {
+        "title": "Digital Construction Control | Quality Supervision System",
+        "description": "Digital construction supervision system reducing reporting workload by 50% and accelerating defect elimination processes."
+      }
+    },
+    {
+      "slug": "personnel-equipment-monitoring",
+      "title_en": "Personnel and Equipment Monitoring System",
+      "title_ru": "Система мониторинга персонала и техники",
+      "summary_en": "Digital control of human and technical resource mobilization. Real-time tracking of equipment and personnel work, ensuring industrial safety. Reduces violations by 61% and optimizes equipment utilization.",
+      "summary_ru": "Цифровой контроль за мобилизацией человеческих и технических ресурсов. В режиме реального времени отслеживается работа техники и персонала, обеспечивается производственная безопасность. Снижение нарушений на 61% и оптимизация использования техники.",
+      "tags": ["personnel monitoring", "equipment tracking", "real-time control", "safety management", "resource optimization"],
+      "status": "scale",
+      "kpis": [
+        "61% reduction in safety violations",
+        "40% improvement in equipment utilization",
+        "50% faster incident response time"
+      ],
+      "seo": {
+        "title": "Personnel Equipment Monitoring | Real-time Safety Control",
+        "description": "Digital monitoring system reducing safety violations by 61% and optimizing equipment utilization through real-time tracking."
+      }
+    },
+    {
+      "slug": "welding-digitalization",
+      "title_en": "Welding Production Digitalization System",
+      "title_ru": "Система цифровизации сварочного производства",
+      "summary_en": "Creates unified digital space for welding process management. Forms welder qualification database, tracks defects, photo-fixes welded joints, automatically prepares executive documentation. Accelerates document flow by 2x, reduces defects and improves transparency.",
+      "summary_ru": "Создание единого цифрового пространства для управления сварочными процессами. Формируется база квалификаций сварщиков, ведётся учёт брака, фотофиксация сварных швов, автоматическая подготовка исполнительной документации. Ускорение документооборота в 2 раза, снижение брака и повышение прозрачности.",
+      "tags": ["welding digitalization", "qualification management", "defect tracking", "automated documentation", "quality control"],
+      "status": "pilot",
+      "kpis": [
+        "200% acceleration in document flow",
+        "45% reduction in welding defects",
+        "80% improvement in process transparency"
+      ],
+      "seo": {
+        "title": "Welding Digitalization | Production Quality Management",
+        "description": "Digital welding management system accelerating document flow by 200% and reducing defects through automated tracking."
+      }
+    },
+    {
+      "slug": "remote-supervision",
+      "title_en": "Remote Supervision Information System",
+      "title_ru": "ИУС \"Дистанционный надзор\"",
+      "summary_en": "Enables experts to control construction and operation processes online without site visits. Reduces travel costs, accelerates supervision processes and improves production rhythm.",
+      "summary_ru": "Позволяет экспертам контролировать ход строительства и эксплуатации объектов в режиме онлайн без выезда на площадку. Снижает затраты на командировки, ускоряет процессы надзора и повышает ритмичность производственных процессов.",
+      "tags": ["remote supervision", "online monitoring", "cost reduction", "expert control", "production optimization"],
+      "status": "completed",
+      "kpis": [
+        "70% reduction in travel costs",
+        "50% faster supervision processes",
+        "90% improvement in production rhythm"
+      ],
+      "seo": {
+        "title": "Remote Supervision System | Online Construction Control",
+        "description": "Remote supervision system reducing travel costs by 70% and accelerating supervision processes through online monitoring."
+      }
+    },
+    {
+      "slug": "afida-digital-archive",
+      "title_en": "AFIDA Digital Archive and Documentation Catalog",
+      "title_ru": "ИУС \"АФИДА\" – цифровой архив и каталог документации",
+      "summary_en": "System for storing and processing project and executive documentation using AI and computer vision. Provides quick search, automatic act generation and digital model (CIM) viewing directly in browser.",
+      "summary_ru": "Система для хранения и обработки проектной и исполнительной документации с применением ИИ и машинного зрения. Обеспечивает быстрый поиск, автоматическое формирование актов и просмотр цифровых моделей (ЦИМ) прямо в браузере.",
+      "tags": ["digital archive", "AI processing", "computer vision", "document management", "CIM models"],
+      "status": "scale",
+      "kpis": [
+        "80% faster document search",
+        "90% automated act generation",
+        "100% browser-based CIM viewing"
+      ],
+      "seo": {
+        "title": "AFIDA Digital Archive | AI Document Processing",
+        "description": "AI-powered digital archive system providing 80% faster document search and automated act generation with CIM model viewing."
+      }
+    },
+    {
+      "slug": "simulation-modeling",
+      "title_en": "Simulation Modeling Technology",
+      "title_ru": "Технология имитационного моделирования",
+      "summary_en": "Tool for forecasting and analyzing business processes in construction and logistics. Identifies bottlenecks, selects optimal strategies and tests solution effectiveness without real project risks.",
+      "summary_ru": "Инструмент для прогнозирования и анализа бизнес-процессов в строительстве и логистике. Позволяет выявлять узкие места, подбирать оптимальные стратегии и проверять эффективность решений без риска для реального проекта.",
+      "tags": ["simulation modeling", "business process analysis", "bottleneck identification", "strategy optimization", "risk-free testing"],
+      "status": "pilot",
+      "kpis": [
+        "85% accuracy in process prediction",
+        "60% reduction in planning risks",
+        "40% improvement in strategy selection"
+      ],
+      "seo": {
+        "title": "Simulation Modeling | Business Process Analysis",
+        "description": "Simulation modeling technology for construction and logistics with 85% prediction accuracy and 60% reduction in planning risks."
+      }
+    },
+    {
+      "slug": "riksl-logistics-calculation",
+      "title_en": "RiKSL Logistics Cost Calculation and Control",
+      "title_ru": "РиКСЛ (расчёт и контроль стоимости логистики)",
+      "summary_en": "Unified digital system for calculating transportation costs and logistics services in investment projects. Automates tariff approval processes, ensures cost transparency and accelerates decision making.",
+      "summary_ru": "Единая цифровая система для расчёта стоимости перевозок и логистических услуг в инвестиционных проектах. Автоматизирует процесс согласования тарифов, обеспечивает прозрачность затрат и ускоряет принятие решений.",
+      "tags": ["logistics calculation", "cost control", "tariff automation", "investment projects", "decision acceleration"],
+      "status": "pilot",
+      "kpis": [
+        "70% faster tariff approval",
+        "90% improvement in cost transparency",
+        "50% acceleration in decision making"
+      ],
+      "seo": {
+        "title": "RiKSL Logistics Calculator | Cost Control System",
+        "description": "Digital logistics cost calculation system accelerating tariff approval by 70% and improving cost transparency in projects."
+      }
+    },
+    {
+      "slug": "unified-data-lake",
+      "title_en": "Construction Data Lake Infrastructure",
+      "title_ru": "Инфраструктура озера данных строительства",
+      "summary_en": "Centralized data repository aggregating information from multiple construction sources. Enables advanced analytics and supports evidence-based decision making across the industry.",
+      "summary_ru": "Централизованный репозиторий данных, агрегирующий информацию из множественных строительных источников.",
+      "tags": ["data lake", "analytics", "decision making", "data aggregation", "unified data environment"],
+      "status": "scale",
+      "kpis": [
+        "500TB+ data processed monthly",
+        "80% improvement in analytical insights",
+        "60% faster decision-making cycles"
+      ],
+      "seo": {
+        "title": "Construction Data Lake | Unified Analytics Infrastructure",
+        "description": "Centralized data lake processing 500TB+ monthly with 80% improvement in analytical insights for construction."
+      }
+    }
+  ]
+}
