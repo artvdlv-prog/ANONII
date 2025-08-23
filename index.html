@@ -810,7 +810,7 @@
             }
             
             .main {
-                padding-top: 56px;
+                padding-top: 80px;
             }
             
             /* Home Section Mobile */
@@ -932,10 +932,10 @@
 
         @media (max-width: 480px) {
             .header {
-                padding: 0 12px;
+                padding: 8px 12px;
                 flex-direction: column;
                 height: auto;
-                padding: 8px 12px;
+                min-height: 100px;
             }
             
             .header-left {
@@ -948,12 +948,16 @@
             
             .nav {
                 order: -1;
-                gap: 12px;
+                gap: 8px;
                 margin-bottom: 8px;
+                flex-wrap: wrap;
+                justify-content: center;
             }
             
             .nav-item {
-                font-size: 13px;
+                font-size: 11px;
+                padding: 6px 4px;
+                white-space: nowrap;
             }
             
             .language-selector {
@@ -977,7 +981,7 @@
             }
             
             .main {
-                padding-top: 80px;
+                padding-top: 120px;
             }
             
             .hero-title {
