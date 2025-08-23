@@ -810,7 +810,7 @@
             }
             
             .main {
-                padding-top: 80px;
+                padding-top: 100px;
             }
             
             /* Home Section Mobile */
@@ -933,13 +933,19 @@
         @media (max-width: 480px) {
             .header {
                 padding: 8px 12px;
-                flex-direction: column;
+                display: grid;
+                grid-template-columns: 1fr auto;
+                grid-template-rows: auto auto;
                 height: auto;
                 min-height: 100px;
+                gap: 8px;
+                align-items: center;
             }
             
             .header-left {
                 gap: 12px;
+                grid-column: 1;
+                grid-row: 1;
             }
             
             .logo-image {
@@ -947,11 +953,12 @@
             }
             
             .nav {
-                order: -1;
+                grid-column: 1 / -1;
+                grid-row: 2;
                 gap: 8px;
-                margin-bottom: 8px;
                 flex-wrap: wrap;
                 justify-content: center;
+                margin-bottom: 0;
             }
             
             .nav-item {
@@ -961,8 +968,11 @@
             }
             
             .language-selector {
+                grid-column: 2;
+                grid-row: 1;
                 margin-left: 0;
-                justify-self: end;
+                flex-direction: column;
+                gap: 4px;
             }
             
             .lang-btn {
@@ -981,7 +991,7 @@
             }
             
             .main {
-                padding-top: 120px;
+                padding-top: 150px;
             }
             
             .hero-title {
