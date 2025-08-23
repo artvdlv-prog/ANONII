@@ -63,6 +63,12 @@
             font-size: 16px;
             font-weight: 600;
             color: #1a1a1a;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .logo:hover {
+            color: #007bff;
         }
 
         .nav {
@@ -111,7 +117,7 @@
             align-items: center;
             height: 100%;
             text-align: center;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 32px;
         }
@@ -128,7 +134,7 @@
         .hero-subtitle {
             font-size: 20px;
             color: #666;
-            max-width: 900px;
+            max-width: 1100px;
             margin-bottom: 32px;
             word-wrap: break-word;
             hyphens: auto;
@@ -162,6 +168,9 @@
         .projects-header {
             margin-bottom: 24px;
             flex-shrink: 0;
+            max-width: 1400px;
+            margin: 0 auto 24px auto;
+            padding: 0 32px;
         }
 
         .section-title {
@@ -393,7 +402,7 @@
             align-items: center;
             height: 100%;
             text-align: center;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 32px;
         }
@@ -416,7 +425,7 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 32px;
             width: 100%;
-            max-width: 1100px;
+            max-width: 1300px;
         }
 
         @media (max-width: 1024px) {
@@ -464,8 +473,10 @@
             flex-wrap: wrap;
             gap: 12px;
             margin-bottom: 32px;
-            padding: 16px 0;
+            padding: 16px 32px;
             border-bottom: 1px solid #e5e5e5;
+            max-width: 1400px;
+            margin: 0 auto 32px auto;
         }
 
         .project-tab {
@@ -510,6 +521,9 @@
             display: flex;
             flex-direction: column;
             height: calc(100vh - 300px);
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 32px;
         }
 
         .project-category-info {
@@ -942,10 +956,10 @@
 <body>
     <div class="app">
         <header class="header">
-            <div class="logo" id="logo">АНО НИИ ИТ и цифровой экономики</div>
+            <div class="logo" id="logo" onclick="showSection('home')">АНО НИИ ИТ и цифровой экономики</div>
             <nav class="nav">
-                <div class="nav-item" onclick="showSection('home')" id="nav-home">Главная</div>
-                <div class="nav-item active" onclick="showSection('about')" id="nav-about">Об институте</div>
+                <div class="nav-item active" onclick="showSection('home')" id="nav-home">Главная</div>
+                <div class="nav-item" onclick="showSection('about')" id="nav-about">Об институте</div>
                 <div class="nav-item" onclick="showSection('projects')" id="nav-projects">Проекты</div>
                 <div class="nav-item" onclick="showSection('crowdfunding')" id="nav-crowdfunding">Краудфандинг</div>
                 <div class="nav-item" onclick="showSection('contacts')" id="nav-contacts">Контакты</div>
@@ -958,15 +972,44 @@
         </header>
 
         <main class="main">
+            <!-- Home Section -->
+            <section class="section active" id="home">
+                <div class="home-content">
+                    <h1 class="hero-title">Digital Construction Future</h1>
+                    <p class="hero-subtitle">
+                        Advancing <strong>digital transformation</strong> across multiple industries through <strong>innovative technology solutions</strong>, 
+                        unified data environments, and intelligent automation systems.
+                    </p>
+                    <p class="hero-description" id="hero-description" style="font-size: 16px; line-height: 1.6; color: #555; max-width: 1100px; margin-bottom: 16px;">
+                        Our institute specializes in creating <strong>cutting-edge digital ecosystems</strong> that integrate construction management, 
+                        financial technology solutions, comprehensive security and surveillance systems, and <strong>advanced data analytics platforms</strong>.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">11</div>
+                            <div class="stat-label">Active Projects</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">85%</div>
+                            <div class="stat-label">Efficiency Improvement</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">$420K</div>
+                            <div class="stat-label">Investment Volume</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- About Section -->
-            <section class="section active" id="about">
+            <section class="section" id="about">
                 <div class="about-content">
                     <h2 class="about-title" id="about-title">Research Institute</h2>
                     <p class="about-mission" id="about-mission" style="font-size: 16px; line-height: 1.6; color: #666; margin-bottom: 48px; text-align: center; max-width: 800px;">
                         Our mission is to accelerate digital transformation through research and development.
                     </p>
                     
-                    <div style="width: 100%; max-width: 1200px;">
+                    <div style="width: 100%; max-width: 1400px;">
                         <h3 id="about-directions-title" style="font-size: 28px; font-weight: 600; text-align: center; margin-bottom: 40px; color: #1a1a1a;">Наши направления</h3>
                         <div class="about-features">
                             <div class="feature">
@@ -998,34 +1041,6 @@
                 </div>
             </section>
 
-            <!-- Home Section -->
-            <section class="section" id="home">
-                <div class="home-content">
-                    <h1 class="hero-title">Digital Construction Future</h1>
-                    <p class="hero-subtitle">
-                        Advancing <strong>digital transformation</strong> across multiple industries through <strong>innovative technology solutions</strong>, 
-                        unified data environments, and intelligent automation systems.
-                    </p>
-                    <p class="hero-description" id="hero-description" style="font-size: 16px; line-height: 1.6; color: #555; max-width: 900px; margin-bottom: 16px;">
-                        Our institute specializes in creating <strong>cutting-edge digital ecosystems</strong> that integrate construction management, 
-                        financial technology solutions, comprehensive security and surveillance systems, and <strong>advanced data analytics platforms</strong>.
-                    </p>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <div class="stat-number">11</div>
-                            <div class="stat-label">Active Projects</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">85%</div>
-                            <div class="stat-label">Efficiency Improvement</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">$420K</div>
-                            <div class="stat-label">Investment Volume</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <!-- Projects Section -->
             <section class="section" id="projects">
@@ -1081,7 +1096,7 @@
 
             <!-- Crowdfunding Section -->
             <section class="section" id="crowdfunding">
-                <div style="max-width: 1000px; margin: 0 auto; padding: 32px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <div style="max-width: 1400px; margin: 0 auto; padding: 32px; display: flex; flex-direction: column; align-items: center; text-align: center;">
                     
                     <!-- Header -->
                     <div style="margin-bottom: 48px;">
@@ -1236,7 +1251,7 @@
 
             <!-- Contacts Section -->
             <section class="section" id="contacts">
-                <div style="max-width: 1200px; margin: 0 auto; padding: 24px; display: flex; flex-direction: column;">
+                <div style="max-width: 1400px; margin: 0 auto; padding: 24px; display: flex; flex-direction: column;">
                     
                     <!-- Header -->
                     <div style="margin-bottom: 32px; text-align: center;">
@@ -1499,9 +1514,16 @@
 
         // Show section
         function showSection(sectionName) {
-            // Update nav
+            // Update nav - handle both nav items and logo clicks
             document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
-            event.target.classList.add('active');
+            
+            // If clicked from nav item, highlight it
+            if (event && event.target.classList.contains('nav-item')) {
+                event.target.classList.add('active');
+            } else {
+                // If clicked from logo or programmatically, highlight the corresponding nav item
+                document.getElementById('nav-' + sectionName)?.classList.add('active');
+            }
             
             // Update sections
             document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
