@@ -9,8 +9,8 @@ const translations = {
         },
         home: {
             title: "Digital Innovation & Technology Solutions",
-            subtitle: "We drive digital transformation across multiple industries including construction, fintech, security systems, and government technology. Our comprehensive solutions span from unified construction management platforms to secure payment systems, advanced video surveillance networks, and intelligent automation frameworks.",
-            description: "Our institute specializes in creating cutting-edge digital ecosystems that integrate construction management, financial technology solutions, comprehensive security and surveillance systems, and advanced data analytics platforms. We develop end-to-end solutions that transform traditional business processes into efficient, transparent, and scalable digital operations.",
+            subtitle: "We drive <strong>digital transformation</strong> across multiple industries through <strong>innovative technology solutions</strong>, unified data environments, and intelligent automation frameworks.",
+            description: "Our institute specializes in creating <strong>cutting-edge digital ecosystems</strong> that integrate construction management, financial technology solutions, comprehensive security and surveillance systems, and <strong>advanced data analytics platforms</strong>.",
             stats: {
                 activeProjects: "Active Projects",
                 efficiency: "Efficiency Improvement", 
@@ -146,8 +146,8 @@ const translations = {
         },
         home: {
             title: "Цифровые инновации и технологические решения",
-            subtitle: "Мы обеспечиваем цифровую трансформацию в различных отраслях, включая строительство, финтех, системы безопасности и государственные технологии. Наши комплексные решения охватывают от единых платформ управления строительством до безопасных платежных систем, передовых сетей видеонаблюдения и интеллектуальных фреймворков автоматизации.",
-            description: "Наш институт специализируется на создании передовых цифровых экосистем, которые интегрируют управление строительством, решения финансовых технологий, комплексные системы безопасности и наблюдения, а также продвинутые платформы аналитики данных. Мы разрабатываем комплексные решения, которые трансформируют традиционные бизнес-процессы в эффективные, прозрачные и масштабируемые цифровые операции.",
+            subtitle: "Мы обеспечиваем <strong>цифровую трансформацию</strong> в различных отраслях через <strong>инновационные технологические решения</strong>, единые информационные среды и интеллектуальные фреймворки автоматизации.",
+            description: "Наш институт специализируется на создании <strong>передовых цифровых экосистем</strong>, которые интегрируют управление строительством, решения финансовых технологий, комплексные системы безопасности и наблюдения, а также <strong>продвинутые платформы аналитики данных</strong>.",
             stats: {
                 activeProjects: "Активных проектов",
                 efficiency: "Повышение эффективности",
@@ -283,8 +283,8 @@ const translations = {
         },
         home: {
             title: "Ψηφιακές καινοτομίες και τεχνολογικές λύσεις",
-            subtitle: "Οδηγούμε τον ψηφιακό μετασχηματισμό σε πολλαπλές βιομηχανίες συμπεριλαμβανομένων των κατασκευών, fintech, συστημάτων ασφαλείας και κυβερνητικής τεχνολογίας. Οι ολοκληρωμένες λύσεις μας εκτείνονται από ενιαίες πλατφόρμες διαχείρισης κατασκευών έως ασφαλή συστήματα πληρωμών, προηγμένα δίκτυα βιντεοεπιτήρησης και πλαίσια ευφυούς αυτοματισμού.",
-            description: "Το ινστιτούτο μας ειδικεύεται στη δημιουργία τεχνολογικών ψηφιακών οικοσυστημάτων που ενσωματώνουν τη διαχείριση κατασκευών, λύσεις χρηματοοικονομικής τεχνολογίας, ολοκληρωμένα συστήματα ασφαλείας και επιτήρησης, καθώς και προηγμένες πλατφόρμες αναλυτικών δεδομένων. Αναπτύσσουμε ολοκληρωμένες λύσεις που μετασχηματίζουν τις παραδοσιακές επιχειρηματικές διαδικασίες σε αποτελεσματικές, διαφανείς και επεκτάσιμες ψηφιακές λειτουργίες.",
+            subtitle: "Οδηγούμε τον <strong>ψηφιακό μετασχηματισμό</strong> σε πολλαπλές βιομηχανίες μέσω <strong>καινοτόμων τεχνολογικών λύσεων</strong>, ενιαίων περιβαλλόντων δεδομένων και πλαισίων ευφυούς αυτοματισμού.",
+            description: "Το ινστιτούτο μας ειδικεύεται στη δημιουργία <strong>προηγμένων ψηφιακών οικοσυστημάτων</strong> που ενσωματώνουν τη διαχείριση κατασκευών, λύσεις χρηματοοικονομικής τεχνολογίας, ολοκληρωμένα συστήματα ασφαλείας και επιτήρησης, καθώς και <strong>προηγμένες πλατφόρμες αναλυτικών δεδομένων</strong>.",
             stats: {
                 activeProjects: "Ενεργά έργα",
                 efficiency: "Βελτίωση αποδοτικότητας",
