@@ -2,8 +2,10 @@ const translations = {
     en: {
         nav: {
             home: "Home",
-            projects: "Projects", 
-            about: "About"
+            about: "About",
+            projects: "Projects",
+            crowdfunding: "Crowdfunding",
+            contacts: "Contacts"
         },
         home: {
             title: "Digital Innovation & Technology Solutions",
@@ -12,12 +14,27 @@ const translations = {
             stats: {
                 activeProjects: "Active Projects",
                 efficiency: "Efficiency Improvement", 
-                dataProcessed: "Data Processed Monthly"
-            }
+                dataProcessed: "Investment Volume"
+            },
+            ourDirections: "Our Directions"
         },
         projects: {
             title: "Projects",
             subtitle: "Comprehensive digital solutions across construction, fintech, security, and government technology sectors",
+            tabs: {
+                digitalConstruction: "Digital Construction",
+                fintech: "Financial Technology",
+                security: "Security & Surveillance", 
+                aiAnalytics: "AI & Analytics",
+                govtech: "GovTech"
+            },
+            categories: {
+                digitalConstruction: "Comprehensive construction management platforms integrating BIM, IoT sensors and automated quality control.",
+                fintech: "Secure payment processing systems, blockchain platforms and advanced fraud detection mechanisms.",
+                security: "Advanced video surveillance networks with AI analytics and integrated security management platforms.",
+                aiAnalytics: "Machine learning algorithms for predictive analytics and intelligent automation solutions.",
+                govtech: "Digital government platforms improving transparency and efficiency of public services."
+            },
             filters: {
                 all: "All Projects",
                 pilot: "Pilot",
@@ -63,13 +80,69 @@ const translations = {
                 }
             }
         },
-        logo: "ANO Research Institute for IT and Digital Economy"
+        crowdfunding: {
+            heroTitle: "Invest in the Digital Future",
+            heroSubtitle: "We attract investments to launch innovative projects in digital technologies and AI.",
+            bullet1: "The market needs IT solutions today.",
+            bullet2: "Our projects solve real business and society challenges.",
+            bullet3: "Early investments = maximum returns.",
+            investBtn: "Invest",
+            detailsBtn: "Learn More",
+            detailsTitle: "Digital Technologies and Crowdfunding",
+            detailsDescription: "We attract investments to launch and develop innovative digital technology projects. Our solutions optimize construction, finance, security, and government management.",
+            whyNeeded: "Why is this in demand?",
+            whyDescription: "Digital technologies are becoming a key competitiveness tool. Companies, cities, and people need our solutions because growth and development are impossible without future technologies.",
+            forInvestors: "For Investors and Participants",
+            investorBenefits: [
+                "Direct access to innovative IT projects.",
+                "Opportunity to invest early and get maximum returns.",
+                "Portfolio of projects across industries — from construction to fintech.",
+                "Crowdfunding as a convenient entry point for small investments."
+            ],
+            ecosystemText: "We create an IT projects ecosystem, and investments help us launch truly needed and promising solutions.",
+            readyTitle: "Ready to Discuss Investments?",
+            readySubtitle: "Leave your contacts — we'll send a brief memorandum and portfolio.",
+            contactBtn: "Contact",
+            activeProjectsTitle: "Active Investment Projects",
+            goalLabel: "Funding Goal",
+            currentLabel: "Raised",
+            daysLabel: "days left",
+            contributeBtn: "Invest",
+            learnBtn: "Learn More"
+        },
+        contacts: {
+            title: "Contacts",
+            subtitle: "Get in touch with our research team",
+            description: "We welcome collaboration opportunities, partnership inquiries, and research proposals.",
+            contactInfo: "Contact Information",
+            address: "Address",
+            phone: "Phone",
+            email: "Email",
+            workingHours: "Working Hours",
+            contactForm: "Contact Form",
+            name: "Name",
+            subject: "Subject",
+            message: "Message",
+            send: "Send Message",
+            partnership: "Partnership",
+            partnershipDesc: "Collaboration proposals and partnership programs",
+            investments: "Investments",
+            investmentsDesc: "Investment opportunity inquiries",
+            press: "Press Service",
+            pressDesc: "Media requests and information materials",
+            write: "Write",
+            contact: "Contact",
+            reach: "Reach Out"
+        },
+        logo: "ANO RII IT and Digital Economy"
     },
     ru: {
         nav: {
             home: "Главная",
+            about: "Об институте",
             projects: "Проекты",
-            about: "Об институте"
+            crowdfunding: "Краудфандинг",
+            contacts: "Контакты"
         },
         home: {
             title: "Цифровые инновации и технологические решения",
@@ -78,12 +151,27 @@ const translations = {
             stats: {
                 activeProjects: "Активных проектов",
                 efficiency: "Повышение эффективности",
-                dataProcessed: "Данных обрабатывается в месяц"
-            }
+                dataProcessed: "Объем инвестиций"
+            },
+            ourDirections: "Наши направления"
         },
         projects: {
             title: "Проекты",
             subtitle: "Комплексные цифровые решения в сферах строительства, финтеха, безопасности и государственных технологий",
+            tabs: {
+                digitalConstruction: "Цифровое строительство",
+                fintech: "Финансовые технологии",
+                security: "Безопасность и наблюдение",
+                aiAnalytics: "ИИ и аналитика", 
+                govtech: "Государственные технологии"
+            },
+            categories: {
+                digitalConstruction: "Комплексные платформы управления строительством, интегрирующие BIM, IoT-датчики и автоматизированный контроль качества.",
+                fintech: "Безопасные системы обработки платежей, блокчейн-платформы и продвинутые механизмы обнаружения мошенничества.",
+                security: "Продвинутые сети видеонаблюдения с ИИ-аналитикой и интегрированные платформы управления безопасностью.",
+                aiAnalytics: "Алгоритмы машинного обучения для предиктивной аналитики и решения интеллектуальной автоматизации.",
+                govtech: "Цифровые государственные платформы, улучшающие прозрачность и эффективность государственных услуг."
+            },
             filters: {
                 all: "Все проекты",
                 pilot: "Пилот",
@@ -129,13 +217,69 @@ const translations = {
                 }
             }
         },
-        logo: "АНО Научно-исследовательский институт ИТ и цифровой экономики"
+        crowdfunding: {
+            heroTitle: "Инвестируй в цифровое будущее",
+            heroSubtitle: "Мы привлекаем инвестиции для запуска инновационных проектов в области цифровых технологий и ИИ.",
+            bullet1: "Рынку нужны решения ИТ уже сегодня.",
+            bullet2: "Наши проекты закрывают реальные задачи бизнеса и общества.",
+            bullet3: "Ранние инвестиции = максимальная доходность.",
+            investBtn: "Инвестировать",
+            detailsBtn: "Подробнее",
+            detailsTitle: "Цифровые технологии и краудфандинг",
+            detailsDescription: "Мы привлекаем инвестиции для запуска и развития инновационных проектов в области цифровых технологий. Наши решения оптимизируют строительство, финансы, безопасность и государственное управление.",
+            whyNeeded: "Почему это востребовано?",
+            whyDescription: "Цифровые технологии становятся ключевым инструментом конкурентоспособности. В наших решениях нуждаются компании, города и люди, потому что без технологий будущего невозможно расти и развиваться.",
+            forInvestors: "Для инвесторов и участников",
+            investorBenefits: [
+                "Прямой доступ к инновационным ИТ-проектам.",
+                "Возможность инвестировать на раннем этапе и получить максимальную доходность.",
+                "Портфель проектов в разных отраслях — от строительства до финтеха.",
+                "Краудфандинг как удобная точка входа даже для небольших вложений."
+            ],
+            ecosystemText: "Мы создаём экосистему ИТ-проектов, а инвестиции помогают нам запускать действительно нужные и перспективные решения.",
+            readyTitle: "Готовы обсудить инвестиции?",
+            readySubtitle: "Оставьте контакты — вышлем краткий меморандум и портфель.",
+            contactBtn: "Связаться",
+            activeProjectsTitle: "Активные проекты для инвестирования",
+            goalLabel: "Цель финансирования",
+            currentLabel: "Собрано",
+            daysLabel: "дней осталось",
+            contributeBtn: "Инвестировать",
+            learnBtn: "Подробнее"
+        },
+        contacts: {
+            title: "Контакты",
+            subtitle: "Свяжитесь с нашей исследовательской командой",
+            description: "Мы приветствуем возможности сотрудничества и партнерские запросы.",
+            contactInfo: "Контактная информация",
+            address: "Адрес",
+            phone: "Телефон",
+            email: "Email",
+            workingHours: "Часы работы",
+            contactForm: "Форма обратной связи",
+            name: "Имя",
+            subject: "Тема",
+            message: "Сообщение",
+            send: "Отправить сообщение",
+            partnership: "Партнерство",
+            partnershipDesc: "Предложения о сотрудничестве и партнерские программы",
+            investments: "Инвестиции",
+            investmentsDesc: "Вопросы по инвестиционным возможностям",
+            press: "Пресс-служба",
+            pressDesc: "Запросы СМИ и информационные материалы",
+            write: "Написать",
+            contact: "Связаться",
+            reach: "Обратиться"
+        },
+        logo: "АНО НИИ ИТ и цифровой экономики"
     },
     el: {
         nav: {
             home: "Αρχική",
+            about: "Σχετικά με το ινστιτούτο",
             projects: "Έργα",
-            about: "Σχετικά με το ινστιτούτο"
+            crowdfunding: "Crowdfunding",
+            contacts: "Επικοινωνία"
         },
         home: {
             title: "Ψηφιακές καινοτομίες και τεχνολογικές λύσεις",
@@ -144,12 +288,27 @@ const translations = {
             stats: {
                 activeProjects: "Ενεργά έργα",
                 efficiency: "Βελτίωση αποδοτικότητας",
-                dataProcessed: "Δεδομένα που επεξεργάζονται μηνιαίως"
-            }
+                dataProcessed: "Όγκος επενδύσεων"
+            },
+            ourDirections: "Οι κατευθύνσεις μας"
         },
         projects: {
             title: "Έργα",
             subtitle: "Ολοκληρωμένες ψηφιακές λύσεις σε τομείς κατασκευών, fintech, ασφάλειας και κυβερνητικής τεχνολογίας",
+            tabs: {
+                digitalConstruction: "Ψηφιακή κατασκευή",
+                fintech: "Χρηματοοικονομική τεχνολογία",
+                security: "Ασφάλεια και επιτήρηση",
+                aiAnalytics: "AI και αναλυτικά",
+                govtech: "Κυβερνητική τεχνολογία"
+            },
+            categories: {
+                digitalConstruction: "Ολοκληρωμένες πλατφόρμες διαχείρισης κατασκευών που ενσωματώνουν BIM, αισθητήρες IoT και αυτοματοποιημένο έλεγχο ποιότητας.",
+                fintech: "Ασφαλή συστήματα επεξεργασίας πληρωμών, blockchain πλατφόρμες και προηγμένους μηχανισμούς ανίχνευσης απάτης.",
+                security: "Προηγμένα δίκτυα βιντεοεπιτήρησης με αναλυτικά AI και ενσωματωμένες πλατφόρμες διαχείρισης ασφαλείας.",
+                aiAnalytics: "Αλγόριθμοι μηχανικής μάθησης για προγνωστικά αναλυτικά και λύσεις ευφυούς αυτοματισμού.",
+                govtech: "Ψηφιακές κυβερνητικές πλατφόρμες που βελτιώνουν τη διαφάνεια και την αποδοτικότητα των δημόσιων υπηρεσιών."
+            },
             filters: {
                 all: "Όλα τα έργα",
                 pilot: "Πιλοτικό",
@@ -195,6 +354,60 @@ const translations = {
                 }
             }
         },
-        logo: "ΜΚΟ Ερευνητικό Ινστιτούτο ΤΠ και Ψηφιακής Οικονομίας"
+        crowdfunding: {
+            heroTitle: "Επενδύστε στο ψηφιακό μέλλον",
+            heroSubtitle: "Προσελκύουμε επενδύσεις για την έναρξη καινοτόμων έργων σε ψηφιακές τεχνολογίες και AI.",
+            bullet1: "Η αγορά χρειάζεται λύσεις ΤΠ σήμερα.",
+            bullet2: "Τα έργα μας λύνουν πραγματικές προκλήσεις επιχειρήσεων και κοινωνίας.",
+            bullet3: "Πρώιμες επενδύσεις = μέγιστες αποδόσεις.",
+            investBtn: "Επενδύστε",
+            detailsBtn: "Μάθετε περισσότερα",
+            detailsTitle: "Ψηφιακές τεχνολογίες και crowdfunding",
+            detailsDescription: "Προσελκύουμε επενδύσεις για την έναρξη και ανάπτυξη καινοτόμων έργων ψηφιακών τεχνολογιών. Οι λύσεις μας βελτιστοποιούν την κατασκευή, τα χρηματοοικονομικά, την ασφάλεια και τη διακυβέρνηση.",
+            whyNeeded: "Γιατί είναι απαραίτητο;",
+            whyDescription: "Οι ψηφιακές τεχνολογίες γίνονται βασικό εργαλείο ανταγωνιστικότητας. Εταιρείες, πόλεις και άνθρωποι χρειάζονται τις λύσεις μας επειδή χωρίς τεχνολογίες μέλλοντος είναι αδύνατη η ανάπτυξη.",
+            forInvestors: "Για επενδυτές και συμμετέχοντες",
+            investorBenefits: [
+                "Άμεση πρόσβαση σε καινοτόμα έργα ΤΠ.",
+                "Ευκαιρία πρώιμης επένδυσης και μέγιστων αποδόσεων.",
+                "Χαρτοφυλάκιο έργων σε διαφορετικούς κλάδους — από κατασκευές έως fintech.",
+                "Crowdfunding ως βολικό σημείο εισόδου ακόμα και για μικρές επενδύσεις."
+            ],
+            ecosystemText: "Δημιουργούμε οικοσύστημα έργων ΤΠ, και οι επενδύσεις μας βοηθούν να ξεκινήσουμε πραγματικά απαραίτητες και πολλά υποσχόμενες λύσεις.",
+            readyTitle: "Έτοιμοι να συζητήσετε επενδύσεις;",
+            readySubtitle: "Αφήστε τα στοιχεία σας — θα στείλουμε σύντομο μνημόνιο και χαρτοφυλάκιο.",
+            contactBtn: "Επικοινωνία",
+            activeProjectsTitle: "Ενεργά έργα για επένδυση",
+            goalLabel: "Στόχος χρηματοδότησης",
+            currentLabel: "Συλλέχθηκαν",
+            daysLabel: "ημέρες που απομένουν",
+            contributeBtn: "Επενδύστε",
+            learnBtn: "Μάθετε περισσότερα"
+        },
+        contacts: {
+            title: "Επικοινωνία",
+            subtitle: "Επικοινωνήστε με την ερευνητική μας ομάδα",
+            description: "Καλωσορίζουμε ευκαιρίες συνεργασίας και εταιρικά αιτήματα.",
+            contactInfo: "Στοιχεία επικοινωνίας",
+            address: "Διεύθυνση",
+            phone: "Τηλέφωνο",
+            email: "Email",
+            workingHours: "Ώρες εργασίας",
+            contactForm: "Φόρμα επικοινωνίας",
+            name: "Όνομα",
+            subject: "Θέμα",
+            message: "Μήνυμα",
+            send: "Αποστολή μηνύματος",
+            partnership: "Συνεργασία",
+            partnershipDesc: "Προτάσεις συνεργασίας και εταιρικά προγράμματα",
+            investments: "Επενδύσεις",
+            investmentsDesc: "Ερωτήσεις για επενδυτικές ευκαιρίες",
+            press: "Τύπος",
+            pressDesc: "Αιτήματα ΜΜΕ και ενημερωτικό υλικό",
+            write: "Γράψτε",
+            contact: "Επικοινωνία",
+            reach: "Επικοινωνήστε"
+        },
+        logo: "ΜΚΟ ΕΙ ΤΠ και Ψηφιακής Οικονομίας"
     }
 };

@@ -16,12 +16,11 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
             background: #ffffff;
             color: #1a1a1a;
-            height: 100vh;
-            overflow: hidden;
+            min-height: 100vh;
         }
 
         .app {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
@@ -91,14 +90,13 @@
             flex: 1;
             display: flex;
             flex-direction: column;
-            overflow: hidden;
         }
 
         .section {
             display: none;
             flex-direction: column;
-            height: 100%;
             padding: 32px;
+            min-height: calc(100vh - 60px);
         }
 
         .section.active {
@@ -120,13 +118,17 @@
             font-weight: 700;
             margin-bottom: 16px;
             letter-spacing: -0.02em;
+            word-wrap: break-word;
+            hyphens: auto;
         }
 
         .hero-subtitle {
             font-size: 18px;
             color: #666;
-            max-width: 600px;
+            max-width: 800px;
             margin-bottom: 32px;
+            word-wrap: break-word;
+            hyphens: auto;
         }
 
         .hero-stats {
@@ -437,6 +439,94 @@
             font-size: 13px;
             color: #666;
             line-height: 1.5;
+            word-wrap: break-word;
+            hyphens: auto;
+        }
+
+        /* Project Tabs */
+        .project-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 32px;
+            padding: 16px 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .project-tab {
+            background: #f8f9fa;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            padding: 12px 16px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            min-width: 120px;
+        }
+
+        .project-tab:hover {
+            background: #e9ecef;
+            border-color: #1a1a1a;
+        }
+
+        .project-tab.active {
+            background: #1a1a1a;
+            color: white;
+            border-color: #1a1a1a;
+        }
+
+        .tab-title {
+            font-size: 12px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .tab-count {
+            font-size: 11px;
+            opacity: 0.7;
+            font-weight: 500;
+        }
+
+        /* Project Content Area */
+        .project-content-area {
+            display: flex;
+            flex-direction: column;
+            height: calc(100vh - 300px);
+        }
+
+        .project-category-info {
+            margin-bottom: 24px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #1a1a1a;
+        }
+
+        .project-category-info h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+
+        .project-category-info p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .projects-scroll-area {
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .projects-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 16px;
         }
 
         /* Projects Grid Layout */
@@ -628,15 +718,17 @@
 <body>
     <div class="app">
         <header class="header">
-            <div class="logo">ANO Research Institute for IT and Digital Economy</div>
+            <div class="logo" id="logo">АНО НИИ ИТ и цифровой экономики</div>
             <nav class="nav">
-                <div class="nav-item" onclick="showSection('about')" id="nav-about">About</div>
-                <div class="nav-item" onclick="showSection('projects')" id="nav-projects">Projects</div>
-                <div class="nav-item" onclick="showSection('home')" id="nav-home">Home</div>
+                <div class="nav-item" onclick="showSection('home')" id="nav-home">Главная</div>
+                <div class="nav-item active" onclick="showSection('about')" id="nav-about">Об институте</div>
+                <div class="nav-item" onclick="showSection('projects')" id="nav-projects">Проекты</div>
+                <div class="nav-item" onclick="showSection('crowdfunding')" id="nav-crowdfunding">Краудфандинг</div>
+                <div class="nav-item" onclick="showSection('contacts')" id="nav-contacts">Контакты</div>
             </nav>
             <div class="language-selector">
-                <button class="lang-btn active" onclick="changeLanguage('en')">EN</button>
-                <button class="lang-btn" onclick="changeLanguage('ru')">RU</button>
+                <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+                <button class="lang-btn active" onclick="changeLanguage('ru')">RU</button>
                 <button class="lang-btn" onclick="changeLanguage('el')">EL</button>
             </div>
         </header>
@@ -646,40 +738,37 @@
             <section class="section active" id="about">
                 <div class="about-content">
                     <h2 class="about-title" id="about-title">Research Institute</h2>
-                    <p class="about-text" id="about-text">
-                        We focus on digital transformation in construction industry through cutting-edge research, 
-                        innovative technology solutions, and strategic partnerships with industry leaders.
-                    </p>
-                    <p class="about-description" id="about-description" style="font-size: 14px; line-height: 1.6; color: #666; margin-bottom: 24px; text-align: center;">
-                        Our institute develops innovative solutions that bridge the gap between traditional industries and modern digital ecosystems.
-                    </p>
-                    <p class="about-mission" id="about-mission" style="font-size: 14px; line-height: 1.6; color: #666; margin-bottom: 32px; text-align: center; font-style: italic;">
+                    <p class="about-mission" id="about-mission" style="font-size: 16px; line-height: 1.6; color: #666; margin-bottom: 48px; text-align: center; max-width: 800px;">
                         Our mission is to accelerate digital transformation through research and development.
                     </p>
-                    <div class="about-features">
-                        <div class="feature">
-                            <div class="feature-title" id="feature-digital-title">Digital Construction</div>
-                            <div class="feature-text" id="feature-digital-text">Unified platforms integrating all construction processes from planning to completion</div>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-title" id="feature-fintech-title">Financial Technology</div>
-                            <div class="feature-text" id="feature-fintech-text">Secure payment processing systems and blockchain-based transaction platforms</div>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-title" id="feature-security-title">Security Systems</div>
-                            <div class="feature-text" id="feature-security-text">Advanced video surveillance networks with AI-powered analytics and access control</div>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-title" id="feature-ai-title">AI & Analytics</div>
-                            <div class="feature-text" id="feature-ai-text">Machine learning solutions for predictive maintenance and process optimization</div>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-title" id="feature-govtech-title">GovTech Solutions</div>
-                            <div class="feature-text" id="feature-govtech-text">Government technology platforms improving transparency and efficiency</div>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-title" id="feature-data-title">Data Infrastructure</div>
-                            <div class="feature-text" id="feature-data-text">Scalable data lake architectures and unified data environments</div>
+                    
+                    <div style="width: 100%; max-width: 1000px;">
+                        <h3 id="about-directions-title" style="font-size: 24px; font-weight: 600; text-align: center; margin-bottom: 32px; color: #1a1a1a;">Наши направления</h3>
+                        <div class="about-features">
+                            <div class="feature">
+                                <div class="feature-title" id="about-feature-digital-title">Digital Construction</div>
+                                <div class="feature-text" id="about-feature-digital-text">Unified platforms integrating all construction processes from planning to completion</div>
+                            </div>
+                            <div class="feature">
+                                <div class="feature-title" id="about-feature-fintech-title">Financial Technology</div>
+                                <div class="feature-text" id="about-feature-fintech-text">Secure payment processing systems and blockchain-based transaction platforms</div>
+                            </div>
+                            <div class="feature">
+                                <div class="feature-title" id="about-feature-security-title">Security Systems</div>
+                                <div class="feature-text" id="about-feature-security-text">Advanced video surveillance networks with AI-powered analytics and access control</div>
+                            </div>
+                            <div class="feature">
+                                <div class="feature-title" id="about-feature-ai-title">AI & Analytics</div>
+                                <div class="feature-text" id="about-feature-ai-text">Machine learning solutions for predictive maintenance and process optimization</div>
+                            </div>
+                            <div class="feature">
+                                <div class="feature-title" id="about-feature-govtech-title">GovTech Solutions</div>
+                                <div class="feature-text" id="about-feature-govtech-text">Government technology platforms improving transparency and efficiency</div>
+                            </div>
+                            <div class="feature">
+                                <div class="feature-title" id="about-feature-data-title">Data Infrastructure</div>
+                                <div class="feature-text" id="about-feature-data-text">Scalable data lake architectures and unified data environments</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -707,8 +796,8 @@
                             <div class="stat-label">Efficiency Improvement</div>
                         </div>
                         <div class="stat">
-                            <div class="stat-number">500TB</div>
-                            <div class="stat-label">Data Processed Monthly</div>
+                            <div class="stat-number">$420K</div>
+                            <div class="stat-label">Investment Volume</div>
                         </div>
                     </div>
                 </div>
@@ -721,17 +810,292 @@
                     <p class="section-subtitle" id="projects-subtitle">Digital construction and automation solutions</p>
                 </div>
                 
-                <div class="filters">
-                    <button class="filter-btn active" onclick="filterProjects('all')" id="filter-all">All Projects</button>
-                    <button class="filter-btn" onclick="filterProjects('pilot')" id="filter-pilot">Pilot</button>
-                    <button class="filter-btn" onclick="filterProjects('scale')" id="filter-scale">Scale</button>
-                    <button class="filter-btn" onclick="filterProjects('completed')" id="filter-completed">Completed</button>
-                    <button class="filter-btn" onclick="filterProjects('ai')" id="filter-ai">AI & ML</button>
-                    <button class="filter-btn" onclick="filterProjects('digital-construction')" id="filter-digital">Digital Construction</button>
+                <!-- Project Category Tabs -->
+                <div class="project-tabs">
+                    <button class="project-tab active" onclick="showProjectTab('digital-construction')" id="tab-digital">
+                        <span class="tab-title" id="tab-digital-title">Digital Construction</span>
+                        <span class="tab-count">5</span>
+                    </button>
+                    <button class="project-tab" onclick="showProjectTab('fintech')" id="tab-fintech">
+                        <span class="tab-title" id="tab-fintech-title">Financial Technology</span>
+                        <span class="tab-count">2</span>
+                    </button>
+                    <button class="project-tab" onclick="showProjectTab('security')" id="tab-security">
+                        <span class="tab-title" id="tab-security-title">Security & Surveillance</span>
+                        <span class="tab-count">2</span>
+                    </button>
+                    <button class="project-tab" onclick="showProjectTab('ai-analytics')" id="tab-ai">
+                        <span class="tab-title" id="tab-ai-title">AI & Analytics</span>
+                        <span class="tab-count">3</span>
+                    </button>
+                    <button class="project-tab" onclick="showProjectTab('govtech')" id="tab-govtech">
+                        <span class="tab-title" id="tab-govtech-title">GovTech</span>
+                        <span class="tab-count">1</span>
+                    </button>
                 </div>
                 
-                <div class="projects-grid" id="projectsGrid">
-                    <!-- Projects will be loaded here -->
+                <!-- Project Content Area -->
+                <div class="project-content-area">
+                    <div class="project-category-info" id="categoryInfo">
+                        <h3 id="categoryTitle">Цифровое строительство</h3>
+                        <p id="categoryDescription">Комплексные платформы управления строительством, интегрирующие BIM, IoT-датчики и автоматизированный контроль качества.</p>
+                    </div>
+                    
+                    <div class="projects-scroll-area">
+                        <div class="projects-list" id="projectsList">
+                            <!-- Projects will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Crowdfunding Section -->
+            <section class="section" id="crowdfunding">
+                <div style="max-width: 1000px; margin: 0 auto; padding: 32px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    
+                    <!-- Header -->
+                    <div style="margin-bottom: 48px;">
+                        <h2 class="about-title" id="crowdfunding-hero-title">Инвестируй в цифровое будущее</h2>
+                        <p class="about-text" id="crowdfunding-hero-subtitle" style="max-width: 800px;">
+                            Мы привлекаем инвестиции для запуска инновационных проектов в области цифровых технологий и ИИ.
+                        </p>
+                    </div>
+
+                    <!-- Key Points -->
+                    <div style="margin-bottom: 48px; width: 100%; max-width: 800px;">
+                        <div style="display: grid; gap: 16px;">
+                            <div style="display: flex; gap: 16px; align-items: flex-start; background: #f8f9fa; border: 1px solid #e5e5e5; padding: 20px; border-radius: 8px; text-align: left;">
+                                <span style="width: 12px; height: 12px; border-radius: 50%; background: #28a745; margin-top: 6px; flex: 0 0 12px;"></span>
+                                <div><strong id="bullet-1">Рынку нужны решения ИТ уже сегодня.</strong></div>
+                            </div>
+                            <div style="display: flex; gap: 16px; align-items: flex-start; background: #f8f9fa; border: 1px solid #e5e5e5; padding: 20px; border-radius: 8px; text-align: left;">
+                                <span style="width: 12px; height: 12px; border-radius: 50%; background: #28a745; margin-top: 6px; flex: 0 0 12px;"></span>
+                                <div id="bullet-2">Наши проекты закрывают <strong>реальные задачи</strong> бизнеса и общества.</div>
+                            </div>
+                            <div style="display: flex; gap: 16px; align-items: flex-start; background: #f8f9fa; border: 1px solid #e5e5e5; padding: 20px; border-radius: 8px; text-align: left;">
+                                <span style="width: 12px; height: 12px; border-radius: 50%; background: #28a745; margin-top: 6px; flex: 0 0 12px;"></span>
+                                <div><strong id="bullet-3">Ранние инвестиции = максимальная доходность.</strong></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div style="margin-bottom: 48px; display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
+                        <button id="invest-btn" class="filter-btn" style="background: #007bff; color: white; border: 1px solid #007bff; padding: 12px 24px;">
+                            Инвестировать
+                        </button>
+                        <button id="details-btn" class="filter-btn" style="background: white; color: #007bff; border: 1px solid #007bff; padding: 12px 24px;">
+                            Подробнее
+                        </button>
+                    </div>
+
+                    <!-- Details Section -->
+                    <div style="background: #f8f9fa; border: 1px solid #e5e5e5; border-radius: 8px; padding: 32px; margin-bottom: 48px; width: 100%; text-align: left;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+                            <div>
+                                <h3 id="details-title" style="font-size: 24px; margin: 0 0 16px; font-weight: 700; color: #1a1a1a;">
+                                    Цифровые технологии и краудфандинг
+                                </h3>
+                                <p id="details-description" style="margin-bottom: 24px; line-height: 1.6; color: #666;">
+                                    Мы привлекаем инвестиции для запуска и развития инновационных проектов в области цифровых технологий. Наши решения оптимизируют строительство, финансы, безопасность и государственное управление.
+                                </p>
+
+                                <h4 id="why-needed" style="margin: 0 0 12px; font-size: 16px; font-weight: 600; color: #1a1a1a;">Почему это востребовано?</h4>
+                                <p id="why-description" style="color: #666; line-height: 1.6;">
+                                    Цифровые технологии становятся ключевым инструментом конкурентоспособности. В наших решениях нуждаются компании, города и люди, потому что без технологий будущего невозможно расти и развиваться.
+                                </p>
+                            </div>
+
+                            <div style="background: white; border: 1px solid #e5e5e5; border-radius: 8px; padding: 24px;">
+                                <h4 id="for-investors" style="margin: 0 0 16px; font-size: 16px; font-weight: 600; color: #1a1a1a;">Для инвесторов и участников</h4>
+                                <ul id="investor-benefits" style="margin: 0; padding-left: 20px; color: #666; line-height: 1.6;">
+                                    <li style="margin-bottom: 8px;">Прямой доступ к инновационным ИТ-проектам.</li>
+                                    <li style="margin-bottom: 8px;">Возможность инвестировать на раннем этапе и получить максимальную доходность.</li>
+                                    <li style="margin-bottom: 8px;">Портфель проектов в разных отраслях — от строительства до финтеха.</li>
+                                    <li>Краудфандинг как удобная точка входа даже для небольших вложений.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p id="ecosystem-text" style="margin-top: 24px; color: #333; line-height: 1.6;">
+                            <strong>Мы создаём экосистему ИТ-проектов</strong>, а инвестиции помогают нам запускать действительно нужные и перспективные решения.
+                        </p>
+                    </div>
+
+                    <!-- CTA Section -->
+                    <div style="background: #f8f9fa; border: 1px solid #e5e5e5; border-radius: 8px; padding: 24px; margin-bottom: 48px; width: 100%;">
+                        <div style="display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; align-items: center;">
+                            <div style="text-align: left;">
+                                <div id="ready-title" style="font-weight: 700; font-size: 18px; color: #1a1a1a; margin-bottom: 8px;">Готовы обсудить инвестиции?</div>
+                                <div id="ready-subtitle" style="color: #666; font-size: 14px;">Оставьте контакты — вышлем краткий меморандум и портфель.</div>
+                            </div>
+                            <button id="contact-btn" class="filter-btn" style="background: #007bff; color: white; border: 1px solid #007bff; padding: 12px 24px;">
+                                Связаться
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Active Projects Section -->
+                    <div style="width: 100%;">
+                        <h3 id="active-projects-title" style="font-size: 24px; margin-bottom: 32px; text-align: center; font-weight: 700; color: #1a1a1a;">
+                            Активные проекты для инвестирования
+                        </h3>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 24px;">
+                            <!-- Project 1 -->
+                            <div style="background: white; border: 1px solid #e5e5e5; border-radius: 8px; padding: 24px;">
+                                <div style="margin-bottom: 20px;">
+                                    <div style="font-size: 18px; font-weight: 600; margin-bottom: 8px; color: #1a1a1a;">Умная строительная платформа</div>
+                                    <div style="font-size: 14px; color: #666; line-height: 1.4;">Интеграция BIM нового поколения с ИИ-аналитикой для оптимизации строительства</div>
+                                </div>
+                                <div style="margin: 20px 0;">
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                        <span id="goal-label-1" style="font-size: 12px; color: #666; font-weight: 600;">Цель финансирования</span>
+                                        <span style="font-size: 12px; color: #666;">€500,000</span>
+                                    </div>
+                                    <div style="background: #f8f9fa; height: 8px; border-radius: 4px; overflow: hidden;">
+                                        <div style="background: #28a745; height: 100%; width: 65%; border-radius: 4px;"></div>
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between; margin-top: 8px;">
+                                        <span id="current-1" style="font-size: 12px; color: #28a745; font-weight: 600;">Собрано: €325,000</span>
+                                        <span id="days-1" style="font-size: 12px; color: #666;">45 дней осталось</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 12px;">
+                                    <button id="contribute-1" class="filter-btn" style="background: #007bff; color: white; border: 1px solid #007bff; padding: 10px 16px; flex: 1;">
+                                        Инвестировать
+                                    </button>
+                                    <button id="learn-1" class="filter-btn" style="background: white; color: #007bff; border: 1px solid #007bff; padding: 10px 16px; flex: 1;">
+                                        Подробнее
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Project 2 -->
+                            <div style="background: white; border: 1px solid #e5e5e5; border-radius: 8px; padding: 24px;">
+                                <div style="margin-bottom: 20px;">
+                                    <div style="font-size: 18px; font-weight: 600; margin-bottom: 8px; color: #1a1a1a;">Безопасный платежный шлюз</div>
+                                    <div style="font-size: 14px; color: #666; line-height: 1.4;">Блокчейн-система платежей с расширенным обнаружением мошенничества</div>
+                                </div>
+                                <div style="margin: 20px 0;">
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                        <span id="goal-label-2" style="font-size: 12px; color: #666; font-weight: 600;">Цель финансирования</span>
+                                        <span style="font-size: 12px; color: #666;">€300,000</span>
+                                    </div>
+                                    <div style="background: #f8f9fa; height: 8px; border-radius: 4px; overflow: hidden;">
+                                        <div style="background: #ffc107; height: 100%; width: 40%; border-radius: 4px;"></div>
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between; margin-top: 8px;">
+                                        <span id="current-2" style="font-size: 12px; color: #ffc107; font-weight: 600;">Собрано: €120,000</span>
+                                        <span id="days-2" style="font-size: 12px; color: #666;">60 дней осталось</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 12px;">
+                                    <button id="contribute-2" class="filter-btn" style="background: #007bff; color: white; border: 1px solid #007bff; padding: 10px 16px; flex: 1;">
+                                        Инвестировать
+                                    </button>
+                                    <button id="learn-2" class="filter-btn" style="background: white; color: #007bff; border: 1px solid #007bff; padding: 10px 16px; flex: 1;">
+                                        Подробнее
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contacts Section -->
+            <section class="section" id="contacts">
+                <div style="max-width: 1000px; margin: 0 auto; padding: 32px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    
+                    <!-- Header -->
+                    <div style="margin-bottom: 48px;">
+                        <h2 class="about-title" id="contacts-title">Контакты</h2>
+                        <p class="about-text" id="contacts-text" style="max-width: 800px;">
+                            Свяжитесь с нашей исследовательской командой
+                        </p>
+                        <p class="about-text" id="contacts-description" style="max-width: 800px; color: #666; font-size: 14px;">
+                            Мы приветствуем возможности сотрудничества и партнерские запросы.
+                        </p>
+                    </div>
+
+                    <!-- Contact Information and Form -->
+                    <div style="background: #f8f9fa; border: 1px solid #e5e5e5; border-radius: 8px; padding: 32px; width: 100%; text-align: left;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px;">
+                            <!-- Contact Info -->
+                            <div>
+                                <h3 style="font-size: 20px; margin-bottom: 24px; color: #1a1a1a; font-weight: 700;" id="contact-info-title">Контактная информация</h3>
+                                
+                                <div style="margin-bottom: 20px;">
+                                    <div style="font-weight: 600; margin-bottom: 6px; color: #1a1a1a;" id="address-label">Адрес</div>
+                                    <div style="color: #666; font-size: 14px; line-height: 1.5;">Москва, Россия<br>Центр исследований и разработок</div>
+                                </div>
+                                
+                                <div style="margin-bottom: 20px;">
+                                    <div style="font-weight: 600; margin-bottom: 6px; color: #1a1a1a;" id="phone-label">Телефон</div>
+                                    <div style="color: #666; font-size: 14px;">+7 (495) 123-45-67</div>
+                                </div>
+                                
+                                <div style="margin-bottom: 20px;">
+                                    <div style="font-weight: 600; margin-bottom: 6px; color: #1a1a1a;" id="email-label">Email</div>
+                                    <div style="color: #666; font-size: 14px;">info@anorii.ru</div>
+                                </div>
+                                
+                                <div style="margin-bottom: 20px;">
+                                    <div style="font-weight: 600; margin-bottom: 6px; color: #1a1a1a;" id="working-hours-label">Часы работы</div>
+                                    <div style="color: #666; font-size: 14px; line-height: 1.5;">Пн-Пт: 9:00 - 18:00<br>Московское время (UTC+3)</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Contact Form -->
+                            <div>
+                                <h3 style="font-size: 20px; margin-bottom: 24px; color: #1a1a1a; font-weight: 700;" id="contact-form-title">Форма обратной связи</h3>
+                                
+                                <form style="display: flex; flex-direction: column; gap: 16px;">
+                                    <input type="text" placeholder="Имя" id="name-input" style="padding: 12px; border: 1px solid #e5e5e5; border-radius: 4px; font-size: 14px; font-family: inherit;">
+                                    
+                                    <input type="email" placeholder="Email" style="padding: 12px; border: 1px solid #e5e5e5; border-radius: 4px; font-size: 14px; font-family: inherit;">
+                                    
+                                    <input type="text" placeholder="Тема" id="subject-input" style="padding: 12px; border: 1px solid #e5e5e5; border-radius: 4px; font-size: 14px; font-family: inherit;">
+                                    
+                                    <textarea placeholder="Сообщение" id="message-input" rows="5" style="padding: 12px; border: 1px solid #e5e5e5; border-radius: 4px; font-size: 14px; resize: vertical; font-family: inherit;"></textarea>
+                                    
+                                    <button type="submit" id="send-btn" class="filter-btn" style="background: #007bff; color: white; border: 1px solid #007bff; padding: 12px 24px; align-self: flex-start;">
+                                        Отправить сообщение
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Contact Methods -->
+                    <div style="margin-top: 32px; width: 100%;">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
+                            <div style="background: white; border: 1px solid #e5e5e5; border-radius: 8px; padding: 24px; text-align: center;">
+                                <h4 style="font-size: 16px; font-weight: 600; color: #1a1a1a; margin-bottom: 12px;" id="partnership-title">Партнерство</h4>
+                                <p style="color: #666; font-size: 14px; line-height: 1.5; margin-bottom: 16px;" id="partnership-desc">Предложения о сотрудничестве и партнерские программы</p>
+                                <button class="filter-btn" style="background: white; color: #007bff; border: 1px solid #007bff; padding: 8px 16px;" id="partnership-btn">
+                                    Написать
+                                </button>
+                            </div>
+                            
+                            <div style="background: white; border: 1px solid #e5e5e5; border-radius: 8px; padding: 24px; text-align: center;">
+                                <h4 style="font-size: 16px; font-weight: 600; color: #1a1a1a; margin-bottom: 12px;" id="investments-title">Инвестиции</h4>
+                                <p style="color: #666; font-size: 14px; line-height: 1.5; margin-bottom: 16px;" id="investments-desc">Вопросы по инвестиционным возможностям</p>
+                                <button class="filter-btn" style="background: white; color: #007bff; border: 1px solid #007bff; padding: 8px 16px;" id="investments-btn">
+                                    Связаться
+                                </button>
+                            </div>
+                            
+                            <div style="background: white; border: 1px solid #e5e5e5; border-radius: 8px; padding: 24px; text-align: center;">
+                                <h4 style="font-size: 16px; font-weight: 600; color: #1a1a1a; margin-bottom: 12px;" id="press-title">Пресс-служба</h4>
+                                <p style="color: #666; font-size: 14px; line-height: 1.5; margin-bottom: 16px;" id="press-desc">Запросы СМИ и информационные материалы</p>
+                                <button class="filter-btn" style="background: white; color: #007bff; border: 1px solid #007bff; padding: 8px 16px;" id="press-btn">
+                                    Обратиться
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -741,7 +1105,7 @@
     <script>
         let projectsData = [];
         let filteredProjects = [];
-        let currentLanguage = 'en';
+        let currentLanguage = 'ru';
 
         // Load projects data
         async function loadProjects() {
@@ -780,9 +1144,11 @@
             document.querySelector('.logo').textContent = t.logo;
             
             // Update navigation
+            document.getElementById('nav-home').textContent = t.nav.home;
             document.getElementById('nav-about').textContent = t.nav.about;
             document.getElementById('nav-projects').textContent = t.nav.projects;
-            document.getElementById('nav-home').textContent = t.nav.home;
+            document.getElementById('nav-crowdfunding').textContent = t.nav.crowdfunding;
+            document.getElementById('nav-contacts').textContent = t.nav.contacts;
             
             // Update home section
             document.querySelector('.hero-title').textContent = t.home.title;
@@ -794,24 +1160,111 @@
             // Update projects section
             document.getElementById('projects-title').textContent = t.projects.title;
             document.getElementById('projects-subtitle').textContent = t.projects.subtitle;
-            document.getElementById('filter-all').textContent = t.projects.filters.all;
-            document.getElementById('filter-pilot').textContent = t.projects.filters.pilot;
-            document.getElementById('filter-scale').textContent = t.projects.filters.scale;
-            document.getElementById('filter-completed').textContent = t.projects.filters.completed;
-            document.getElementById('filter-ai').textContent = t.projects.filters.ai;
-            document.getElementById('filter-digital').textContent = t.projects.filters.digitalConstruction;
             
-            // Update about section
-            document.getElementById('about-title').textContent = t.about.title;
-            document.getElementById('about-text').textContent = t.about.subtitle;
-            document.getElementById('feature-digital-title').textContent = t.about.features.digitalConstruction.title;
-            document.getElementById('feature-digital-text').textContent = t.about.features.digitalConstruction.text;
-            document.getElementById('feature-ai-title').textContent = t.about.features.aiAnalytics.title;
-            document.getElementById('feature-ai-text').textContent = t.about.features.aiAnalytics.text;
-            document.getElementById('feature-bim-title').textContent = t.about.features.bimIntegration.title;
-            document.getElementById('feature-bim-text').textContent = t.about.features.bimIntegration.text;
-            document.getElementById('feature-govtech-title').textContent = t.about.features.govTech.title;
-            document.getElementById('feature-govtech-text').textContent = t.about.features.govTech.text;
+            // Update project tabs
+            document.getElementById('tab-digital-title').textContent = t.projects.tabs.digitalConstruction;
+            document.getElementById('tab-fintech-title').textContent = t.projects.tabs.fintech;
+            document.getElementById('tab-security-title').textContent = t.projects.tabs.security;
+            document.getElementById('tab-ai-title').textContent = t.projects.tabs.aiAnalytics;
+            document.getElementById('tab-govtech-title').textContent = t.projects.tabs.govtech;
+            
+            // Update home section description
+            if (document.getElementById('hero-description')) {
+                document.getElementById('hero-description').textContent = t.home.description;
+            }
+            
+            // Update about section (only if elements exist)
+            if (document.getElementById('about-title')) {
+                document.getElementById('about-title').textContent = t.about.title;
+                document.getElementById('about-mission').textContent = t.about.mission;
+                
+                // Update about page directions
+                if (document.getElementById('about-directions-title')) {
+                    document.getElementById('about-directions-title').textContent = t.home.ourDirections;
+                    document.getElementById('about-feature-digital-title').textContent = t.about.features.digitalConstruction.title;
+                    document.getElementById('about-feature-digital-text').textContent = t.about.features.digitalConstruction.text;
+                    document.getElementById('about-feature-fintech-title').textContent = t.about.features.fintech.title;
+                    document.getElementById('about-feature-fintech-text').textContent = t.about.features.fintech.text;
+                    document.getElementById('about-feature-security-title').textContent = t.about.features.security.title;
+                    document.getElementById('about-feature-security-text').textContent = t.about.features.security.text;
+                    document.getElementById('about-feature-ai-title').textContent = t.about.features.aiAnalytics.title;
+                    document.getElementById('about-feature-ai-text').textContent = t.about.features.aiAnalytics.text;
+                    document.getElementById('about-feature-govtech-title').textContent = t.about.features.govTech.title;
+                    document.getElementById('about-feature-govtech-text').textContent = t.about.features.govTech.text;
+                    document.getElementById('about-feature-data-title').textContent = t.about.features.dataInfrastructure.title;
+                    document.getElementById('about-feature-data-text').textContent = t.about.features.dataInfrastructure.text;
+                }
+            }
+            
+            
+            // Update crowdfunding section (only if elements exist)
+            if (t.crowdfunding && document.getElementById('crowdfunding-hero-title')) {
+                document.getElementById('crowdfunding-hero-title').textContent = t.crowdfunding.heroTitle;
+                document.getElementById('crowdfunding-hero-subtitle').textContent = t.crowdfunding.heroSubtitle;
+                document.getElementById('bullet-1').innerHTML = '<strong>' + t.crowdfunding.bullet1 + '</strong>';
+                document.getElementById('bullet-2').innerHTML = t.crowdfunding.bullet2.replace('реальные задачи', '<strong>реальные задачи</strong>');
+                document.getElementById('bullet-3').innerHTML = '<strong>' + t.crowdfunding.bullet3 + '</strong>';
+                document.getElementById('invest-btn').textContent = t.crowdfunding.investBtn;
+                document.getElementById('details-btn').textContent = t.crowdfunding.detailsBtn;
+                document.getElementById('details-title').textContent = t.crowdfunding.detailsTitle;
+                document.getElementById('details-description').textContent = t.crowdfunding.detailsDescription;
+                document.getElementById('why-needed').textContent = t.crowdfunding.whyNeeded;
+                document.getElementById('why-description').textContent = t.crowdfunding.whyDescription;
+                document.getElementById('for-investors').textContent = t.crowdfunding.forInvestors;
+                document.getElementById('ecosystem-text').innerHTML = '<strong>' + t.crowdfunding.ecosystemText.split('**')[1] + '</strong>' + t.crowdfunding.ecosystemText.split('**')[2] || t.crowdfunding.ecosystemText;
+                document.getElementById('ready-title').textContent = t.crowdfunding.readyTitle;
+                document.getElementById('ready-subtitle').textContent = t.crowdfunding.readySubtitle;
+                document.getElementById('contact-btn').textContent = t.crowdfunding.contactBtn;
+                document.getElementById('active-projects-title').textContent = t.crowdfunding.activeProjectsTitle;
+                
+                // Update project labels
+                if (document.getElementById('goal-label-1')) document.getElementById('goal-label-1').textContent = t.crowdfunding.goalLabel;
+                if (document.getElementById('goal-label-2')) document.getElementById('goal-label-2').textContent = t.crowdfunding.goalLabel;
+                if (document.getElementById('current-1')) document.getElementById('current-1').textContent = t.crowdfunding.currentLabel + ': €325,000';
+                if (document.getElementById('current-2')) document.getElementById('current-2').textContent = t.crowdfunding.currentLabel + ': €120,000';
+                if (document.getElementById('days-1')) document.getElementById('days-1').textContent = '45 ' + t.crowdfunding.daysLabel;
+                if (document.getElementById('days-2')) document.getElementById('days-2').textContent = '60 ' + t.crowdfunding.daysLabel;
+                if (document.getElementById('contribute-1')) document.getElementById('contribute-1').textContent = t.crowdfunding.contributeBtn;
+                if (document.getElementById('contribute-2')) document.getElementById('contribute-2').textContent = t.crowdfunding.contributeBtn;
+                if (document.getElementById('learn-1')) document.getElementById('learn-1').textContent = t.crowdfunding.learnBtn;
+                if (document.getElementById('learn-2')) document.getElementById('learn-2').textContent = t.crowdfunding.learnBtn;
+                
+                // Update investor benefits list
+                if (document.getElementById('investor-benefits')) {
+                    const benefitsList = document.getElementById('investor-benefits');
+                    benefitsList.innerHTML = t.crowdfunding.investorBenefits.map(benefit => 
+                        `<li style="margin-left: 18px;">${benefit}</li>`
+                    ).join('');
+                }
+            }
+            
+            // Update contacts section (only if elements exist)
+            if (t.contacts && document.getElementById('contacts-title')) {
+                document.getElementById('contacts-title').textContent = t.contacts.title;
+                document.getElementById('contacts-text').textContent = t.contacts.subtitle;
+                document.getElementById('contacts-description').textContent = t.contacts.description;
+                document.getElementById('contact-info-title').textContent = t.contacts.contactInfo;
+                document.getElementById('address-label').textContent = t.contacts.address;
+                document.getElementById('phone-label').textContent = t.contacts.phone;
+                document.getElementById('email-label').textContent = t.contacts.email;
+                document.getElementById('working-hours-label').textContent = t.contacts.workingHours;
+                document.getElementById('contact-form-title').textContent = t.contacts.contactForm;
+                document.getElementById('name-input').placeholder = t.contacts.name;
+                document.getElementById('subject-input').placeholder = t.contacts.subject;
+                document.getElementById('message-input').placeholder = t.contacts.message;
+                document.getElementById('send-btn').textContent = t.contacts.send;
+                
+                // Update additional contact method cards
+                document.getElementById('partnership-title').textContent = t.contacts.partnership;
+                document.getElementById('partnership-desc').textContent = t.contacts.partnershipDesc;
+                document.getElementById('partnership-btn').textContent = t.contacts.write;
+                document.getElementById('investments-title').textContent = t.contacts.investments;
+                document.getElementById('investments-desc').textContent = t.contacts.investmentsDesc;
+                document.getElementById('investments-btn').textContent = t.contacts.contact;
+                document.getElementById('press-title').textContent = t.contacts.press;
+                document.getElementById('press-desc').textContent = t.contacts.pressDesc;
+                document.getElementById('press-btn').textContent = t.contacts.reach;
+            }
         }
 
         // Show section
@@ -848,10 +1301,70 @@
             renderProjectsGrid();
         }
 
-        // Render projects grid
-        function renderProjectsGrid() {
-            const gridContainer = document.getElementById('projectsGrid');
-            gridContainer.innerHTML = filteredProjects.map(project => {
+        // Category information - using translations
+        function getCategoryInfo() {
+            const t = translations[currentLanguage];
+            return {
+                'digital-construction': {
+                    title: t.projects.tabs.digitalConstruction,
+                    description: t.projects.categories.digitalConstruction,
+                    tags: ['digital construction', 'BIM', 'construction control']
+                },
+                'fintech': {
+                    title: t.projects.tabs.fintech,
+                    description: t.projects.categories.fintech,
+                    tags: ['blockchain', 'payment', 'fintech']
+                },
+                'security': {
+                    title: t.projects.tabs.security,
+                    description: t.projects.categories.security,
+                    tags: ['surveillance', 'security', 'AI analytics']
+                },
+                'ai-analytics': {
+                    title: t.projects.tabs.aiAnalytics,
+                    description: t.projects.categories.aiAnalytics,
+                    tags: ['AI', 'machine learning', 'predictive analytics']
+                },
+                'govtech': {
+                    title: t.projects.tabs.govtech,
+                    description: t.projects.categories.govtech,
+                    tags: ['govtech', 'government', 'transparency']
+                }
+            };
+        }
+
+        let currentCategory = 'digital-construction';
+
+        // Show project tab
+        function showProjectTab(category) {
+            currentCategory = category;
+            
+            // Update tab selection
+            document.querySelectorAll('.project-tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelector(`[onclick="showProjectTab('${category}')"]`).classList.add('active');
+            
+            // Update category info
+            const categoryInfo = getCategoryInfo();
+            const info = categoryInfo[category];
+            document.getElementById('categoryTitle').textContent = info.title;
+            document.getElementById('categoryDescription').textContent = info.description;
+            
+            // Filter and render projects
+            const categoryProjects = projectsData.filter(project => {
+                return project.tags.some(tag => info.tags.some(categoryTag => 
+                    tag.toLowerCase().includes(categoryTag.toLowerCase())
+                ));
+            });
+            
+            renderProjectsList(categoryProjects);
+        }
+
+        // Render projects list (for tabs)
+        function renderProjectsList(projects = filteredProjects) {
+            const listContainer = document.getElementById('projectsList');
+            if (!listContainer) return;
+            
+            listContainer.innerHTML = projects.map(project => {
                 const title = currentLanguage === 'ru' ? project.title_ru : project.title_en;
                 const summary = currentLanguage === 'ru' ? project.summary_ru : project.summary_en;
                 
@@ -872,6 +1385,11 @@
                     </div>
                 `;
             }).join('');
+        }
+
+        // Render projects grid (legacy - for compatibility)
+        function renderProjectsGrid() {
+            renderProjectsList();
         }
 
         // Show expanded project
@@ -939,7 +1457,10 @@
 
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
-            loadProjects();
+            loadProjects().then(() => {
+                // Initialize first tab after projects are loaded
+                showProjectTab('digital-construction');
+            });
             updateTranslations();
         });
     </script>
