@@ -1349,7 +1349,7 @@
                                 <div id="ready-title" style="font-weight: 700; font-size: 18px; color: #1a1a1a; margin-bottom: 8px;">Готовы обсудить инвестиции?</div>
                                 <div id="ready-subtitle" style="color: #666; font-size: 14px;">Оставьте контакты — вышлем краткий меморандум и портфель.</div>
                             </div>
-                            <button id="contact-btn" class="filter-btn" style="background: #007bff; color: white; border: 1px solid #007bff; padding: 12px 24px;">
+                            <button id="contact-btn" class="filter-btn" style="background: #007bff; color: white; border: 1px solid #007bff; padding: 12px 24px;" onclick="window.location.href='mailto:info@niiit.org'">
                                 Связаться
                             </button>
                         </div>
@@ -1574,7 +1574,7 @@
                         <div style="background: white; border: 1px solid #e5e5e5; border-radius: 8px; padding: 16px; text-align: center;">
                             <h4 style="font-size: 14px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;" id="investments-title">Инвестиции</h4>
                             <p style="color: #666; font-size: 12px; line-height: 1.4; margin-bottom: 12px;" id="investments-desc">Инвестиционные возможности</p>
-                            <button class="filter-btn" style="background: white; color: #007bff; border: 1px solid #007bff; padding: 6px 12px; font-size: 12px;" id="investments-btn">
+                            <button class="filter-btn" style="background: white; color: #007bff; border: 1px solid #007bff; padding: 6px 12px; font-size: 12px;" id="investments-btn" onclick="window.location.href='mailto:info@niiit.org'">
                                 Связаться
                             </button>
                         </div>
@@ -1914,7 +1914,9 @@
                 document.getElementById('ecosystem-text').innerHTML = '<strong>' + t.crowdfunding.ecosystemText.split('**')[1] + '</strong>' + t.crowdfunding.ecosystemText.split('**')[2] || t.crowdfunding.ecosystemText;
                 document.getElementById('ready-title').textContent = t.crowdfunding.readyTitle;
                 document.getElementById('ready-subtitle').textContent = t.crowdfunding.readySubtitle;
-                document.getElementById('contact-btn').textContent = t.crowdfunding.contactBtn;
+                const contactBtn = document.getElementById('contact-btn');
+                contactBtn.textContent = t.crowdfunding.contactBtn;
+                contactBtn.onclick = () => window.location.href = 'mailto:info@niiit.org';
                 document.getElementById('active-projects-title').textContent = t.crowdfunding.activeProjectsTitle;
                 
                 // Update project labels
@@ -1959,7 +1961,9 @@
                 document.getElementById('partnership-btn').textContent = t.contacts.write;
                 document.getElementById('investments-title').textContent = t.contacts.investments;
                 document.getElementById('investments-desc').textContent = t.contacts.investmentsDesc;
-                document.getElementById('investments-btn').textContent = t.contacts.contact;
+                const investmentsBtn = document.getElementById('investments-btn');
+                investmentsBtn.textContent = t.contacts.contact;
+                investmentsBtn.onclick = () => window.location.href = 'mailto:info@niiit.org';
                 document.getElementById('press-title').textContent = t.contacts.press;
                 document.getElementById('press-desc').textContent = t.contacts.pressDesc;
                 document.getElementById('press-btn').textContent = t.contacts.reach;
