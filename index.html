@@ -61,26 +61,83 @@
         }
 
         .language-selector {
-            display: flex;
-            gap: 8px;
             margin-left: 32px;
+            position: relative;
         }
 
-        .lang-btn {
-            background: none;
+        .language-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .lang-current {
+            background: white;
             border: 1px solid #e5e5e5;
             color: #666;
             cursor: pointer;
             font-size: 13px;
-            padding: 4px 8px;
+            padding: 4px 12px;
             border-radius: 4px;
             transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            min-width: 60px;
+            justify-content: space-between;
         }
 
-        .lang-btn:hover,
-        .lang-btn.active {
+        .lang-current:hover {
             border-color: #1a1a1a;
             color: #1a1a1a;
+        }
+
+        .lang-arrow {
+            font-size: 10px;
+            transition: transform 0.2s;
+        }
+
+        .language-dropdown.active .lang-arrow {
+            transform: rotate(180deg);
+        }
+
+        .lang-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border: 1px solid #e5e5e5;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 1001;
+            min-width: 60px;
+            display: none;
+        }
+
+        .lang-dropdown.show {
+            display: block;
+        }
+
+        .lang-option {
+            padding: 6px 12px;
+            cursor: pointer;
+            font-size: 13px;
+            color: #666;
+            transition: background-color 0.2s;
+        }
+
+        .lang-option:hover {
+            background: #f8f9fa;
+            color: #1a1a1a;
+        }
+
+        .lang-option:first-child {
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+
+        .lang-option:last-child {
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
         }
 
         .logo {
@@ -800,7 +857,6 @@
             }
             
             .language-selector {
-                gap: 6px;
                 margin-left: 16px;
             }
             
@@ -940,6 +996,8 @@
                 min-height: 100px;
                 gap: 8px;
                 align-items: center;
+                background: #f8f9fa;
+                border-bottom: 2px solid #e5e5e5;
             }
             
             .header-left {
@@ -971,12 +1029,16 @@
                 grid-column: 2;
                 grid-row: 1;
                 margin-left: 0;
-                flex-direction: column;
-                gap: 4px;
             }
             
-            .lang-btn {
-                padding: 3px 6px;
+            .lang-current {
+                padding: 6px 8px;
+                font-size: 12px;
+                min-width: 50px;
+            }
+            
+            .lang-option {
+                padding: 6px 8px;
                 font-size: 12px;
             }
             
@@ -1075,9 +1137,17 @@
                 <div class="nav-item" onclick="showSection('contacts')" id="nav-contacts">Контакты</div>
             </nav>
             <div class="language-selector">
-                <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
-                <button class="lang-btn active" onclick="changeLanguage('ru')">RU</button>
-                <button class="lang-btn" onclick="changeLanguage('el')">EL</button>
+                <div class="language-dropdown">
+                    <button class="lang-current" onclick="toggleLanguageDropdown()">
+                        <span id="current-lang">RU</span>
+                        <span class="lang-arrow">▼</span>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <div class="lang-option" onclick="changeLanguage('en')">EN</div>
+                        <div class="lang-option" onclick="changeLanguage('ru')">RU</div>
+                        <div class="lang-option" onclick="changeLanguage('el')">EL</div>
+                    </div>
+                </div>
             </div>
         </header>
 
@@ -1728,13 +1798,41 @@
             showProjectTab('digital-construction');
         }
 
+        // Toggle language dropdown
+        function toggleLanguageDropdown() {
+            const dropdown = document.getElementById('lang-dropdown');
+            dropdown.classList.toggle('show');
+            document.querySelector('.language-dropdown').classList.toggle('active');
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const languageSelector = document.querySelector('.language-selector');
+            if (!languageSelector.contains(event.target)) {
+                const dropdown = document.getElementById('lang-dropdown');
+                if (dropdown) {
+                    dropdown.classList.remove('show');
+                    document.querySelector('.language-dropdown').classList.remove('active');
+                }
+            }
+        });
+
         // Change language
         function changeLanguage(lang) {
             currentLanguage = lang;
             
-            // Update language buttons
-            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+            // Update current language display
+            const currentLangDisplay = document.getElementById('current-lang');
+            if (currentLangDisplay) {
+                currentLangDisplay.textContent = lang.toUpperCase();
+            }
+            
+            // Close dropdown
+            const dropdown = document.getElementById('lang-dropdown');
+            if (dropdown) {
+                dropdown.classList.remove('show');
+                document.querySelector('.language-dropdown').classList.remove('active');
+            }
             
             // Update translations
             updateTranslations();
