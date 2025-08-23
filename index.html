@@ -1446,20 +1446,15 @@
                             <div>
                                 <h3 style="font-size: 18px; margin-bottom: 16px; color: #1a1a1a; font-weight: 700;" id="contact-info-title">Контактная информация</h3>
                                 
-                                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
-                                    <div>
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                                    <div style="grid-column: 1 / -1;">
                                         <div style="font-weight: 600; margin-bottom: 4px; color: #1a1a1a; font-size: 13px;" id="address-label">Адрес</div>
-                                        <div style="color: #666; font-size: 13px; line-height: 1.4;">Москва, Россия<br>Центр R&D</div>
-                                    </div>
-                                    
-                                    <div>
-                                        <div style="font-weight: 600; margin-bottom: 4px; color: #1a1a1a; font-size: 13px;" id="phone-label">Телефон</div>
-                                        <div style="color: #666; font-size: 13px;">+7 (495) 123-45-67</div>
+                                        <div style="color: #666; font-size: 13px; line-height: 1.4;">109147, г. Москва, вн.тер.г. муниципальный округ Таганский,<br>ул Марксистская, д. 20, стр. 8, помещ. 1/1</div>
                                     </div>
                                     
                                     <div>
                                         <div style="font-weight: 600; margin-bottom: 4px; color: #1a1a1a; font-size: 13px;" id="email-label">Email</div>
-                                        <div style="color: #666; font-size: 13px;">info@anorii.ru</div>
+                                        <div style="color: #666; font-size: 13px;">info@niiit.org</div>
                                     </div>
                                     
                                     <div>
@@ -1950,7 +1945,6 @@
                 document.getElementById('contacts-description').textContent = t.contacts.description;
                 document.getElementById('contact-info-title').textContent = t.contacts.contactInfo;
                 document.getElementById('address-label').textContent = t.contacts.address;
-                document.getElementById('phone-label').textContent = t.contacts.phone;
                 document.getElementById('email-label').textContent = t.contacts.email;
                 document.getElementById('working-hours-label').textContent = t.contacts.workingHours;
                 document.getElementById('contact-form-title').textContent = t.contacts.contactForm;

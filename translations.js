@@ -2,7 +2,7 @@ const translations = {
     en: {
         nav: {
             home: "Home",
-            about: "About",
+            about: "About Us",
             projects: "Projects",
             crowdfunding: "Crowdfunding",
             contacts: "Contacts"
@@ -116,7 +116,6 @@ const translations = {
             description: "We welcome collaboration opportunities, partnership inquiries, and research proposals.",
             contactInfo: "Contact Information",
             address: "Address",
-            phone: "Phone",
             email: "Email",
             workingHours: "Working Hours",
             contactForm: "Contact Form",
@@ -160,7 +159,7 @@ const translations = {
     ru: {
         nav: {
             home: "Главная",
-            about: "Об институте",
+            about: "О нас",
             projects: "Проекты",
             crowdfunding: "Краудфандинг",
             contacts: "Контакты"
@@ -274,7 +273,6 @@ const translations = {
             description: "Мы приветствуем возможности сотрудничества и партнерские запросы.",
             contactInfo: "Контактная информация",
             address: "Адрес",
-            phone: "Телефон",
             email: "Email",
             workingHours: "Часы работы",
             contactForm: "Форма обратной связи",
@@ -318,7 +316,7 @@ const translations = {
     el: {
         nav: {
             home: "Αρχική",
-            about: "Σχετικά με το ινστιτούτο",
+            about: "Σχετικά με εμάς",
             projects: "Έργα",
             crowdfunding: "Crowdfunding",
             contacts: "Επικοινωνία"
@@ -432,7 +430,6 @@ const translations = {
             description: "Καλωσορίζουμε ευκαιρίες συνεργασίας και εταιρικά αιτήματα.",
             contactInfo: "Στοιχεία επικοινωνίας",
             address: "Διεύθυνση",
-            phone: "Τηλέφωνο",
             email: "Email",
             workingHours: "Ώρες εργασίας",
             contactForm: "Φόρμα επικοινωνίας",
