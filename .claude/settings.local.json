@@ -8,7 +8,9 @@
       "Bash(start http://localhost:8000)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "WebFetch(domain:www.consortium-solutionbank.ru)",
+      "WebFetch(domain:maginnov.ru)"
     ],
     "deny": [],
     "ask": []

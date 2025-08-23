@@ -132,7 +132,28 @@ const translations = {
             pressDesc: "Media requests and information materials",
             write: "Write",
             contact: "Contact",
-            reach: "Reach Out"
+            reach: "Reach Out",
+            leadership: {
+                title: "Leadership Team",
+                name: "Ilya Ivanovich Vershinkin",
+                position: "Director",
+                expertise: [
+                    "Strategic planning and project management",
+                    "Digital transformation in construction industry", 
+                    "Investment project oversight and control",
+                    "Integration of innovative technologies in business processes"
+                ],
+                achievement: "Over 15 years of experience in construction digitalization and innovative technology implementation",
+                name2: "Vladimir Petrovich Bauer",
+                position2: "Director of Strategic Forecasting Center",
+                expertise2: [
+                    "Economic policy and security",
+                    "Strategic planning and forecasting",
+                    "Risk management and modeling",
+                    "Development of technological modeling tools"
+                ],
+                achievement2: "Doctor of Economic Sciences, Candidate of Technical Sciences, Associate Professor at Financial University"
+            }
         },
         logo: "ANO RII IT and Digital Economy"
     },
@@ -269,7 +290,28 @@ const translations = {
             pressDesc: "Запросы СМИ и информационные материалы",
             write: "Написать",
             contact: "Связаться",
-            reach: "Обратиться"
+            reach: "Обратиться",
+            leadership: {
+                title: "Руководство",
+                name: "Илья Иванович Вершинкин",
+                position: "Руководитель",
+                expertise: [
+                    "Стратегическое планирование и управление проектами",
+                    "Цифровая трансформация в строительной отрасли",
+                    "Надзор и контроль инвестиционных проектов",
+                    "Интеграция инновационных технологий в бизнес-процессы"
+                ],
+                achievement: "Более 15 лет опыта в цифровизации строительства и внедрении инновационных технологий",
+                name2: "Владимир Петрович Бауэр",
+                position2: "Директор центра стратегического прогнозирования",
+                expertise2: [
+                    "Экономическая политика и безопасность",
+                    "Стратегическое планирование и прогнозирование",
+                    "Управление рисками и моделирование",
+                    "Разработка инструментов технологического моделирования"
+                ],
+                achievement2: "Д.э.н., к.т.н., доцент Финансового университета при Правительстве РФ"
+            }
         },
         logo: "АНО НИИ ИТ и цифровой экономики"
     },
@@ -406,7 +448,28 @@ const translations = {
             pressDesc: "Αιτήματα ΜΜΕ και ενημερωτικό υλικό",
             write: "Γράψτε",
             contact: "Επικοινωνία",
-            reach: "Επικοινωνήστε"
+            reach: "Επικοινωνήστε",
+            leadership: {
+                title: "Ηγετική Ομάδα",
+                name: "Ηλίας Ιβάνοβιτς Βερσίνκιν",
+                position: "Διευθυντής",
+                expertise: [
+                    "Στρατηγικός σχεδιασμός και διαχείριση έργων",
+                    "Ψηφιακός μετασχηματισμός στη βιομηχανία κατασκευών",
+                    "Εποπτεία και έλεγχος επενδυτικών έργων",
+                    "Ενσωμάτωση καινοτόμων τεχνολογιών στις επιχειρηματικές διαδικασίες"
+                ],
+                achievement: "Πάνω από 15 χρόνια εμπειρίας στην ψηφιοποίηση κατασκευών και υλοποίηση καινοτόμων τεχνολογιών",
+                name2: "Βλαντιμίρ Πέτροβιτς Μπάουερ",
+                position2: "Διευθυντής Κέντρου Στρατηγικής Πρόβλεψης",
+                expertise2: [
+                    "Οικονομική πολιτική και ασφάλεια",
+                    "Στρατηγικός σχεδιασμός και πρόβλεψη",
+                    "Διαχείριση κινδύνων και μοντελοποίηση",
+                    "Ανάπτυξη εργαλείων τεχνολογικής μοντελοποίησης"
+                ],
+                achievement2: "Διδάκτορας Οικονομικών Επιστημών, Υποψήφιος Τεχνικών Επιστημών, Αναπληρωτής Καθηγητής στο Οικονομικό Πανεπιστήμιο"
+            }
         },
         logo: "ΜΚΟ ΕΙ ΤΠ και Ψηφιακής Οικονομίας"
     }

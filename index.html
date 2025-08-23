@@ -577,6 +577,14 @@
             overflow-y: auto;
         }
 
+        /* Project Cards Grid - Desktop */
+        #projectCards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+
         .projects-list {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -995,6 +1003,46 @@
             .project-tab {
                 padding: 8px 10px;
             }
+            
+            .leadership-card {
+                padding: 16px !important;
+            }
+            
+            .leadership-grid {
+                grid-template-columns: 1fr !important;
+                gap: 16px !important;
+            }
+            
+            .leadership-grid img {
+                max-width: 120px !important;
+                height: auto !important;
+                margin: 0 auto !important;
+                display: block !important;
+            }
+        }
+        
+        /* Leadership Section Responsive Styles */
+        @media (max-width: 768px) {
+            .leadership-cards-grid {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+            
+            .leadership-card {
+                padding: 16px !important;
+            }
+            
+            .leadership-grid {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+                text-align: center;
+            }
+            
+            .leadership-grid img {
+                max-width: 140px !important;
+                margin: 0 auto !important;
+                display: block !important;
+            }
         }
     </style>
 </head>
@@ -1101,7 +1149,7 @@
                 <div class="project-tabs">
                     <button class="project-tab active" onclick="showProjectTab('digital-construction')" id="tab-digital">
                         <span class="tab-title" id="tab-digital-title">Digital Construction</span>
-                        <span class="tab-count">5</span>
+                        <span class="tab-count">3</span>
                     </button>
                     <button class="project-tab" onclick="showProjectTab('fintech')" id="tab-fintech">
                         <span class="tab-title" id="tab-fintech-title">Financial Technology</span>
@@ -1117,7 +1165,7 @@
                     </button>
                     <button class="project-tab" onclick="showProjectTab('govtech')" id="tab-govtech">
                         <span class="tab-title" id="tab-govtech-title">GovTech</span>
-                        <span class="tab-count">1</span>
+                        <span class="tab-count">2</span>
                     </button>
                 </div>
                 
@@ -1130,7 +1178,7 @@
                     
                     <div class="projects-scroll-area">
                         <!-- Project cards grid -->
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 32px;" id="projectCards">
+                        <div id="projectCards">
                             <!-- Project cards will be loaded here -->
                         </div>
                         
@@ -1363,6 +1411,82 @@
                         </div>
                     </div>
 
+                    <!-- Leadership Section -->
+                    <div style="margin-bottom: 32px;">
+                        <h3 style="font-size: 24px; font-weight: 700; text-align: center; margin-bottom: 24px; color: #1a1a1a;" id="leadership-title">Руководство</h3>
+                        
+                        <!-- Leadership Grid -->
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 1200px; margin: 0 auto;" class="leadership-cards-grid">
+                            <!-- Leader 1: Илья Иванович Вершинкин -->
+                            <div style="background: #f8f9fa; border: 1px solid #e5e5e5; border-radius: 8px; padding: 20px;" class="leadership-card">
+                                <div style="text-align: center; margin-bottom: 16px;">
+                                    <img src="https://www.consortium-solutionbank.ru/images/experts/Versinkin%20Ila%20Ivanovic.jpg" 
+                                         alt="Илья Иванович Вершинкин" 
+                                         style="width: 120px; height: 144px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                                </div>
+                                
+                                <div>
+                                    <h4 style="font-size: 18px; font-weight: 700; color: #1a1a1a; margin-bottom: 6px; text-align: center;" id="leader-name">
+                                        Илья Иванович Вершинкин
+                                    </h4>
+                                    <p style="font-size: 14px; color: #007bff; font-weight: 600; margin-bottom: 14px; text-align: center;" id="leader-position">
+                                        Руководитель
+                                    </p>
+                                    
+                                    <div style="margin-bottom: 14px;">
+                                        <h5 style="font-size: 13px; font-weight: 600; color: #1a1a1a; margin-bottom: 6px;" id="expertise-title">Области экспертизы:</h5>
+                                        <ul style="margin: 0; padding-left: 18px; color: #666; font-size: 12px; line-height: 1.4;" id="expertise-list">
+                                            <li id="expertise-1">Стратегическое планирование и управление проектами</li>
+                                            <li id="expertise-2">Цифровая трансформация в строительной отрасли</li>
+                                            <li id="expertise-3">Надзор и контроль инвестиционных проектов</li>
+                                            <li id="expertise-4">Интеграция инновационных технологий в бизнес-процессы</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div style="background: white; padding: 10px; border-radius: 6px; border-left: 4px solid #007bff;">
+                                        <p style="font-size: 12px; color: #333; margin: 0; font-style: italic;" id="leader-achievement">
+                                            <strong>Достижение:</strong> Более 15 лет опыта в цифровизации строительства и внедрении инновационных технологий
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Leader 2: Владимир Петрович Бауэр -->
+                            <div style="background: #f8f9fa; border: 1px solid #e5e5e5; border-radius: 8px; padding: 20px;" class="leadership-card">
+                                <div style="text-align: center; margin-bottom: 16px;">
+                                    <img src="https://maginnov.ru/assets/images/authors/bauer-vp.jpg" 
+                                         alt="Владимир Петрович Бауэр" 
+                                         style="width: 120px; height: 144px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                                </div>
+                                
+                                <div>
+                                    <h4 style="font-size: 18px; font-weight: 700; color: #1a1a1a; margin-bottom: 6px; text-align: center;" id="leader-name-2">
+                                        Владимир Петрович Бауэр
+                                    </h4>
+                                    <p style="font-size: 14px; color: #007bff; font-weight: 600; margin-bottom: 14px; text-align: center;" id="leader-position-2">
+                                        Директор центра стратегического прогнозирования
+                                    </p>
+                                    
+                                    <div style="margin-bottom: 14px;">
+                                        <h5 style="font-size: 13px; font-weight: 600; color: #1a1a1a; margin-bottom: 6px;" id="expertise-title-2">Области экспертизы:</h5>
+                                        <ul style="margin: 0; padding-left: 18px; color: #666; font-size: 12px; line-height: 1.4;" id="expertise-list-2">
+                                            <li id="expertise-2-1">Экономическая политика и безопасность</li>
+                                            <li id="expertise-2-2">Стратегическое планирование и прогнозирование</li>
+                                            <li id="expertise-2-3">Управление рисками и моделирование</li>
+                                            <li id="expertise-2-4">Разработка инструментов технологического моделирования</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div style="background: white; padding: 10px; border-radius: 6px; border-left: 4px solid #007bff;">
+                                        <p style="font-size: 12px; color: #333; margin: 0; font-style: italic;" id="leader-achievement-2">
+                                            <strong>Достижение:</strong> Д.э.н., к.т.н., доцент Финансового университета при Правительстве РФ
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Additional Contact Methods -->
                     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
                         <div style="background: white; border: 1px solid #e5e5e5; border-radius: 8px; padding: 16px; text-align: center;">
@@ -1400,6 +1524,183 @@
         let filteredProjects = [];
         let currentLanguage = 'ru';
 
+        // Embedded projects data as fallback (2-3 projects per category)
+        const embeddedProjectsData = [
+            // Digital Construction (3 projects)
+            {
+                "slug": "cipus-platform",
+                "title_en": "ЦиПУС Digital Construction Management Platform",
+                "title_ru": "ЦиПУС (Цифровая платформа управления строительством)",
+                "summary_en": "Unified digital environment for construction project participants. Provides end-to-end data exchange between customers, contractors and regulatory authorities.",
+                "summary_ru": "Единая цифровая среда для участников строительных проектов. Обеспечивает сквозной обмен данными между заказчиком, подрядчиком и контролирующими органами.",
+                "tags": ["digital construction", "project management", "document workflow"],
+                "status": "scale",
+                "kpis": [
+                    "50% reduction in project documentation time",
+                    "35% improvement in resource utilization",
+                    "40% faster regulatory compliance"
+                ]
+            },
+            {
+                "slug": "gazprom-digital-platform",
+                "title_en": "Gazprom Unified Digital Platform",
+                "title_ru": "Единая цифровая платформа Газпром ЦПС",
+                "summary_en": "Integrated investment project management system. Combines construction control services, document workflow, digital models (BIM/CIM).",
+                "summary_ru": "Интегрированная система управления инвестиционными проектами. Объединяет сервисы для контроля строительства, документооборота, цифровых моделей (BIM/ЦИМ).",
+                "tags": ["BIM", "digital construction", "investment projects"],
+                "status": "scale",
+                "kpis": [
+                    "25% reduction in commissioning time",
+                    "40% improvement in process transparency",
+                    "30% decrease in operational costs"
+                ]
+            },
+            {
+                "slug": "digital-construction-control",
+                "title_en": "Digital Construction Control System",
+                "title_ru": "Система цифрового строительного контроля",
+                "summary_en": "Creates unified information space for construction supervision. Automates quality control processes and generates analytical reports in real time.",
+                "summary_ru": "Создаёт единое информационное пространство для строительного надзора. Автоматизирует процессы контроля качества и формирует аналитическую отчётность в реальном времени.",
+                "tags": ["digital construction", "quality assurance", "real-time reporting"],
+                "status": "scale",
+                "kpis": [
+                    "50% reduction in reporting workload",
+                    "60% faster defect elimination",
+                    "80% improvement in control transparency"
+                ]
+            },
+            // Financial Technology (2 projects)
+            {
+                "slug": "riksl-logistics-calculation",
+                "title_en": "RiKSL Logistics Cost Calculation and Control",
+                "title_ru": "РиКСЛ (расчёт и контроль стоимости логистики)",
+                "summary_en": "Unified digital system for calculating transportation costs and logistics services in investment projects. Automates tariff approval processes.",
+                "summary_ru": "Единая цифровая система для расчёта стоимости перевозок и логистических услуг в инвестиционных проектах. Автоматизирует процесс согласования тарифов.",
+                "tags": ["fintech", "logistics calculation", "cost control"],
+                "status": "pilot",
+                "kpis": [
+                    "70% faster tariff approval",
+                    "90% improvement in cost transparency",
+                    "50% acceleration in decision making"
+                ]
+            },
+            {
+                "slug": "payment-processing-system",
+                "title_en": "Secure Payment Processing Platform",
+                "title_ru": "Платформа безопасной обработки платежей",
+                "summary_en": "Advanced payment processing system with fraud detection and blockchain integration for secure financial transactions.",
+                "summary_ru": "Передовая система обработки платежей с обнаружением мошенничества и интеграцией блокчейна для безопасных финансовых транзакций.",
+                "tags": ["fintech", "payment processing", "blockchain"],
+                "status": "scale",
+                "kpis": [
+                    "99.9% transaction security",
+                    "85% fraud detection accuracy",
+                    "40% faster payment processing"
+                ]
+            },
+            // Security & Surveillance (2 projects)
+            {
+                "slug": "personnel-equipment-monitoring",
+                "title_en": "Personnel and Equipment Monitoring System",
+                "title_ru": "Система мониторинга персонала и техники",
+                "summary_en": "Digital control of human and technical resource mobilization. Real-time tracking of equipment and personnel work, ensuring industrial safety.",
+                "summary_ru": "Цифровой контроль за мобилизацией человеческих и технических ресурсов. В режиме реального времени отслеживается работа техники и персонала.",
+                "tags": ["security", "personnel monitoring", "equipment tracking"],
+                "status": "scale",
+                "kpis": [
+                    "61% reduction in safety violations",
+                    "40% improvement in equipment utilization",
+                    "50% faster incident response time"
+                ]
+            },
+            {
+                "slug": "video-surveillance-ai",
+                "title_en": "AI-Powered Video Surveillance Network",
+                "title_ru": "Сеть видеонаблюдения с ИИ",
+                "summary_en": "Advanced video surveillance system with AI analytics for threat detection, behavior analysis, and automated security management.",
+                "summary_ru": "Передовая система видеонаблюдения с аналитикой ИИ для обнаружения угроз, анализа поведения и автоматизированного управления безопасностью.",
+                "tags": ["security", "video surveillance", "AI analytics"],
+                "status": "completed",
+                "kpis": [
+                    "95% threat detection accuracy",
+                    "70% reduction in false alarms",
+                    "24/7 automated monitoring"
+                ]
+            },
+            // AI & Analytics (3 projects)
+            {
+                "slug": "afida-digital-archive",
+                "title_en": "AFIDA Digital Archive and Documentation Catalog",
+                "title_ru": "ИУС \"АФИДА\" – цифровой архив и каталог документации",
+                "summary_en": "System for storing and processing project documentation using AI and computer vision. Provides quick search and automatic act generation.",
+                "summary_ru": "Система для хранения и обработки проектной документации с применением ИИ и машинного зрения. Обеспечивает быстрый поиск и автоматическое формирование актов.",
+                "tags": ["AI analytics", "digital archive", "computer vision"],
+                "status": "scale",
+                "kpis": [
+                    "80% faster document search",
+                    "90% automated act generation",
+                    "100% browser-based viewing"
+                ]
+            },
+            {
+                "slug": "simulation-modeling",
+                "title_en": "Simulation Modeling Technology",
+                "title_ru": "Технология имитационного моделирования",
+                "summary_en": "Tool for forecasting and analyzing business processes in construction and logistics. Identifies bottlenecks and selects optimal strategies.",
+                "summary_ru": "Инструмент для прогнозирования и анализа бизнес-процессов в строительстве и логистике. Позволяет выявлять узкие места и подбирать оптимальные стратегии.",
+                "tags": ["AI analytics", "simulation modeling", "business process analysis"],
+                "status": "pilot",
+                "kpis": [
+                    "85% accuracy in process prediction",
+                    "60% reduction in planning risks",
+                    "40% improvement in strategy selection"
+                ]
+            },
+            {
+                "slug": "unified-data-lake",
+                "title_en": "Construction Data Lake Infrastructure",
+                "title_ru": "Инфраструктура озера данных строительства",
+                "summary_en": "Centralized data repository aggregating information from multiple construction sources. Enables advanced analytics and decision making.",
+                "summary_ru": "Централизованный репозиторий данных, агрегирующий информацию из множественных строительных источников. Обеспечивает продвинутую аналитику.",
+                "tags": ["AI analytics", "data lake", "decision making"],
+                "status": "scale",
+                "kpis": [
+                    "500TB+ data processed monthly",
+                    "80% improvement in analytical insights",
+                    "60% faster decision-making cycles"
+                ]
+            },
+            // GovTech (2 projects)
+            {
+                "slug": "remote-supervision",
+                "title_en": "Remote Supervision Information System",
+                "title_ru": "ИУС \"Дистанционный надзор\"",
+                "summary_en": "Enables experts to control construction and operation processes online without site visits. Reduces travel costs and accelerates supervision.",
+                "summary_ru": "Позволяет экспертам контролировать ход строительства и эксплуатации объектов в режиме онлайн без выезда на площадку. Снижает затраты на командировки.",
+                "tags": ["govtech", "remote supervision", "online monitoring"],
+                "status": "completed",
+                "kpis": [
+                    "70% reduction in travel costs",
+                    "50% faster supervision processes",
+                    "90% improvement in production rhythm"
+                ]
+            },
+            {
+                "slug": "digital-government-platform",
+                "title_en": "Digital Government Services Platform",
+                "title_ru": "Платформа цифровых государственных услуг",
+                "summary_en": "Comprehensive digital platform for government services delivery, improving transparency and efficiency of public administration.",
+                "summary_ru": "Комплексная цифровая платформа для предоставления государственных услуг, повышающая прозрачность и эффективность государственного управления.",
+                "tags": ["govtech", "digital government", "public services"],
+                "status": "pilot",
+                "kpis": [
+                    "80% reduction in service delivery time",
+                    "95% citizen satisfaction rate",
+                    "60% cost reduction in administration"
+                ]
+            }
+        ];
+
         // Load projects data
         async function loadProjects() {
             try {
@@ -1407,11 +1708,15 @@
                 const data = await response.json();
                 projectsData = data.projects;
                 filteredProjects = projectsData;
-                renderProjectsGrid();
             } catch (error) {
-                console.error('Error loading projects:', error);
-                document.getElementById('projectsGrid').innerHTML = '<div style="padding: 20px; color: #999; text-align: center;">Failed to load projects</div>';
+                console.warn('Could not load projects from JSON file, using embedded data:', error);
+                // Use embedded data as fallback
+                projectsData = embeddedProjectsData;
+                filteredProjects = projectsData;
             }
+            
+            // Initialize with digital-construction category
+            showProjectTab('digital-construction');
         }
 
         // Change language
@@ -1557,6 +1862,57 @@
                 document.getElementById('press-title').textContent = t.contacts.press;
                 document.getElementById('press-desc').textContent = t.contacts.pressDesc;
                 document.getElementById('press-btn').textContent = t.contacts.reach;
+                
+                // Update leadership section (only if elements exist)
+                if (t.contacts.leadership && document.getElementById('leadership-title')) {
+                    document.getElementById('leadership-title').textContent = t.contacts.leadership.title;
+                    
+                    // Leader 1
+                    document.getElementById('leader-name').textContent = t.contacts.leadership.name;
+                    document.getElementById('leader-position').textContent = t.contacts.leadership.position;
+                    document.getElementById('expertise-title').textContent = currentLanguage === 'ru' ? 'Области экспертизы:' : 
+                                                                            currentLanguage === 'en' ? 'Areas of Expertise:' : 
+                                                                            'Τομείς εμπειρογνωμοσύνης:';
+                    
+                    const expertiseList = document.getElementById('expertise-list');
+                    if (expertiseList) {
+                        expertiseList.innerHTML = t.contacts.leadership.expertise.map(item => 
+                            `<li>${item}</li>`
+                        ).join('');
+                    }
+                    
+                    const achievementElement = document.getElementById('leader-achievement');
+                    if (achievementElement) {
+                        const achievementLabel = currentLanguage === 'ru' ? 'Достижение:' : 
+                                               currentLanguage === 'en' ? 'Achievement:' : 
+                                               'Επίτευγμα:';
+                        achievementElement.innerHTML = `<strong>${achievementLabel}</strong> ${t.contacts.leadership.achievement}`;
+                    }
+                    
+                    // Leader 2
+                    if (document.getElementById('leader-name-2')) {
+                        document.getElementById('leader-name-2').textContent = t.contacts.leadership.name2;
+                        document.getElementById('leader-position-2').textContent = t.contacts.leadership.position2;
+                        document.getElementById('expertise-title-2').textContent = currentLanguage === 'ru' ? 'Области экспертизы:' : 
+                                                                                currentLanguage === 'en' ? 'Areas of Expertise:' : 
+                                                                                'Τομείς εμπειρογνωμοσύνης:';
+                        
+                        const expertiseList2 = document.getElementById('expertise-list-2');
+                        if (expertiseList2) {
+                            expertiseList2.innerHTML = t.contacts.leadership.expertise2.map(item => 
+                                `<li>${item}</li>`
+                            ).join('');
+                        }
+                        
+                        const achievementElement2 = document.getElementById('leader-achievement-2');
+                        if (achievementElement2) {
+                            const achievementLabel = currentLanguage === 'ru' ? 'Достижение:' : 
+                                                   currentLanguage === 'en' ? 'Achievement:' : 
+                                                   'Επίτευγμα:';
+                            achievementElement2.innerHTML = `<strong>${achievementLabel}</strong> ${t.contacts.leadership.achievement2}`;
+                        }
+                    }
+                }
             }
         }
 
@@ -1783,10 +2139,7 @@
 
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
-            loadProjects().then(() => {
-                // Initialize first tab after projects are loaded
-                showProjectTab('digital-construction');
-            });
+            loadProjects();
             updateTranslations();
         });
     </script>
