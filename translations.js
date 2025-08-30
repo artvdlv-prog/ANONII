@@ -144,14 +144,14 @@ const translations = {
                 ],
                 achievement: "Over 15 years of experience in construction digitalization and innovative technology implementation",
                 name2: "Vladimir Petrovich Bauer",
-                position2: "Director of Strategic Forecasting Center",
+                position2: "Professor, Director of Strategic Forecasting Center",
                 expertise2: [
                     "Economic policy and security",
                     "Strategic planning and forecasting",
                     "Risk management and modeling",
                     "Development of technological modeling tools"
                 ],
-                achievement2: "Doctor of Economic Sciences, Candidate of Technical Sciences, Associate Professor at Financial University"
+                achievement2: "Professor at Financial University under the Government of the Russian Federation"
             }
         },
         logo: "ANO RII IT and Digital Economy"
@@ -301,14 +301,14 @@ const translations = {
                 ],
                 achievement: "Более 15 лет опыта в цифровизации строительства и внедрении инновационных технологий",
                 name2: "Владимир Петрович Бауэр",
-                position2: "Директор центра стратегического прогнозирования",
+                position2: "Профессор, Директор центра стратегического прогнозирования",
                 expertise2: [
                     "Экономическая политика и безопасность",
                     "Стратегическое планирование и прогнозирование",
                     "Управление рисками и моделирование",
                     "Разработка инструментов технологического моделирования"
                 ],
-                achievement2: "Д.э.н., к.т.н., доцент Финансового университета при Правительстве РФ"
+                achievement2: "Профессор Финансового университета при Правительстве РФ"
             }
         },
         logo: "АНО НИИ ИТ и цифровой экономики"
@@ -458,14 +458,14 @@ const translations = {
                 ],
                 achievement: "Πάνω από 15 χρόνια εμπειρίας στην ψηφιοποίηση κατασκευών και υλοποίηση καινοτόμων τεχνολογιών",
                 name2: "Βλαντιμίρ Πέτροβιτς Μπάουερ",
-                position2: "Διευθυντής Κέντρου Στρατηγικής Πρόβλεψης",
+                position2: "Καθηγητής, Διευθυντής Κέντρου Στρατηγικής Πρόβλεψης",
                 expertise2: [
                     "Οικονομική πολιτική και ασφάλεια",
                     "Στρατηγικός σχεδιασμός και πρόβλεψη",
                     "Διαχείριση κινδύνων και μοντελοποίηση",
                     "Ανάπτυξη εργαλείων τεχνολογικής μοντελοποίησης"
                 ],
-                achievement2: "Διδάκτορας Οικονομικών Επιστημών, Υποψήφιος Τεχνικών Επιστημών, Αναπληρωτής Καθηγητής στο Οικονομικό Πανεπιστήμιο"
+                achievement2: "Καθηγητής στο Οικονομικό Πανεπιστήμιο"
             }
         },
         logo: "ΜΚΟ ΕΙ ΤΠ και Ψηφιακής Οικονομίας"
