@@ -525,10 +525,88 @@
             }
         }
 
+        /* Small mobile phones */
         @media (max-width: 480px) {
             .about-features {
                 grid-template-columns: 1fr;
-                gap: 16px;
+                gap: 12px;
+            }
+            
+            .section {
+                padding: 8px !important;
+            }
+            
+            .projects-header {
+                padding: 0 8px !important;
+            }
+            
+            .home-content {
+                padding: 0 8px !important;
+            }
+            
+            .about-content {
+                padding: 0 8px !important;
+            }
+            
+            .hero-title {
+                font-size: 24px !important;
+                line-height: 1.2;
+            }
+            
+            .hero-subtitle {
+                font-size: 16px !important;
+                margin-bottom: 20px;
+            }
+            
+            .section-title {
+                font-size: 24px !important;
+                margin-bottom: 12px;
+            }
+            
+            /* Make all content blocks single column on small screens */
+            .home-directions-grid {
+                gap: 12px;
+            }
+            
+            .about-blocks-grid {
+                gap: 8px;
+            }
+            
+            .feature {
+                padding: 12px !important;
+                margin-bottom: 8px !important;
+            }
+            
+            .feature-title {
+                font-size: 14px !important;
+            }
+            
+            .feature-text {
+                font-size: 13px !important;
+            }
+            
+            /* Project tabs for very small screens */
+            .project-tabs {
+                padding: 8px 4px !important;
+                margin: 0 4px !important;
+            }
+            
+            .project-tab {
+                padding: 10px 12px !important;
+                font-size: 12px !important;
+            }
+            
+            .tab-title {
+                font-size: 12px !important;
+            }
+            
+            .tab-count {
+                font-size: 10px !important;
+            }
+            
+            /* Crowdfunding section adjustments */
+            .crowdfunding-container {
+                padding: 8px !important;
             }
         }
 
@@ -865,16 +943,36 @@
             
             /* Section padding for mobile */
             .section {
-                padding: 16px;
+                padding: 12px;
             }
             
             .projects-header {
-                padding: 0 16px;
+                padding: 0 12px;
             }
             
             /* Main content adjustments */
             .main {
                 padding-top: 56px;
+            }
+            
+            /* Mobile-specific content adjustments */
+            .home-content {
+                padding: 0 12px;
+            }
+            
+            .about-content {
+                padding: 0 12px;
+            }
+            
+            /* Projects page mobile adjustments */
+            .about-features {
+                grid-template-columns: 1fr !important;
+                gap: 12px !important;
+            }
+            
+            .feature {
+                padding: 16px !important;
+                margin-bottom: 12px;
             }
             
             .header {
@@ -958,14 +1056,16 @@
             .project-tabs {
                 flex-direction: column;
                 gap: 8px;
-                padding: 12px 0;
+                padding: 12px 8px;
+                margin: 0 8px;
             }
             
             .project-tab {
                 min-width: auto;
-                padding: 10px 12px;
+                padding: 12px 16px;
                 flex-direction: row;
                 justify-content: space-between;
+                font-size: 14px;
             }
             
             .tab-title {
@@ -1904,7 +2004,7 @@
             
             // Update projects directions section
             if (document.getElementById('projects-directions-title')) {
-                document.getElementById('projects-directions-title').textContent = 'Направления';
+                document.getElementById('projects-directions-title').textContent = 'Наши технологии';
                 document.getElementById('projects-feature-digital-title').textContent = t.about.features.digitalConstruction.title;
                 document.getElementById('projects-feature-digital-text').textContent = t.about.features.digitalConstruction.text;
                 document.getElementById('projects-feature-fintech-title').textContent = t.about.features.fintech.title;
