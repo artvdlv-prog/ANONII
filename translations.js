@@ -49,7 +49,7 @@ const translations = {
             }
         },
         about: {
-            title: "Research Institute for IT and Digital Economy",
+            title: "Research Institute for RIT and Digital Economy",
             subtitle: "We are a leading research and development institute focused on comprehensive digital transformation across multiple sectors including construction technology, financial systems, security infrastructure, and government digitalization.",
             description: "Our institute develops innovative solutions that bridge the gap between traditional industries and modern digital ecosystems. We specialize in creating integrated platforms that enhance operational efficiency, security, and transparency across various sectors.",
             mission: "Our mission is to accelerate digital transformation through research, development, and implementation of cutting-edge technology solutions that address real-world challenges in construction, finance, security, and public administration.",
@@ -206,7 +206,7 @@ const translations = {
             }
         },
         about: {
-            title: "Научно-исследовательский институт ИТ и цифровой экономики",
+            title: "Научно-исследовательский институт развития информационных технологий и цифровой экономики",
             subtitle: "<div style='margin-bottom: 32px;'><h4 style='font-size: 20px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; text-align: center;'>Мы развиваем цифровую экономику через:</h4><div class='about-blocks-grid'><div style='background: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #007bff; text-align: justify;'>• интеграцию науки, образования и технологий</div><div style='background: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #28a745; text-align: justify;'>• поддержку исследовательских и образовательных инициатив</div><div style='background: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #17a2b8; text-align: justify;'>• создание цифровых платформ и инструментов управления проектами</div><div style='background: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #ffc107; text-align: justify;'>• участие в международных научных и экспертных сообществах</div></div></div><div style='margin-bottom: 32px;'><h4 style='font-size: 20px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; text-align: center;'>Наши проекты направлены на:</h4><div class='about-blocks-grid'><div style='background: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #dc3545; text-align: justify;'>• формирование новой модели образования, где обучение становится гибким и персонализированным</div><div style='background: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #6f42c1; text-align: justify;'>• поддержку развития «цифровых активов» и блокчейн-инвестирования</div><div style='background: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #e83e8c; text-align: justify;'>• внедрение передовых технологий искусственного интеллекта и роботизации</div><div style='background: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #20c997; text-align: justify;'>• участие в создании экосистемы цифрового доверия</div></div></div><div style='text-align: justify; line-height: 1.6; background: #f1f3f4; padding: 20px; border-radius: 8px; margin-top: 24px;'>Мы сотрудничаем с университетами, фондами и организациями в России и за рубежом, опираясь на научные разработки и международное право.</div>",
             description: "Наш институт разрабатывает инновационные решения, которые устраняют разрыв между традиционными отраслями и современными цифровыми экосистемами. Мы специализируемся на создании интегрированных платформ, которые повышают операционную эффективность, безопасность и прозрачность в различных секторах.",
             mission: "Наша миссия - ускорить цифровую трансформацию через исследования, разработку и внедрение передовых технологических решений, которые решают реальные проблемы в строительстве, финансах, безопасности и государственном управлении.",
@@ -311,7 +311,7 @@ const translations = {
                 achievement2: "Профессор Финансового университета при Правительстве РФ"
             }
         },
-        logo: "АНО НИИ ИТ и цифровой экономики"
+        logo: "АНО НИИ РИТиЦЭ"
     },
     el: {
         nav: {
