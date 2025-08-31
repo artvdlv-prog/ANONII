@@ -612,6 +612,42 @@
 
         .feature {
             text-align: left;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            background: #f8f9fa;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        .feature:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        /* Different colored borders for each feature */
+        .feature:nth-child(1) {
+            border-left: 4px solid #007bff;
+        }
+
+        .feature:nth-child(2) {
+            border-left: 4px solid #28a745;
+        }
+
+        .feature:nth-child(3) {
+            border-left: 4px solid #17a2b8;
+        }
+
+        .feature:nth-child(4) {
+            border-left: 4px solid #ffc107;
+        }
+
+        .feature:nth-child(5) {
+            border-left: 4px solid #dc3545;
+        }
+
+        .feature:nth-child(6) {
+            border-left: 4px solid #6f42c1;
         }
 
         .feature-title {
