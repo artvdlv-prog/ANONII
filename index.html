@@ -834,8 +834,49 @@
             to { opacity: 1; }
         }
 
+        /* Home Directions Grid */
+        .home-directions-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        /* About Page Blocks */
+        .about-blocks-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
         /* Mobile Optimization */
         @media (max-width: 768px) {
+            .home-directions-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            
+            .about-blocks-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            /* Section padding for mobile */
+            .section {
+                padding: 16px;
+            }
+            
+            .projects-header {
+                padding: 0 16px;
+            }
+            
+            /* Main content adjustments */
+            .main {
+                padding-top: 56px;
+            }
+            
             .header {
                 padding: 0 16px;
                 height: 56px;
@@ -1069,8 +1110,22 @@
                 font-size: 18px !important;
             }
             
+            /* Typography adjustments for mobile */
+            .section-title {
+                font-size: 28px !important;
+            }
+            
             .about-title {
                 font-size: 26px;
+            }
+            
+            /* Directions section mobile styles */
+            .home-content {
+                padding: 0 16px;
+            }
+            
+            .about-content {
+                padding: 0 16px;
             }
             
             .project-tabs {
@@ -1283,33 +1338,12 @@
 
             <!-- Crowdfunding Section -->
             <section class="section" id="crowdfunding">
+                <!-- Header -->
+                <div class="projects-header">
+                    <h2 class="section-title" id="crowdfunding-hero-title">Инвестируй в цифровое будущее</h2>
+                </div>
+                
                 <div style="max-width: 1400px; margin: 0 auto; padding: 32px; display: flex; flex-direction: column; align-items: center; text-align: center;">
-                    
-                    <!-- Header -->
-                    <div style="margin-bottom: 48px;">
-                        <h2 class="about-title" id="crowdfunding-hero-title">Инвестируй в цифровое будущее</h2>
-                        <p class="about-text" id="crowdfunding-hero-subtitle" style="max-width: 800px;">
-                            Мы привлекаем инвестиции для запуска инновационных проектов в области цифровых технологий и ИИ.
-                        </p>
-                    </div>
-
-                    <!-- Key Points -->
-                    <div style="margin-bottom: 48px; width: 100%; max-width: 800px;">
-                        <div style="display: grid; gap: 16px;">
-                            <div style="display: flex; gap: 16px; align-items: flex-start; background: #f8f9fa; border: 1px solid #e5e5e5; padding: 20px; border-radius: 8px; text-align: left;">
-                                <span style="width: 12px; height: 12px; border-radius: 50%; background: #28a745; margin-top: 6px; flex: 0 0 12px;"></span>
-                                <div><strong id="bullet-1">Рынку нужны решения ИТ уже сегодня.</strong></div>
-                            </div>
-                            <div style="display: flex; gap: 16px; align-items: flex-start; background: #f8f9fa; border: 1px solid #e5e5e5; padding: 20px; border-radius: 8px; text-align: left;">
-                                <span style="width: 12px; height: 12px; border-radius: 50%; background: #28a745; margin-top: 6px; flex: 0 0 12px;"></span>
-                                <div id="bullet-2">Наши проекты закрывают <strong>реальные задачи</strong> бизнеса и общества.</div>
-                            </div>
-                            <div style="display: flex; gap: 16px; align-items: flex-start; background: #f8f9fa; border: 1px solid #e5e5e5; padding: 20px; border-radius: 8px; text-align: left;">
-                                <span style="width: 12px; height: 12px; border-radius: 50%; background: #28a745; margin-top: 6px; flex: 0 0 12px;"></span>
-                                <div><strong id="bullet-3">Ранние инвестиции = максимальная доходность.</strong></div>
-                            </div>
-                        </div>
-                    </div>
 
 
                     <!-- Details Section -->
@@ -1907,10 +1941,6 @@
             // Update crowdfunding section (only if elements exist)
             if (t.crowdfunding && document.getElementById('crowdfunding-hero-title')) {
                 document.getElementById('crowdfunding-hero-title').textContent = t.crowdfunding.heroTitle;
-                document.getElementById('crowdfunding-hero-subtitle').textContent = t.crowdfunding.heroSubtitle;
-                document.getElementById('bullet-1').innerHTML = '<strong>' + t.crowdfunding.bullet1 + '</strong>';
-                document.getElementById('bullet-2').innerHTML = t.crowdfunding.bullet2.replace('реальные задачи', '<strong>реальные задачи</strong>');
-                document.getElementById('bullet-3').innerHTML = '<strong>' + t.crowdfunding.bullet3 + '</strong>';
                 document.getElementById('details-title').textContent = t.crowdfunding.detailsTitle;
                 document.getElementById('details-description').textContent = t.crowdfunding.detailsDescription;
                 document.getElementById('why-needed').textContent = t.crowdfunding.whyNeeded;
