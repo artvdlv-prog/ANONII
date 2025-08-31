@@ -1191,39 +1191,9 @@
             <section class="section" id="about">
                 <div class="about-content">
                     <h2 class="about-title" id="about-title">Research Institute</h2>
-                    <p class="about-mission" id="about-mission" style="font-size: 16px; line-height: 1.6; color: #666; margin-bottom: 48px; text-align: center; max-width: 800px;">
-                        Our mission is to accelerate digital transformation through research and development.
+                    <p class="about-subtitle" id="about-subtitle" style="font-size: 18px; line-height: 1.5; color: #666; margin-bottom: 24px; text-align: left; max-width: 1000px;">
+                        <!-- Content will be loaded from translations.js -->
                     </p>
-                    
-                    <div style="width: 100%; max-width: 1400px;">
-                        <h3 id="about-directions-title" style="font-size: 28px; font-weight: 600; text-align: center; margin-bottom: 40px; color: #1a1a1a;">Наши направления</h3>
-                        <div class="about-features">
-                            <div class="feature">
-                                <div class="feature-title" id="about-feature-digital-title">Digital Construction</div>
-                                <div class="feature-text" id="about-feature-digital-text">Unified platforms integrating all construction processes from planning to completion</div>
-                            </div>
-                            <div class="feature">
-                                <div class="feature-title" id="about-feature-fintech-title">Financial Technology</div>
-                                <div class="feature-text" id="about-feature-fintech-text">Secure payment processing systems and blockchain-based transaction platforms</div>
-                            </div>
-                            <div class="feature">
-                                <div class="feature-title" id="about-feature-security-title">Security Systems</div>
-                                <div class="feature-text" id="about-feature-security-text">Advanced video surveillance networks with AI-powered analytics and access control</div>
-                            </div>
-                            <div class="feature">
-                                <div class="feature-title" id="about-feature-ai-title">AI & Analytics</div>
-                                <div class="feature-text" id="about-feature-ai-text">Machine learning solutions for predictive maintenance and process optimization</div>
-                            </div>
-                            <div class="feature">
-                                <div class="feature-title" id="about-feature-govtech-title">GovTech Solutions</div>
-                                <div class="feature-text" id="about-feature-govtech-text">Government technology platforms improving transparency and efficiency</div>
-                            </div>
-                            <div class="feature">
-                                <div class="feature-title" id="about-feature-data-title">Data Infrastructure</div>
-                                <div class="feature-text" id="about-feature-data-text">Scalable data lake architectures and unified data environments</div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </section>
 
@@ -1231,8 +1201,44 @@
             <!-- Projects Section -->
             <section class="section" id="projects">
                 <div class="projects-header">
-                    <h2 class="section-title" id="projects-title">Projects</h2>
-                    <p class="section-subtitle" id="projects-subtitle">Digital construction and automation solutions</p>
+                    <h2 class="section-title" id="projects-main-title" style="font-size: 35px; font-weight: 700; margin-bottom: 8px;">Комплексные цифровые решения</h2>
+                    <p class="section-subtitle" id="projects-main-subtitle" style="font-size: 15px; color: #666;">в сферах строительства, финтеха, безопасности и государственных технологий</p>
+                </div>
+                
+                <!-- Our Directions Section -->
+                <div style="width: 100%; max-width: 1400px; margin: 0 auto 48px auto; padding: 0 32px;">
+                    <h3 id="projects-directions-title" style="font-size: 28px; font-weight: 600; text-align: center; margin-bottom: 40px; color: #1a1a1a;">Направления</h3>
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-title" id="projects-feature-digital-title">Digital Construction</div>
+                            <div class="feature-text" id="projects-feature-digital-text">Unified platforms integrating all construction processes from planning to completion</div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-title" id="projects-feature-fintech-title">Financial Technology</div>
+                            <div class="feature-text" id="projects-feature-fintech-text">Secure payment processing systems and blockchain-based transaction platforms</div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-title" id="projects-feature-security-title">Security Systems</div>
+                            <div class="feature-text" id="projects-feature-security-text">Advanced video surveillance networks with AI-powered analytics and access control</div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-title" id="projects-feature-ai-title">AI & Analytics</div>
+                            <div class="feature-text" id="projects-feature-ai-text">Machine learning solutions for predictive maintenance and process optimization</div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-title" id="projects-feature-govtech-title">GovTech Solutions</div>
+                            <div class="feature-text" id="projects-feature-govtech-text">Government technology platforms improving transparency and efficiency</div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-title" id="projects-feature-data-title">Data Infrastructure</div>
+                            <div class="feature-text" id="projects-feature-data-text">Scalable data lake architectures and unified data environments</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projects Header -->
+                <div class="projects-header">
+                    <h2 class="section-title" id="projects-title" style="font-size: 35px; font-weight: 700; margin-bottom: 8px;">Проекты</h2>
                 </div>
                 
                 <!-- Project Category Tabs -->
@@ -1861,7 +1867,23 @@
             
             // Update projects section
             document.getElementById('projects-title').textContent = t.projects.title;
-            document.getElementById('projects-subtitle').textContent = t.projects.subtitle;
+            
+            // Update projects directions section
+            if (document.getElementById('projects-directions-title')) {
+                document.getElementById('projects-directions-title').textContent = 'Направления';
+                document.getElementById('projects-feature-digital-title').textContent = t.about.features.digitalConstruction.title;
+                document.getElementById('projects-feature-digital-text').textContent = t.about.features.digitalConstruction.text;
+                document.getElementById('projects-feature-fintech-title').textContent = t.about.features.fintech.title;
+                document.getElementById('projects-feature-fintech-text').textContent = t.about.features.fintech.text;
+                document.getElementById('projects-feature-security-title').textContent = t.about.features.security.title;
+                document.getElementById('projects-feature-security-text').textContent = t.about.features.security.text;
+                document.getElementById('projects-feature-ai-title').textContent = t.about.features.aiAnalytics.title;
+                document.getElementById('projects-feature-ai-text').textContent = t.about.features.aiAnalytics.text;
+                document.getElementById('projects-feature-govtech-title').textContent = t.about.features.govTech.title;
+                document.getElementById('projects-feature-govtech-text').textContent = t.about.features.govTech.text;
+                document.getElementById('projects-feature-data-title').textContent = t.about.features.dataInfrastructure.title;
+                document.getElementById('projects-feature-data-text').textContent = t.about.features.dataInfrastructure.text;
+            }
             
             // Update project tabs
             document.getElementById('tab-digital-title').textContent = t.projects.tabs.digitalConstruction;
@@ -1878,24 +1900,7 @@
             // Update about section (only if elements exist)
             if (document.getElementById('about-title')) {
                 document.getElementById('about-title').textContent = t.about.title;
-                document.getElementById('about-mission').textContent = t.about.mission;
-                
-                // Update about page directions
-                if (document.getElementById('about-directions-title')) {
-                    document.getElementById('about-directions-title').textContent = t.home.ourDirections;
-                    document.getElementById('about-feature-digital-title').textContent = t.about.features.digitalConstruction.title;
-                    document.getElementById('about-feature-digital-text').textContent = t.about.features.digitalConstruction.text;
-                    document.getElementById('about-feature-fintech-title').textContent = t.about.features.fintech.title;
-                    document.getElementById('about-feature-fintech-text').textContent = t.about.features.fintech.text;
-                    document.getElementById('about-feature-security-title').textContent = t.about.features.security.title;
-                    document.getElementById('about-feature-security-text').textContent = t.about.features.security.text;
-                    document.getElementById('about-feature-ai-title').textContent = t.about.features.aiAnalytics.title;
-                    document.getElementById('about-feature-ai-text').textContent = t.about.features.aiAnalytics.text;
-                    document.getElementById('about-feature-govtech-title').textContent = t.about.features.govTech.title;
-                    document.getElementById('about-feature-govtech-text').textContent = t.about.features.govTech.text;
-                    document.getElementById('about-feature-data-title').textContent = t.about.features.dataInfrastructure.title;
-                    document.getElementById('about-feature-data-text').textContent = t.about.features.dataInfrastructure.text;
-                }
+                document.getElementById('about-subtitle').innerHTML = t.about.subtitle;
             }
             
             
