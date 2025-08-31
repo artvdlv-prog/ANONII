@@ -4,7 +4,7 @@ const translations = {
             home: "Home",
             about: "About Us",
             projects: "Projects",
-            crowdfunding: "Crowdfunding",
+            crowdfunding: "Investments",
             contacts: "Contacts"
         },
         home: {
@@ -161,7 +161,7 @@ const translations = {
             home: "Главная",
             about: "О нас",
             projects: "Проекты",
-            crowdfunding: "Краудфандинг",
+            crowdfunding: "Инвестиции",
             contacts: "Контакты"
         },
         home: {
@@ -318,7 +318,7 @@ const translations = {
             home: "Αρχική",
             about: "Σχετικά με εμάς",
             projects: "Έργα",
-            crowdfunding: "Crowdfunding",
+            crowdfunding: "Investments",
             contacts: "Επικοινωνία"
         },
         home: {
