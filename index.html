@@ -1292,24 +1292,33 @@
         /* Leadership Section Responsive Styles */
         @media (max-width: 768px) {
             .leadership-cards-grid {
-                grid-template-columns: 1fr !important;
-                gap: 20px !important;
+                gap: 16px !important;
             }
             
             .leadership-card {
+                flex-direction: column !important;
+                text-align: center !important;
                 padding: 16px !important;
             }
             
-            .leadership-grid {
-                grid-template-columns: 1fr !important;
-                gap: 20px !important;
-                text-align: center;
+            .leadership-card img {
+                width: 100px !important;
+                height: 120px !important;
+                margin: 0 auto 12px auto !important;
             }
             
-            .leadership-grid img {
-                max-width: 140px !important;
-                margin: 0 auto !important;
-                display: block !important;
+            .board-cards-grid {
+                gap: 12px !important;
+            }
+            
+            .board-card {
+                flex-direction: column !important;
+                text-align: center !important;
+                padding: 16px !important;
+            }
+            
+            .board-card > div:first-child {
+                margin: 0 auto 12px auto !important;
             }
         }
     </style>
@@ -1385,6 +1394,134 @@
                     <p class="about-subtitle" id="about-subtitle" style="font-size: 18px; line-height: 1.5; color: #666; margin-bottom: 24px; text-align: left; max-width: 1000px;">
                         <!-- Content will be loaded from translations.js -->
                     </p>
+                </div>
+                
+                <!-- Leadership Section -->
+                <div style="max-width: 1400px; margin: 0 auto; padding: 24px;">
+                    <div style="margin-bottom: 32px;">
+                        <h3 style="font-size: 24px; font-weight: 700; text-align: center; margin-bottom: 24px; color: #1a1a1a;" id="leadership-title-about">Руководство</h3>
+                        
+                        <!-- Leadership Grid -->
+                        <div style="display: flex; flex-direction: column; gap: 20px; max-width: 1000px; margin: 0 auto;" class="leadership-cards-grid">
+                            <!-- Leader 1: Илья Иванович Вершинкин -->
+                            <div style="background: #f8f9fa; border: 1px solid #e5e5e5; border-radius: 8px; padding: 20px; display: flex; gap: 20px; align-items: flex-start;" class="leadership-card">
+                                <div style="flex-shrink: 0;">
+                                    <img src="image.png" 
+                                         alt="Илья Иванович Вершинкин" 
+                                         style="width: 120px; height: 144px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                                </div>
+                                
+                                <div style="flex: 1;">
+                                    <h4 style="font-size: 18px; font-weight: 700; color: #1a1a1a; margin-bottom: 6px;" id="leader-name-about">
+                                        Илья Иванович Вершинкин
+                                    </h4>
+                                    <p style="font-size: 14px; color: #007bff; font-weight: 600; margin-bottom: 8px;" id="leader-position-about">
+                                        Руководитель
+                                    </p>
+                                    
+                                    <p style="font-size: 13px; color: #666; line-height: 1.5; margin: 0;">
+                                        Специалист в области стратегического планирования, управления проектами и цифровой трансформации в строительной отрасли.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Leader 2: Владимир Петрович Бауэр -->
+                            <div style="background: #f8f9fa; border: 1px solid #e5e5e5; border-radius: 8px; padding: 20px; display: flex; gap: 20px; align-items: flex-start;" class="leadership-card">
+                                <div style="flex-shrink: 0;">
+                                    <img src="https://maginnov.ru/assets/images/authors/bauer-vp.jpg" 
+                                         alt="Владимир Петрович Бауэр" 
+                                         style="width: 120px; height: 144px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                                </div>
+                                
+                                <div style="flex: 1;">
+                                    <h4 style="font-size: 18px; font-weight: 700; color: #1a1a1a; margin-bottom: 6px;" id="leader-name-2-about">
+                                        Владимир Петрович Бауэр
+                                    </h4>
+                                    <p style="font-size: 14px; color: #007bff; font-weight: 600; margin-bottom: 8px;" id="leader-position-2-about">
+                                        Профессор, Директор центра стратегического прогнозирования
+                                    </p>
+                                    
+                                    <p style="font-size: 13px; color: #666; line-height: 1.5; margin: 0;">
+                                        Эксперт в области экономической политики, безопасности, стратегического планирования и прогнозирования.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Board of Trustees Section -->
+                    <div style="margin-bottom: 32px;">
+                        <h3 style="font-size: 24px; font-weight: 700; text-align: center; margin-bottom: 24px; color: #1a1a1a;" id="board-title-about">Попечительский совет</h3>
+                        
+                        <!-- Board Grid -->
+                        <div style="display: flex; flex-direction: column; gap: 16px; max-width: 1000px; margin: 0 auto;" class="board-cards-grid">
+                            <!-- Board Member 1 -->
+                            <div style="background: #f8f9fa; border: 1px solid #e5e5e5; border-radius: 8px; padding: 16px; display: flex; gap: 16px; align-items: flex-start;" class="board-card">
+                                <div style="flex-shrink: 0;">
+                                    <div style="width: 80px; height: 80px; background: #007bff; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                        <span style="color: white; font-size: 24px; font-weight: 600;">А</span>
+                                    </div>
+                                </div>
+                                
+                                <div style="flex: 1;">
+                                    <h4 style="font-size: 16px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px;" id="board-member-1-name">
+                                        Андрей Иванович Петров
+                                    </h4>
+                                    <p style="font-size: 13px; color: #007bff; font-weight: 600; margin-bottom: 6px;" id="board-member-1-position">
+                                        Председатель попечительского совета
+                                    </p>
+                                    
+                                    <p style="font-size: 12px; color: #666; line-height: 1.4; margin: 0;">
+                                        Специалист в области инвестиционного планирования и развития высокотехнологичных предприятий.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Board Member 2 -->
+                            <div style="background: #f8f9fa; border: 1px solid #e5e5e5; border-radius: 8px; padding: 16px; display: flex; gap: 16px; align-items: flex-start;" class="board-card">
+                                <div style="flex-shrink: 0;">
+                                    <div style="width: 80px; height: 80px; background: #007bff; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                        <span style="color: white; font-size: 24px; font-weight: 600;">М</span>
+                                    </div>
+                                </div>
+                                
+                                <div style="flex: 1;">
+                                    <h4 style="font-size: 16px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px;" id="board-member-2-name">
+                                        Мария Сергеевна Кузнецова
+                                    </h4>
+                                    <p style="font-size: 13px; color: #007bff; font-weight: 600; margin-bottom: 6px;" id="board-member-2-position">
+                                        Член попечительского совета
+                                    </p>
+                                    
+                                    <p style="font-size: 12px; color: #666; line-height: 1.4; margin: 0;">
+                                        Эксперт в области финансового планирования и стратегического развития научно-исследовательских институтов.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Board Member 3 -->
+                            <div style="background: #f8f9fa; border: 1px solid #e5e5e5; border-radius: 8px; padding: 16px; display: flex; gap: 16px; align-items: flex-start;" class="board-card">
+                                <div style="flex-shrink: 0;">
+                                    <div style="width: 80px; height: 80px; background: #007bff; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                        <span style="color: white; font-size: 24px; font-weight: 600;">В</span>
+                                    </div>
+                                </div>
+                                
+                                <div style="flex: 1;">
+                                    <h4 style="font-size: 16px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px;" id="board-member-3-name">
+                                        Виктор Александрович Смирнов
+                                    </h4>
+                                    <p style="font-size: 13px; color: #007bff; font-weight: 600; margin-bottom: 6px;" id="board-member-3-position">
+                                        Член попечительского совета
+                                    </p>
+                                    
+                                    <p style="font-size: 12px; color: #666; line-height: 1.4; margin: 0;">
+                                        Специалист в области правового регулирования и корпоративного управления.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -1663,81 +1800,6 @@
                         </div>
                     </div>
 
-                    <!-- Leadership Section -->
-                    <div style="margin-bottom: 32px;">
-                        <h3 style="font-size: 24px; font-weight: 700; text-align: center; margin-bottom: 24px; color: #1a1a1a;" id="leadership-title">Руководство</h3>
-                        
-                        <!-- Leadership Grid -->
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 1200px; margin: 0 auto;" class="leadership-cards-grid">
-                            <!-- Leader 1: Илья Иванович Вершинкин -->
-                            <div style="background: #f8f9fa; border: 1px solid #e5e5e5; border-radius: 8px; padding: 20px;" class="leadership-card">
-                                <div style="text-align: center; margin-bottom: 16px;">
-                                    <img src="image.png" 
-                                         alt="Илья Иванович Вершинкин" 
-                                         style="width: 120px; height: 144px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                                </div>
-                                
-                                <div>
-                                    <h4 style="font-size: 18px; font-weight: 700; color: #1a1a1a; margin-bottom: 6px; text-align: center;" id="leader-name">
-                                        Илья Иванович Вершинкин
-                                    </h4>
-                                    <p style="font-size: 14px; color: #007bff; font-weight: 600; margin-bottom: 14px; text-align: center;" id="leader-position">
-                                        Руководитель
-                                    </p>
-                                    
-                                    <div style="margin-bottom: 14px;">
-                                        <h5 style="font-size: 13px; font-weight: 600; color: #1a1a1a; margin-bottom: 6px;" id="expertise-title">Области экспертизы:</h5>
-                                        <ul style="margin: 0; padding-left: 18px; color: #666; font-size: 12px; line-height: 1.4;" id="expertise-list">
-                                            <li id="expertise-1">Стратегическое планирование и управление проектами</li>
-                                            <li id="expertise-2">Цифровая трансформация в строительной отрасли</li>
-                                            <li id="expertise-3">Надзор и контроль инвестиционных проектов</li>
-                                            <li id="expertise-4">Интеграция инновационных технологий в бизнес-процессы</li>
-                                        </ul>
-                                    </div>
-                                    
-                                    <div style="background: white; padding: 10px; border-radius: 6px; border-left: 4px solid #007bff;">
-                                        <p style="font-size: 12px; color: #333; margin: 0; font-style: italic;" id="leader-achievement">
-                                            <strong>Достижение:</strong> Более 15 лет опыта в цифровизации строительства и внедрении инновационных технологий
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Leader 2: Владимир Петрович Бауэр -->
-                            <div style="background: #f8f9fa; border: 1px solid #e5e5e5; border-radius: 8px; padding: 20px;" class="leadership-card">
-                                <div style="text-align: center; margin-bottom: 16px;">
-                                    <img src="https://maginnov.ru/assets/images/authors/bauer-vp.jpg" 
-                                         alt="Владимир Петрович Бауэр" 
-                                         style="width: 120px; height: 144px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                                </div>
-                                
-                                <div>
-                                    <h4 style="font-size: 18px; font-weight: 700; color: #1a1a1a; margin-bottom: 6px; text-align: center;" id="leader-name-2">
-                                        Владимир Петрович Бауэр
-                                    </h4>
-                                    <p style="font-size: 14px; color: #007bff; font-weight: 600; margin-bottom: 14px; text-align: center;" id="leader-position-2">
-                                        Профессор, Директор центра стратегического прогнозирования
-                                    </p>
-                                    
-                                    <div style="margin-bottom: 14px;">
-                                        <h5 style="font-size: 13px; font-weight: 600; color: #1a1a1a; margin-bottom: 6px;" id="expertise-title-2">Области экспертизы:</h5>
-                                        <ul style="margin: 0; padding-left: 18px; color: #666; font-size: 12px; line-height: 1.4;" id="expertise-list-2">
-                                            <li id="expertise-2-1">Экономическая политика и безопасность</li>
-                                            <li id="expertise-2-2">Стратегическое планирование и прогнозирование</li>
-                                            <li id="expertise-2-3">Управление рисками и моделирование</li>
-                                            <li id="expertise-2-4">Разработка инструментов технологического моделирования</li>
-                                        </ul>
-                                    </div>
-                                    
-                                    <div style="background: white; padding: 10px; border-radius: 6px; border-left: 4px solid #007bff;">
-                                        <p style="font-size: 12px; color: #333; margin: 0; font-style: italic;" id="leader-achievement-2">
-                                            <strong>Достижение:</strong> Профессор Финансового университета при Правительстве РФ
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                     <!-- Additional Contact Methods -->
                     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
@@ -2018,6 +2080,9 @@
         function updateTranslations() {
             const t = translations[currentLanguage];
             
+            // Update page title
+            document.title = t.logo;
+            
             // Update logo
             document.querySelector('.logo').textContent = t.logo;
             
@@ -2037,10 +2102,13 @@
             
             // Update projects section
             document.getElementById('projects-title').textContent = t.projects.title;
+            if (document.getElementById('projects-main-title')) {
+                document.getElementById('projects-main-title').textContent = t.projects.mainTitle;
+            }
             
             // Update projects directions section
             if (document.getElementById('projects-directions-title')) {
-                document.getElementById('projects-directions-title').textContent = 'Наши технологии';
+                document.getElementById('projects-directions-title').textContent = t.home.ourTechnologies;
                 document.getElementById('projects-feature-digital-title').textContent = t.about.features.digitalConstruction.title;
                 document.getElementById('projects-feature-digital-text').textContent = t.about.features.digitalConstruction.text;
                 document.getElementById('projects-feature-fintech-title').textContent = t.about.features.fintech.title;
@@ -2139,54 +2207,29 @@
                 document.getElementById('press-desc').textContent = t.contacts.pressDesc;
                 document.getElementById('press-btn').textContent = t.contacts.reach;
                 
-                // Update leadership section (only if elements exist)
-                if (t.contacts.leadership && document.getElementById('leadership-title')) {
-                    document.getElementById('leadership-title').textContent = t.contacts.leadership.title;
+                // Update leadership section in about page (only if elements exist)
+                if (t.contacts.leadership && document.getElementById('leadership-title-about')) {
+                    document.getElementById('leadership-title-about').textContent = t.contacts.leadership.title;
                     
                     // Leader 1
-                    document.getElementById('leader-name').textContent = t.contacts.leadership.name;
-                    document.getElementById('leader-position').textContent = t.contacts.leadership.position;
-                    document.getElementById('expertise-title').textContent = currentLanguage === 'ru' ? 'Области экспертизы:' : 
-                                                                            currentLanguage === 'en' ? 'Areas of Expertise:' : 
-                                                                            'Τομείς εμπειρογνωμοσύνης:';
-                    
-                    const expertiseList = document.getElementById('expertise-list');
-                    if (expertiseList) {
-                        expertiseList.innerHTML = t.contacts.leadership.expertise.map(item => 
-                            `<li>${item}</li>`
-                        ).join('');
+                    if (document.getElementById('leader-name-about')) {
+                        document.getElementById('leader-name-about').textContent = t.contacts.leadership.name;
                     }
-                    
-                    const achievementElement = document.getElementById('leader-achievement');
-                    if (achievementElement) {
-                        const achievementLabel = currentLanguage === 'ru' ? 'Достижение:' : 
-                                               currentLanguage === 'en' ? 'Achievement:' : 
-                                               'Επίτευγμα:';
-                        achievementElement.innerHTML = `<strong>${achievementLabel}</strong> ${t.contacts.leadership.achievement}`;
+                    if (document.getElementById('leader-position-about')) {
+                        document.getElementById('leader-position-about').textContent = t.contacts.leadership.position;
                     }
                     
                     // Leader 2
-                    if (document.getElementById('leader-name-2')) {
-                        document.getElementById('leader-name-2').textContent = t.contacts.leadership.name2;
-                        document.getElementById('leader-position-2').textContent = t.contacts.leadership.position2;
-                        document.getElementById('expertise-title-2').textContent = currentLanguage === 'ru' ? 'Области экспертизы:' : 
-                                                                                currentLanguage === 'en' ? 'Areas of Expertise:' : 
-                                                                                'Τομείς εμπειρογνωμοσύνης:';
-                        
-                        const expertiseList2 = document.getElementById('expertise-list-2');
-                        if (expertiseList2) {
-                            expertiseList2.innerHTML = t.contacts.leadership.expertise2.map(item => 
-                                `<li>${item}</li>`
-                            ).join('');
-                        }
-                        
-                        const achievementElement2 = document.getElementById('leader-achievement-2');
-                        if (achievementElement2) {
-                            const achievementLabel = currentLanguage === 'ru' ? 'Достижение:' : 
-                                                   currentLanguage === 'en' ? 'Achievement:' : 
-                                                   'Επίτευγμα:';
-                            achievementElement2.innerHTML = `<strong>${achievementLabel}</strong> ${t.contacts.leadership.achievement2}`;
-                        }
+                    if (document.getElementById('leader-name-2-about')) {
+                        document.getElementById('leader-name-2-about').textContent = t.contacts.leadership.name2;
+                        document.getElementById('leader-position-2-about').textContent = t.contacts.leadership.position2;
+                    }
+                    
+                    // Update board of trustees section
+                    if (document.getElementById('board-title-about')) {
+                        document.getElementById('board-title-about').textContent = currentLanguage === 'ru' ? 'Попечительский совет' :
+                                                                               currentLanguage === 'en' ? 'Board of Trustees' :
+                                                                               'Διοικητικό Συμβούλιο';
                     }
                 }
             }
