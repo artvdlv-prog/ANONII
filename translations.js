@@ -9,17 +9,19 @@ const translations = {
         },
         home: {
             title: "Digital Innovation & Technology Solutions",
-            subtitle: "We drive <strong>digital transformation</strong> across multiple industries through <strong>innovative technology solutions</strong>, unified data environments, and intelligent automation frameworks.",
+            subtitle: "We unite science, technology and education to shape a new digital reality.<br><br><strong>Our strategic directions:</strong><br><br><div class='home-directions-grid'><div style='background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #007bff;'><strong>Science and Research</strong><br><span style='font-size: 0.9em; color: #555;'>Developing advanced solutions in the digital economy</span></div><div style='background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #28a745;'><strong>Education</strong><br><span style='font-size: 0.9em; color: #555;'>Courses, programs and new learning models for future generations</span></div><div style='background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #17a2b8;'><strong>Process Digitization</strong><br><span style='font-size: 0.9em; color: #555;'>Digital assets, project management, AI and blockchain technology implementation</span></div></div><div style='text-align: justify; line-height: 1.5; margin-top: 20px;'>Our mission is to create artificial intelligence and digital systems based on life development science. We envision a future where knowledge becomes the main resource, and digital platforms serve as the framework for societal, economic, and governmental development.</div>",
             description: "Our institute specializes in creating <strong>cutting-edge digital ecosystems</strong> that integrate construction management, financial technology solutions, comprehensive security and surveillance systems, and <strong>advanced data analytics platforms</strong>.",
             stats: {
                 activeProjects: "Active Projects",
                 efficiency: "Efficiency Improvement", 
                 dataProcessed: "Investment Volume"
             },
-            ourDirections: "Our Directions"
+            ourDirections: "Our Directions",
+            ourTechnologies: "Our Technologies"
         },
         projects: {
             title: "Projects",
+            mainTitle: "Comprehensive Digital Solutions",
             subtitle: "Comprehensive digital solutions across construction, fintech, security, and government technology sectors",
             tabs: {
                 digitalConstruction: "Digital Construction",
@@ -50,7 +52,7 @@ const translations = {
         },
         about: {
             title: "Research Institute for RIT and Digital Economy",
-            subtitle: "We are a leading research and development institute focused on comprehensive digital transformation across multiple sectors including construction technology, financial systems, security infrastructure, and government digitalization.",
+            subtitle: "<div style='margin-bottom: 32px;'><h4 style='font-size: 20px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; text-align: center;'>We develop the digital economy through:</h4><div class='about-blocks-grid'><div style='background: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #007bff; text-align: justify;'>• integration of science, education and technology</div><div style='background: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #28a745; text-align: justify;'>• support for research and educational initiatives</div><div style='background: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #17a2b8; text-align: justify;'>• creation of digital platforms and project management tools</div><div style='background: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #ffc107; text-align: justify;'>• participation in international scientific and expert communities</div></div></div><div style='margin-bottom: 32px;'><h4 style='font-size: 20px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; text-align: center;'>Our projects aim to:</h4><div class='about-blocks-grid'><div style='background: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #dc3545; text-align: justify;'>• form a new model of education where learning becomes flexible and personalized</div><div style='background: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #6f42c1; text-align: justify;'>• support development of \"digital assets\" and blockchain investing</div><div style='background: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #e83e8c; text-align: justify;'>• implement advanced artificial intelligence and robotics technologies</div><div style='background: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #20c997; text-align: justify;'>• participate in creating a digital trust ecosystem</div></div></div><div style='text-align: justify; line-height: 1.6; background: #f1f3f4; padding: 20px; border-radius: 8px; margin-top: 24px;'>We collaborate with universities, foundations and organizations in Russia and abroad, relying on scientific developments and international law.</div>",
             description: "Our institute develops innovative solutions that bridge the gap between traditional industries and modern digital ecosystems. We specialize in creating integrated platforms that enhance operational efficiency, security, and transparency across various sectors.",
             mission: "Our mission is to accelerate digital transformation through research, development, and implementation of cutting-edge technology solutions that address real-world challenges in construction, finance, security, and public administration.",
             features: {
@@ -133,9 +135,9 @@ const translations = {
             contact: "Contact",
             reach: "Reach Out",
             leadership: {
-                title: "Leadership Team",
+                title: "Board of Directors",
                 name: "Ilya Ivanovich Vershinkin",
-                position: "Director",
+                position: "Board Chairman",
                 expertise: [
                     "Strategic planning and project management",
                     "Digital transformation in construction industry", 
@@ -144,7 +146,7 @@ const translations = {
                 ],
                 achievement: "Over 15 years of experience in construction digitalization and innovative technology implementation",
                 name2: "Vladimir Petrovich Bauer",
-                position2: "Professor, Director of Strategic Forecasting Center",
+                position2: "Board Chairman Advisor",
                 expertise2: [
                     "Economic policy and security",
                     "Strategic planning and forecasting",
@@ -154,7 +156,7 @@ const translations = {
                 achievement2: "Professor at Financial University under the Government of the Russian Federation"
             }
         },
-        logo: "ANO RII IT and Digital Economy"
+        logo: "ANO RIT and Digital Economy"
     },
     ru: {
         nav: {
@@ -173,10 +175,12 @@ const translations = {
                 efficiency: "Повышение эффективности",
                 dataProcessed: "Объем инвестиций"
             },
-            ourDirections: "Наши направления"
+            ourDirections: "Наши направления",
+            ourTechnologies: "Наши технологии"
         },
         projects: {
-            title: "Проекты",
+            title: "Проекты", 
+            mainTitle: "Комплексные цифровые решения",
             subtitle: "Комплексные цифровые решения в сферах строительства, финтеха, безопасности и государственных технологий",
             tabs: {
                 digitalConstruction: "Цифровое строительство",
@@ -290,9 +294,9 @@ const translations = {
             contact: "Связаться",
             reach: "Обратиться",
             leadership: {
-                title: "Руководство",
+                title: "Правление",
                 name: "Илья Иванович Вершинкин",
-                position: "Руководитель",
+                position: "Председатель правления",
                 expertise: [
                     "Стратегическое планирование и управление проектами",
                     "Цифровая трансформация в строительной отрасли",
@@ -301,7 +305,7 @@ const translations = {
                 ],
                 achievement: "Более 15 лет опыта в цифровизации строительства и внедрении инновационных технологий",
                 name2: "Владимир Петрович Бауэр",
-                position2: "Профессор, Директор центра стратегического прогнозирования",
+                position2: "Советник председателя правления",
                 expertise2: [
                     "Экономическая политика и безопасность",
                     "Стратегическое планирование и прогнозирование",
@@ -323,17 +327,19 @@ const translations = {
         },
         home: {
             title: "Ψηφιακές καινοτομίες και τεχνολογικές λύσεις",
-            subtitle: "Οδηγούμε τον <strong>ψηφιακό μετασχηματισμό</strong> σε πολλαπλές βιομηχανίες μέσω <strong>καινοτόμων τεχνολογικών λύσεων</strong>, ενιαίων περιβαλλόντων δεδομένων και πλαισίων ευφυούς αυτοματισμού.",
+            subtitle: "Ενώνουμε επιστήμη, τεχνολογία και εκπαίδευση για να διαμορφώσουμε μια νέα ψηφιακή πραγματικότητα.<br><br><strong>Οι στρατηγικές μας κατευθύνσεις:</strong><br><br><div class='home-directions-grid'><div style='background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #007bff;'><strong>Επιστήμη και Έρευνα</strong><br><span style='font-size: 0.9em; color: #555;'>Ανάπτυξη προηγμένων λύσεων στην ψηφιακή οικονομία</span></div><div style='background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #28a745;'><strong>Εκπαίδευση</strong><br><span style='font-size: 0.9em; color: #555;'>Μαθήματα, προγράμματα και νέα μοντέλα μάθησης για τις μελλοντικές γενιές</span></div><div style='background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #17a2b8;'><strong>Ψηφιοποίηση Διαδικασιών</strong><br><span style='font-size: 0.9em; color: #555;'>Ψηφιακά περιουσιακά στοιχεία, διαχείριση έργων, υλοποίηση AI και blockchain τεχνολογιών</span></div></div><div style='text-align: justify; line-height: 1.5; margin-top: 20px;'>Η αποστολή μας είναι να δημιουργήσουμε τεχνητή νοημοσύνη και ψηφιακά συστήματα βασισμένα στην επιστήμη ανάπτυξης της ζωής. Οραματιζόμαστε ένα μέλλον όπου η γνώση γίνεται ο κύριος πόρος και οι ψηφιακές πλατφόρμες χρησιμεύουν ως πλαίσιο για την κοινωνική, οικονομική και κυβερνητική ανάπτυξη.</div>",
             description: "Το ινστιτούτο μας ειδικεύεται στη δημιουργία <strong>προηγμένων ψηφιακών οικοσυστημάτων</strong> που ενσωματώνουν τη διαχείριση κατασκευών, λύσεις χρηματοοικονομικής τεχνολογίας, ολοκληρωμένα συστήματα ασφαλείας και επιτήρησης, καθώς και <strong>προηγμένες πλατφόρμες αναλυτικών δεδομένων</strong>.",
             stats: {
                 activeProjects: "Ενεργά έργα",
                 efficiency: "Βελτίωση αποδοτικότητας",
                 dataProcessed: "Όγκος επενδύσεων"
             },
-            ourDirections: "Οι κατευθύνσεις μας"
+            ourDirections: "Οι κατευθύνσεις μας",
+            ourTechnologies: "Οι τεχνολογίες μας"
         },
         projects: {
             title: "Έργα",
+            mainTitle: "Ολοκληρωμένες ψηφιακές λύσεις",
             subtitle: "Ολοκληρωμένες ψηφιακές λύσεις σε τομείς κατασκευών, fintech, ασφάλειας και κυβερνητικής τεχνολογίας",
             tabs: {
                 digitalConstruction: "Ψηφιακή κατασκευή",
@@ -364,7 +370,7 @@ const translations = {
         },
         about: {
             title: "Ερευνητικό Ινστιτούτο ΤΠ και Ψηφιακής Οικονομίας",
-            subtitle: "Είμαστε ένα κορυφαίο ερευνητικό και αναπτυξιακό ινστιτούτο που εστιάζει στον ολοκληρωμένο ψηφιακό μετασχηματισμό σε πολλαπλούς τομείς συμπεριλαμβανομένων των τεχνολογιών κατασκευών, χρηματοπιστωτικών συστημάτων, υποδομής ασφαλείας και κυβερνητικής ψηφιοποίησης.",
+            subtitle: "<div style='margin-bottom: 32px;'><h4 style='font-size: 20px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; text-align: center;'>Αναπτύσσουμε την ψηφιακή οικονομία μέσω:</h4><div class='about-blocks-grid'><div style='background: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #007bff; text-align: justify;'>• ενσωμάτωση επιστήμης, εκπαίδευσης και τεχνολογίας</div><div style='background: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #28a745; text-align: justify;'>• υποστήριξη ερευνητικών και εκπαιδευτικών πρωτοβουλιών</div><div style='background: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #17a2b8; text-align: justify;'>• δημιουργία ψηφιακών πλατφορμών και εργαλείων διαχείρισης έργων</div><div style='background: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #ffc107; text-align: justify;'>• συμμετοχή σε διεθνείς επιστημονικές και εμπειρογνωμονικές κοινότητες</div></div></div><div style='margin-bottom: 32px;'><h4 style='font-size: 20px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; text-align: center;'>Τα έργα μας στοχεύουν σε:</h4><div class='about-blocks-grid'><div style='background: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #dc3545; text-align: justify;'>• διαμόρφωση νέου μοντέλου εκπαίδευσης όπου η μάθηση γίνεται ευέλικτη και εξατομικευμένη</div><div style='background: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #6f42c1; text-align: justify;'>• υποστήριξη ανάπτυξης \"ψηφιακών περιουσιακών στοιχείων\" και blockchain επενδύσεων</div><div style='background: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #e83e8c; text-align: justify;'>• υλοποίηση προηγμένων τεχνολογιών τεχνητής νοημοσύνης και ρομποτικής</div><div style='background: #f8f9fa; padding: 16px; border-radius: 8px; border-left: 4px solid #20c997; text-align: justify;'>• συμμετοχή στη δημιουργία οικοσυστήματος ψηφιακής εμπιστοσύνης</div></div></div><div style='text-align: justify; line-height: 1.6; background: #f1f3f4; padding: 20px; border-radius: 8px; margin-top: 24px;'>Συνεργαζόμαστε με πανεπιστήμια, ιδρύματα και οργανισμούς στη Ρωσία και το εξωτερικό, βασιζόμενοι σε επιστημονικές εξελίξεις και διεθνές δίκαιο.</div>",
             description: "Το ινστιτούτο μας αναπτύσσει καινοτόμες λύσεις που γεφυρώνουν το χάσμα μεταξύ παραδοσιακών βιομηχανιών και σύγχρονων ψηφιακών οικοσυστημάτων. Ειδικευόμαστε στη δημιουργία ενσωματωμένων πλατφορμών που ενισχύουν την επιχειρησιακή αποτελεσματικότητα, την ασφάλεια και τη διαφάνεια σε διάφορους τομείς.",
             mission: "Η αποστολή μας είναι να επιταχύνουμε τον ψηφιακό μετασχηματισμό μέσω έρευνας, ανάπτυξης και υλοποίησης τεχνολογικών λύσεων αιχμής που αντιμετωπίζουν πραγματικές προκλήσεις σε κατασκευές, χρηματοοικονομικά, ασφάλεια και δημόσια διοίκηση.",
             features: {
@@ -447,9 +453,9 @@ const translations = {
             contact: "Επικοινωνία",
             reach: "Επικοινωνήστε",
             leadership: {
-                title: "Ηγετική Ομάδα",
+                title: "Διοικητικό Συμβούλιο",
                 name: "Ηλίας Ιβάνοβιτς Βερσίνκιν",
-                position: "Διευθυντής",
+                position: "Πρόεδρος Διοικητικού Συμβουλίου",
                 expertise: [
                     "Στρατηγικός σχεδιασμός και διαχείριση έργων",
                     "Ψηφιακός μετασχηματισμός στη βιομηχανία κατασκευών",
@@ -458,7 +464,7 @@ const translations = {
                 ],
                 achievement: "Πάνω από 15 χρόνια εμπειρίας στην ψηφιοποίηση κατασκευών και υλοποίηση καινοτόμων τεχνολογιών",
                 name2: "Βλαντιμίρ Πέτροβιτς Μπάουερ",
-                position2: "Καθηγητής, Διευθυντής Κέντρου Στρατηγικής Πρόβλεψης",
+                position2: "Σύμβουλος Προέδρου Διοικητικού Συμβουλίου",
                 expertise2: [
                     "Οικονομική πολιτική και ασφάλεια",
                     "Στρατηγικός σχεδιασμός και πρόβλεψη",
