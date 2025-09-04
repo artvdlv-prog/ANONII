@@ -1181,6 +1181,31 @@
                 font-size: 18px;
             }
             
+            #crowdfunding > div {
+                padding: 16px !important;
+            }
+            
+            #crowdfunding div[style*="grid-template-columns: 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+            
+            #crowdfunding div[style*="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))"] {
+                grid-template-columns: 1fr !important;
+                gap: 16px !important;
+            }
+            
+            #crowdfunding div[style*="display: flex"][style*="justify-content: space-between"] {
+                flex-direction: column !important;
+                gap: 16px !important;
+                text-align: center !important;
+            }
+            
+            #crowdfunding button {
+                align-self: center !important;
+                width: auto !important;
+            }
+            
             /* Contacts Section Mobile */
             #contacts > div {
                 padding: 16px !important;
@@ -1195,9 +1220,22 @@
                 gap: 20px !important;
             }
             
-            #contacts div[style*="grid-template-columns: repeat(2, 1fr)"] {
+            #contacts div[style*="grid-template-columns: repeat(2, 1fr)"],
+            #contacts div[style*="grid-template-columns: 1fr 1fr"] {
                 grid-template-columns: 1fr !important;
                 gap: 12px !important;
+            }
+            
+            /* Фиксируем проблему с телефоном и почтой на мобильных */
+            #contacts div[style*="grid-template-columns: 1fr 1fr"] > div {
+                width: 100% !important;
+                word-wrap: break-word !important;
+                overflow-wrap: break-word !important;
+            }
+            
+            #contacts div[style*="grid-template-columns: 1fr 1fr"] > div > div:last-child {
+                font-size: 14px !important;
+                word-break: break-all !important;
             }
             
             #contacts form {
@@ -1331,6 +1369,74 @@
                 height: auto !important;
                 margin: 0 auto !important;
                 display: block !important;
+            }
+            
+            /* Контакты для очень маленьких экранов */
+            #contacts > div {
+                padding: 12px !important;
+            }
+            
+            #contacts div[style*="grid-template-columns: 1fr 1.2fr"] {
+                gap: 16px !important;
+            }
+            
+            #contacts h3 {
+                font-size: 16px !important;
+            }
+            
+            #contacts div[style*="grid-template-columns: 1fr 1fr"] > div > div:last-child,
+            #contacts div[style*="font-size: 16px"] {
+                font-size: 13px !important;
+                line-height: 1.3 !important;
+            }
+            
+            #contacts input,
+            #contacts textarea {
+                font-size: 13px !important;
+                padding: 8px !important;
+            }
+            
+            #contacts button {
+                font-size: 12px !important;
+                padding: 8px 12px !important;
+            }
+            
+            /* Краудфандинг для очень маленьких экранов */
+            #crowdfunding > div {
+                padding: 12px !important;
+            }
+            
+            #crowdfunding div[style*="padding: 32px"] {
+                padding: 16px !important;
+            }
+            
+            #crowdfunding div[style*="padding: 24px"] {
+                padding: 16px !important;
+            }
+            
+            #crowdfunding h3 {
+                font-size: 18px !important;
+            }
+            
+            #crowdfunding h4 {
+                font-size: 14px !important;
+            }
+            
+            #crowdfunding div[style*="font-size: 18px"] {
+                font-size: 16px !important;
+            }
+            
+            #crowdfunding div[style*="font-size: 14px"] {
+                font-size: 13px !important;
+            }
+            
+            #crowdfunding ul {
+                padding-left: 16px !important;
+            }
+            
+            #crowdfunding li {
+                font-size: 13px !important;
+                line-height: 1.4 !important;
             }
         }
         
