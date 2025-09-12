@@ -330,9 +330,21 @@
 
         .projects-sidebar {
             width: 280px;
-            border-right: 1px solid #e5e5e5;
-            padding-right: 24px;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            padding: 20px;
             flex-shrink: 0;
+            background: #f8f9fa;
+            height: fit-content;
+        }
+        
+        .models-list-area {
+            flex: 1;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            padding: 20px;
+            background: #f8f9fa;
+            margin-left: 24px;
         }
 
         .filters {
@@ -367,17 +379,19 @@
 
         .project-item {
             padding: 12px;
-            border-radius: 6px;
+            border-radius: 8px;
             cursor: pointer;
             transition: all 0.2s;
             margin-bottom: 8px;
-            border: 1px solid transparent;
+            border: 1px solid #e5e5e5;
+            background: #f8f9fa;
         }
 
         .project-item:hover,
         .project-item.active {
-            background: #f8f9fa;
-            border-color: #e5e5e5;
+            background: #ffffff;
+            border-color: #1a1a1a;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         .project-item-title {
@@ -832,7 +846,7 @@
             overflow: hidden;
             cursor: pointer;
             transition: all 0.3s ease;
-            background: white;
+            background: #f8f9fa;
             height: 200px;
             position: relative;
         }
@@ -1186,6 +1200,20 @@
                 gap: 16px;
             }
             
+            .projects-container {
+                flex-direction: column !important;
+                gap: 16px !important;
+            }
+            
+            .projects-sidebar {
+                width: 100% !important;
+                margin-left: 0 !important;
+            }
+            
+            .models-list-area {
+                margin-left: 0 !important;
+            }
+            
             /* Crowdfunding Section Mobile */
             #crowdfunding .hero-subtitle {
                 font-size: 18px;
@@ -1507,6 +1535,21 @@
                 height: 120px !important;
                 margin: 0 auto 12px auto !important;
             }
+            
+            .projects-container {
+                flex-direction: column !important;
+                gap: 12px !important;
+            }
+            
+            .projects-sidebar {
+                width: 100% !important;
+                padding: 16px !important;
+            }
+            
+            .models-list-area {
+                margin-left: 0 !important;
+                padding: 16px !important;
+            }
         }
     </style>
 </head>
@@ -1520,7 +1563,7 @@
             <nav class="nav">
                 <div class="nav-item active" onclick="showSection('home')" id="nav-home">Главная</div>
                 <div class="nav-item" onclick="showSection('about')" id="nav-about">Об институте</div>
-                <div class="nav-item" onclick="showSection('projects')" id="nav-projects">Проекты</div>
+                <div class="nav-item" onclick="showSection('projects')" id="nav-projects">Решения</div>
                 <div class="nav-item" onclick="showSection('crowdfunding')" id="nav-crowdfunding">Краудфандинг</div>
                 <div class="nav-item" onclick="showSection('contacts')" id="nav-contacts">Контакты</div>
             </nav>
@@ -1553,24 +1596,6 @@
                         Наша миссия — создание искусственного интеллекта и цифровых систем, основанных на науке развития жизни.
                         Мы видим будущее, где знания становятся главным ресурсом, а цифровые платформы — каркасом для развития общества, экономики и государства.
                     </p>
-                    <p class="hero-description" id="hero-description" style="font-size: 20px; line-height: 1.6; color: #555; max-width: 1100px; margin-bottom: 16px;">
-                        Our institute specializes in creating <strong>cutting-edge digital ecosystems</strong> that integrate construction management, 
-                        financial technology solutions, comprehensive security and surveillance systems, and <strong>advanced data analytics platforms</strong>.
-                    </p>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <div class="stat-number">11</div>
-                            <div class="stat-label">Active Projects</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">85%</div>
-                            <div class="stat-label">Efficiency Improvement</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">$420K</div>
-                            <div class="stat-label">Investment Volume</div>
-                        </div>
-                    </div>
                 </div>
             </section>
 
@@ -1798,7 +1823,7 @@
                 
                 <!-- Projects Header -->
                 <div class="projects-header">
-                    <h2 class="section-title" id="projects-title" style="font-size: 35px; font-weight: 700; margin-bottom: 8px;">Проекты</h2>
+                    <h2 class="section-title" id="projects-title" style="font-size: 35px; font-weight: 700; margin-bottom: 8px;">Решения</h2>
                 </div>
                 
                 <!-- Project Category Tabs -->
@@ -1825,17 +1850,40 @@
                     </button>
                 </div>
                 
-                <!-- Project Content Area -->
-                <div class="project-content-area">
-                    <div class="project-category-info" id="categoryInfo">
-                        <h3 id="categoryTitle">Цифровое строительство</h3>
-                        <p id="categoryDescription">Комплексные платформы управления строительством, интегрирующие BIM, IoT-датчики и автоматизированный контроль качества.</p>
+                <!-- Projects Container with Sidebar -->
+                <div class="projects-container">
+                    <!-- Sidebar with Filters -->
+                    <div class="projects-sidebar">
+                        <div class="filters">
+                            <div class="filter-section">
+                                <h4 style="font-size: 16px; font-weight: 600; margin-bottom: 12px; color: #1a1a1a;">Фильтры</h4>
+                                <button class="filter-btn active" onclick="filterProjects('all')">Все проекты</button>
+                                <button class="filter-btn" onclick="filterProjects('digital-construction')">Цифровое строительство</button>
+                                <button class="filter-btn" onclick="filterProjects('fintech')">Финансовые технологии</button>
+                                <button class="filter-btn" onclick="filterProjects('security')">Системы безопасности</button>
+                                <button class="filter-btn" onclick="filterProjects('ai')">ИИ и аналитика</button>
+                            </div>
+                            <div class="filter-section" style="margin-top: 24px;">
+                                <h4 style="font-size: 16px; font-weight: 600; margin-bottom: 12px; color: #1a1a1a;">Статус</h4>
+                                <button class="filter-btn" onclick="filterProjects('pilot')">Пилотные</button>
+                                <button class="filter-btn" onclick="filterProjects('scale')">Масштабирование</button>
+                                <button class="filter-btn" onclick="filterProjects('research')">Исследования</button>
+                            </div>
+                        </div>
                     </div>
                     
-                    <div class="projects-scroll-area">
-                        <!-- Project cards grid -->
-                        <div id="projectCards">
-                            <!-- Project cards will be loaded here -->
+                    <!-- Models List Area -->
+                    <div class="models-list-area">
+                        <div class="project-category-info" id="categoryInfo">
+                            <h3 id="categoryTitle">Цифровое строительство</h3>
+                            <p id="categoryDescription">Комплексные платформы управления строительством, интегрирующие BIM, IoT-датчики и автоматизированный контроль качества.</p>
+                        </div>
+                        
+                        <div class="projects-scroll-area">
+                            <!-- Project cards grid -->
+                            <div id="projectCards">
+                                <!-- Project cards will be loaded here -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1897,72 +1945,6 @@
                         </div>
                     </div>
 
-                    <!-- Active Projects Section -->
-                    <div style="width: 100%;">
-                        <h3 id="active-projects-title" style="font-size: 24px; margin-bottom: 32px; text-align: center; font-weight: 700; color: #1a1a1a;">
-                            Активные проекты для инвестирования
-                        </h3>
-                        
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 24px;">
-                            <!-- Project 1 -->
-                            <div style="background: white; border: 1px solid #e5e5e5; border-radius: 8px; padding: 24px;">
-                                <div style="margin-bottom: 20px;">
-                                    <div style="font-size: 18px; font-weight: 600; margin-bottom: 8px; color: #1a1a1a;">Умная строительная платформа</div>
-                                    <div style="font-size: 14px; color: #666; line-height: 1.4;">Интеграция BIM нового поколения с ИИ-аналитикой для оптимизации строительства</div>
-                                </div>
-                                <div style="margin: 20px 0;">
-                                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                                        <span id="goal-label-1" style="font-size: 12px; color: #666; font-weight: 600;">Цель финансирования</span>
-                                        <span style="font-size: 12px; color: #666;">€280,000</span>
-                                    </div>
-                                    <div style="background: #f8f9fa; height: 8px; border-radius: 4px; overflow: hidden;">
-                                        <div style="background: #28a745; height: 100%; width: 15%; border-radius: 4px;"></div>
-                                    </div>
-                                    <div style="display: flex; justify-content: space-between; margin-top: 8px;">
-                                        <span id="current-1" style="font-size: 12px; color: #28a745; font-weight: 600;">Собрано: €42,000</span>
-                                        <span id="days-1" style="font-size: 12px; color: #666;">45 дней осталось</span>
-                                    </div>
-                                </div>
-                                <div style="display: flex; gap: 12px;">
-                                    <button id="contribute-1" class="filter-btn" style="background: #007bff; color: white; border: 1px solid #007bff; padding: 10px 16px; flex: 1;" onclick="window.location.href='mailto:vershinkin_pravlenie@list.ru'">
-                                        Инвестировать
-                                    </button>
-                                    <button id="learn-1" class="filter-btn" style="background: white; color: #007bff; border: 1px solid #007bff; padding: 10px 16px; flex: 1;" onclick="showCrowdfundingProjectDetails(1)">
-                                        Подробнее
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Project 2 -->
-                            <div style="background: white; border: 1px solid #e5e5e5; border-radius: 8px; padding: 24px;">
-                                <div style="margin-bottom: 20px;">
-                                    <div style="font-size: 18px; font-weight: 600; margin-bottom: 8px; color: #1a1a1a;">Безопасный платежный шлюз</div>
-                                    <div style="font-size: 14px; color: #666; line-height: 1.4;">Блокчейн-система платежей с расширенным обнаружением мошенничества</div>
-                                </div>
-                                <div style="margin: 20px 0;">
-                                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                                        <span id="goal-label-2" style="font-size: 12px; color: #666; font-weight: 600;">Цель финансирования</span>
-                                        <span style="font-size: 12px; color: #666;">€420,000</span>
-                                    </div>
-                                    <div style="background: #f8f9fa; height: 8px; border-radius: 4px; overflow: hidden;">
-                                        <div style="background: #ffc107; height: 100%; width: 10%; border-radius: 4px;"></div>
-                                    </div>
-                                    <div style="display: flex; justify-content: space-between; margin-top: 8px;">
-                                        <span id="current-2" style="font-size: 12px; color: #ffc107; font-weight: 600;">Собрано: €42,000</span>
-                                        <span id="days-2" style="font-size: 12px; color: #666;">60 дней осталось</span>
-                                    </div>
-                                </div>
-                                <div style="display: flex; gap: 12px;">
-                                    <button id="contribute-2" class="filter-btn" style="background: #007bff; color: white; border: 1px solid #007bff; padding: 10px 16px; flex: 1;" onclick="window.location.href='mailto:vershinkin_pravlenie@list.ru'">
-                                        Инвестировать
-                                    </button>
-                                    <button id="learn-2" class="filter-btn" style="background: white; color: #007bff; border: 1px solid #007bff; padding: 10px 16px; flex: 1;" onclick="showCrowdfundingProjectDetails(2)">
-                                        Подробнее
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </section>
 
@@ -2041,8 +2023,8 @@
                         </div>
                         
                         <div style="background: white; border: 1px solid #e5e5e5; border-radius: 8px; padding: 16px; text-align: center;">
-                            <h4 style="font-size: 14px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;" id="investments-title">Инвестиции</h4>
-                            <p style="color: #666; font-size: 12px; line-height: 1.4; margin-bottom: 12px;" id="investments-desc">Инвестиционные возможности</p>
+                            <h4 style="font-size: 14px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;" id="investments-title">Проектный офис</h4>
+                            <p style="color: #666; font-size: 12px; line-height: 1.4; margin-bottom: 12px;" id="investments-desc">Совместные проекты с МИФИ</p>
                             <button class="filter-btn" style="background: white; color: #007bff; border: 1px solid #007bff; padding: 6px 12px; font-size: 12px;" id="investments-btn" onclick="window.location.href='mailto:vershinkin_pravlenie@list.ru'">
                                 Связаться
                             </button>
@@ -2325,9 +2307,7 @@
             // Update home section
             document.querySelector('.hero-title').textContent = t.home.title;
             document.querySelector('.hero-subtitle').innerHTML = t.home.subtitle;
-            document.querySelectorAll('.stat-label')[0].textContent = t.home.stats.activeProjects;
-            document.querySelectorAll('.stat-label')[1].textContent = t.home.stats.efficiency;
-            document.querySelectorAll('.stat-label')[2].textContent = t.home.stats.dataProcessed;
+            // Statistics removed from home page
             
             // Update projects section
             document.getElementById('projects-title').textContent = t.projects.title;
@@ -2385,19 +2365,7 @@
                 const contactBtn = document.getElementById('contact-btn');
                 contactBtn.textContent = t.crowdfunding.contactBtn;
                 contactBtn.onclick = () => window.location.href = 'mailto:vershinkin_pravlenie@list.ru';
-                document.getElementById('active-projects-title').textContent = t.crowdfunding.activeProjectsTitle;
-                
-                // Update project labels
-                if (document.getElementById('goal-label-1')) document.getElementById('goal-label-1').textContent = t.crowdfunding.goalLabel;
-                if (document.getElementById('goal-label-2')) document.getElementById('goal-label-2').textContent = t.crowdfunding.goalLabel;
-                if (document.getElementById('current-1')) document.getElementById('current-1').textContent = t.crowdfunding.currentLabel + ': €42,000';
-                if (document.getElementById('current-2')) document.getElementById('current-2').textContent = t.crowdfunding.currentLabel + ': €42,000';
-                if (document.getElementById('days-1')) document.getElementById('days-1').textContent = '45 ' + t.crowdfunding.daysLabel;
-                if (document.getElementById('days-2')) document.getElementById('days-2').textContent = '60 ' + t.crowdfunding.daysLabel;
-                if (document.getElementById('contribute-1')) document.getElementById('contribute-1').textContent = t.crowdfunding.contributeBtn;
-                if (document.getElementById('contribute-2')) document.getElementById('contribute-2').textContent = t.crowdfunding.contributeBtn;
-                if (document.getElementById('learn-1')) document.getElementById('learn-1').textContent = t.crowdfunding.learnBtn;
-                if (document.getElementById('learn-2')) document.getElementById('learn-2').textContent = t.crowdfunding.learnBtn;
+                // Investment projects section removed
                 
                 // Update investor benefits list
                 if (document.getElementById('investor-benefits')) {
