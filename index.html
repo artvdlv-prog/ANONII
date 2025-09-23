@@ -1948,29 +1948,7 @@
                                 </div>
                             </div>
 
-                            <!-- Leader 3: Владимир Петрович Бауэр -->
-                            <div style="background: #f8f9fa; border: 1px solid #e5e5e5; border-radius: 8px; padding: 16px; display: flex; gap: 16px; align-items: flex-start;" class="leadership-card">
-                                <div style="flex-shrink: 0;">
-                                    <img src="https://maginnov.ru/assets/images/authors/bauer-vp.jpg" 
-                                         alt="Владимир Петрович Бауэр" 
-                                         style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                                </div>
-                                
-                                <div style="flex: 1;">
-                                    <h4 style="font-size: 22px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px;" id="leader-name-3-about">
-                                        Бауэр Владимир Петрович
-                                    </h4>
-                                    <p style="font-size: 17px; color: #007bff; font-weight: 600; margin-bottom: 6px;" id="leader-position-3-about">
-                                        Советник председателя правления
-                                    </p>
-                                    
-                                    <p style="font-size: 16px; color: #666; line-height: 1.4; margin: 0;">
-                                        к.т.н., д.э.н., профессор, действительный член РАЕН, главный научный сотрудник, АО «Институт региональных экономических исследований»
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- Leader 4: Кузнецов Андрей Евгеньевич -->
+                            <!-- Leader 3: Кузнецов Андрей Евгеньевич -->
                             <div style="background: #f8f9fa; border: 1px solid #e5e5e5; border-radius: 8px; padding: 16px; display: flex; gap: 16px; align-items: flex-start;" class="leadership-card">
                                 <div style="flex-shrink: 0;">
                                     <img src="Кузнецов.jpeg" 
@@ -1979,15 +1957,37 @@
                                 </div>
                                 
                                 <div style="flex: 1;">
-                                    <h4 style="font-size: 22px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px;" id="leader-name-4-about">
+                                    <h4 style="font-size: 22px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px;" id="leader-name-3-about">
                                         Кузнецов Андрей Евгеньевич
                                     </h4>
-                                    <p style="font-size: 17px; color: #007bff; font-weight: 600; margin-bottom: 6px;" id="leader-position-4-about">
+                                    <p style="font-size: 17px; color: #007bff; font-weight: 600; margin-bottom: 6px;" id="leader-position-3-about">
                                         Заместитель председателя правления по цифровой экономике
                                     </p>
                                     
-                                    <p style="font-size: 16px; color: #666; line-height: 1.4; margin: 0;" id="leader-achievement-4-about">
+                                    <p style="font-size: 16px; color: #666; line-height: 1.4; margin: 0;" id="leader-achievement-3-about">
                                         Директор лаборатории нейрофизики. Профессор, К. Э. Н.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Leader 4: Владимир Петрович Бауэр -->
+                            <div style="background: #f8f9fa; border: 1px solid #e5e5e5; border-radius: 8px; padding: 16px; display: flex; gap: 16px; align-items: flex-start;" class="leadership-card">
+                                <div style="flex-shrink: 0;">
+                                    <img src="https://maginnov.ru/assets/images/authors/bauer-vp.jpg" 
+                                         alt="Владимир Петрович Бауэр" 
+                                         style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                                </div>
+                                
+                                <div style="flex: 1;">
+                                    <h4 style="font-size: 22px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px;" id="leader-name-4-about">
+                                        Бауэр Владимир Петрович
+                                    </h4>
+                                    <p style="font-size: 17px; color: #007bff; font-weight: 600; margin-bottom: 6px;" id="leader-position-4-about">
+                                        Советник председателя правления
+                                    </p>
+                                    
+                                    <p style="font-size: 16px; color: #666; line-height: 1.4; margin: 0;">
+                                        к.т.н., д.э.н., профессор, действительный член РАЕН, главный научный сотрудник, АО «Институт региональных экономических исследований»
                                     </p>
                                 </div>
                             </div>
@@ -2729,17 +2729,17 @@
                         document.getElementById('leader-position-2-about').textContent = 'Первый заместитель председателя правления';
                     }
                     
-                    // Leader 3 - Bauer
+                    // Leader 3 - Kuznetsov
                     if (document.getElementById('leader-name-3-about')) {
-                        document.getElementById('leader-name-3-about').textContent = t.contacts.leadership.name2;
-                        document.getElementById('leader-position-3-about').textContent = t.contacts.leadership.position2;
+                        document.getElementById('leader-name-3-about').textContent = t.contacts.leadership.name3;
+                        document.getElementById('leader-position-3-about').textContent = t.contacts.leadership.position3;
+                        document.getElementById('leader-achievement-3-about').textContent = t.contacts.leadership.achievement3;
                     }
                     
-                    // Leader 4 - Kuznetsov
+                    // Leader 4 - Bauer
                     if (document.getElementById('leader-name-4-about')) {
-                        document.getElementById('leader-name-4-about').textContent = t.contacts.leadership.name3;
-                        document.getElementById('leader-position-4-about').textContent = t.contacts.leadership.position3;
-                        document.getElementById('leader-achievement-4-about').textContent = t.contacts.leadership.achievement3;
+                        document.getElementById('leader-name-4-about').textContent = t.contacts.leadership.name2;
+                        document.getElementById('leader-position-4-about').textContent = t.contacts.leadership.position2;
                     }
                     
                     // Update board of trustees section
