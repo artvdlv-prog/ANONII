@@ -1970,7 +1970,29 @@
                                 </div>
                             </div>
 
-                            <!-- Leader 4: Авдонов Алексей Юрьевич -->
+                            <!-- Leader 4: Кузнецов Андрей Евгеньевич -->
+                            <div style="background: #f8f9fa; border: 1px solid #e5e5e5; border-radius: 8px; padding: 16px; display: flex; gap: 16px; align-items: flex-start;" class="leadership-card">
+                                <div style="flex-shrink: 0;">
+                                    <img src="Кузнецов.jpeg" 
+                                         alt="Кузнецов Андрей Евгеньевич" 
+                                         style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                                </div>
+                                
+                                <div style="flex: 1;">
+                                    <h4 style="font-size: 22px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px;" id="leader-name-4-about">
+                                        Кузнецов Андрей Евгеньевич
+                                    </h4>
+                                    <p style="font-size: 17px; color: #007bff; font-weight: 600; margin-bottom: 6px;" id="leader-position-4-about">
+                                        Заместитель председателя правления по цифровой экономике
+                                    </p>
+                                    
+                                    <p style="font-size: 16px; color: #666; line-height: 1.4; margin: 0;" id="leader-achievement-4-about">
+                                        Директор лаборатории нейрофизики. Профессор, К. Э. Н.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Leader 5: Авдонов Алексей Юрьевич -->
                             <div style="background: #f8f9fa; border: 1px solid #e5e5e5; border-radius: 8px; padding: 16px; display: flex; gap: 16px; align-items: flex-start;" class="leadership-card">
                                 <div style="flex-shrink: 0;">
                                     <img src="Авдонов.jpeg" 
@@ -2711,6 +2733,13 @@
                     if (document.getElementById('leader-name-3-about')) {
                         document.getElementById('leader-name-3-about').textContent = t.contacts.leadership.name2;
                         document.getElementById('leader-position-3-about').textContent = t.contacts.leadership.position2;
+                    }
+                    
+                    // Leader 4 - Kuznetsov
+                    if (document.getElementById('leader-name-4-about')) {
+                        document.getElementById('leader-name-4-about').textContent = t.contacts.leadership.name3;
+                        document.getElementById('leader-position-4-about').textContent = t.contacts.leadership.position3;
+                        document.getElementById('leader-achievement-4-about').textContent = t.contacts.leadership.achievement3;
                     }
                     
                     // Update board of trustees section
