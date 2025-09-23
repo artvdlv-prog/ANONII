@@ -2220,6 +2220,33 @@
 
                         </div>
                     </div>
+                    
+                    <!-- Project Office Section -->
+                    <div style="margin-bottom: 32px;">
+                        <h3 style="font-size: 24px; font-weight: 700; text-align: center; margin-bottom: 24px; color: #1a1a1a;" id="project-office-title-about">Проектный офис</h3>
+                        
+                        <!-- Project Office Grid -->
+                        <div style="display: flex; flex-direction: column; gap: 16px; max-width: 1000px; margin: 0 auto;" class="project-office-cards-grid">
+                            <!-- Project Office Member 1: Гончар Владимир -->
+                            <div style="background: #f8f9fa; border: 1px solid #e5e5e5; border-radius: 8px; padding: 16px; display: flex; gap: 16px; align-items: flex-start;" class="project-office-card">
+                                <div style="flex-shrink: 0;">
+                                    <img src="Гончар.jpg" 
+                                         alt="Гончар Владимир" 
+                                         style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                                </div>
+                                
+                                <div style="flex: 1;">
+                                    <h4 style="font-size: 22px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px;" id="project-office-member-1-name">
+                                        Гончар Владимир
+                                    </h4>
+                                    <p style="font-size: 17px; color: #007bff; font-weight: 600; margin-bottom: 6px;" id="project-office-member-1-position">
+                                        Руководитель по направлению интеграции конвергентных технологий
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -2882,6 +2909,17 @@
                         document.getElementById('board-title-about').textContent = currentLanguage === 'ru' ? 'Попечительский совет' :
                                                                                currentLanguage === 'en' ? 'Board of Trustees' :
                                                                                'Διοικητικό Συμβούλιο';
+                    }
+                    
+                    // Update project office section
+                    if (document.getElementById('project-office-title-about')) {
+                        document.getElementById('project-office-title-about').textContent = t.contacts.projectOffice.title;
+                    }
+                    if (document.getElementById('project-office-member-1-name')) {
+                        document.getElementById('project-office-member-1-name').textContent = t.contacts.projectOffice.member1Name;
+                    }
+                    if (document.getElementById('project-office-member-1-position')) {
+                        document.getElementById('project-office-member-1-position').textContent = t.contacts.projectOffice.member1Position;
                     }
                 }
             }

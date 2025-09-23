@@ -155,6 +155,11 @@ const translations = {
                     "Development of technological modeling tools"
                 ],
                 achievement2: "Professor at Financial University under the Government of the Russian Federation"
+            },
+            projectOffice: {
+                title: "Project Office",
+                member1Name: "Vladimir Gonchar",
+                member1Position: "Head of Convergent Technologies Integration"
             }
         },
         logo: "ANO RIT and Digital Economy"
@@ -319,6 +324,11 @@ const translations = {
                     "Развитие цифровых платформ и решений"
                 ],
                 achievement3: "Профессор, к.э.н., директор лаборатории нейрофизики"
+            },
+            projectOffice: {
+                title: "Проектный офис",
+                member1Name: "Гончар Владимир",
+                member1Position: "Руководитель по направлению интеграции конвергентных технологий"
             }
         },
         logo: "АНО НИИ РИТиЦЭ"
@@ -479,6 +489,11 @@ const translations = {
                     "Ανάπτυξη εργαλείων τεχνολογικής μοντελοποίησης"
                 ],
                 achievement2: "Καθηγητής στο Οικονομικό Πανεπιστήμιο"
+            },
+            projectOffice: {
+                title: "Γραφείο Έργου",
+                member1Name: "Βλαντιμίρ Γκόντσαρ",
+                member1Position: "Επικεφαλής Ολοκλήρωσης Συγκλίνουσων Τεχνολογιών"
             }
         },
         logo: "ΜΚΟ ΕΙ ΤΠ και Ψηφιακής Οικονομίας"
