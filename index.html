@@ -252,11 +252,11 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100%;
+            height: calc(100% - 40px);
             text-align: center;
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 32px;
+            padding: 0 32px 20px 32px;
         }
 
         .hero-title {
@@ -1574,6 +1574,85 @@
             }
         }
 
+        /* Partners Section Animations */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Partners hover effects */
+        .partner-link:hover {
+            transform: translateY(-5px);
+        }
+
+        .partner-link:hover .partner-card {
+            border-color: #007bff;
+            box-shadow: 0 8px 20px rgba(0, 123, 255, 0.2);
+        }
+
+        /* Partners responsive design */
+        @media (max-width: 768px) {
+            .partners-track {
+                animation: scroll 15s linear infinite !important;
+                gap: 20px !important;
+            }
+            
+            .partner-card {
+                width: 140px !important;
+                height: 80px !important;
+                padding: 15px !important;
+            }
+            
+            .partner-card img {
+                max-height: 50px !important;
+                max-width: 110px !important;
+            }
+        }
+
+        /* Mission block responsive design */
+        @media (max-width: 768px) {
+            .home-content div[style*="text-align: center"] h3 {
+                font-size: 1.8rem !important;
+                margin-bottom: 20px !important;
+            }
+            
+            .home-content div[style*="text-align: center"] p:first-of-type {
+                font-size: 1.2rem !important;
+                line-height: 1.6 !important;
+                margin-bottom: 25px !important;
+            }
+            
+            .home-content div[style*="text-align: center"] p:last-of-type {
+                font-size: 1rem !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .home-content div[style*="text-align: center"] {
+                margin: 35px auto !important;
+                padding: 0 15px !important;
+            }
+            
+            .home-content div[style*="text-align: center"] h3 {
+                font-size: 1.6rem !important;
+                margin-bottom: 18px !important;
+            }
+            
+            .home-content div[style*="text-align: center"] p:first-of-type {
+                font-size: 1.1rem !important;
+                line-height: 1.5 !important;
+                margin-bottom: 20px !important;
+            }
+            
+            .home-content div[style*="text-align: center"] p:last-of-type {
+                font-size: 0.95rem !important;
+            }
+        }
+
         .benefit-block {
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             padding: 18px;
@@ -1883,8 +1962,59 @@
                         <strong>Образование</strong> — курсы, программы и новые модели обучения для будущих поколений.<br><br>
                         <strong>Оцифровка процессов</strong> — цифровые активы, управление проектами, внедрение ИИ и блокчейн-технологий.<br><br>
                         Наша миссия — экспертиза технологий и технологических решений, включая гибридный и искусственный интеллект, комплексная информационная и кибер безопасность.
-                        Мы видим будущее, где знания становятся главным ресурсом, а цифровые платформы — каркасом для развития общества, экономики и государства.
                     </p>
+                </div>
+            </section>
+
+            <!-- Partners Section -->
+            <section class="section active" id="partners" style="background: #f8f9fa; padding: 15px 0; margin-top: -60px;">
+                <div class="partners-content" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                    <h2 style="text-align: center; margin-bottom: 15px; font-size: 2rem; color: #1a1a1a; font-weight: 700;" id="partners-title">Наши партнеры</h2>
+                    
+                    <div class="partners-slider" style="overflow: hidden; margin: 10px 0;">
+                        <div class="partners-track" style="display: flex; animation: scroll 16s linear infinite; gap: 40px; align-items: center;">
+                            <!-- Partner 1: Технополис -->
+                            <a href="https://technopark.moscow" target="_blank" class="partner-link" style="flex-shrink: 0; transition: transform 0.3s ease;" title="Технополис - technopark.moscow">
+                                <div class="partner-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 180px; height: 100px; display: flex; align-items: center; justify-content: center; border: 2px solid transparent; transition: all 0.3s ease;">
+                                    <img src="Лого партнеры/Технополис.jpg" alt="Технополис" style="max-height: 70px; max-width: 150px; object-fit: contain;">
+                                </div>
+                            </a>
+                            
+                            <!-- Partner 2: Сколково -->
+                            <a href="https://sk.ru" target="_blank" class="partner-link" style="flex-shrink: 0; transition: transform 0.3s ease;" title="Сколково - sk.ru">
+                                <div class="partner-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 180px; height: 100px; display: flex; align-items: center; justify-content: center; border: 2px solid transparent; transition: all 0.3s ease;">
+                                    <img src="Лого партнеры/Сколково.jpg" alt="Сколково" style="max-height: 70px; max-width: 150px; object-fit: contain;">
+                                </div>
+                            </a>
+                            
+                            <!-- Partner 3: НИЯУ МИФИ -->
+                            <a href="https://mephi.ru" target="_blank" class="partner-link" style="flex-shrink: 0; transition: transform 0.3s ease;" title="НИЯУ МИФИ - mephi.ru">
+                                <div class="partner-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 180px; height: 100px; display: flex; align-items: center; justify-content: center; border: 2px solid transparent; transition: all 0.3s ease;">
+                                    <img src="Лого партнеры/МИФИ.jpg" alt="НИЯУ МИФИ" style="max-height: 70px; max-width: 150px; object-fit: contain;">
+                                </div>
+                            </a>
+                            
+                            <!-- Partner 4: МГУ им. Ломоносова -->
+                            <a href="https://msu.ru" target="_blank" class="partner-link" style="flex-shrink: 0; transition: transform 0.3s ease;" title="МГУ им. Ломоносова - msu.ru">
+                                <div class="partner-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 180px; height: 100px; display: flex; align-items: center; justify-content: center; border: 2px solid transparent; transition: all 0.3s ease;">
+                                    <img src="Лого партнеры/Ломоносов.jpg" alt="МГУ им. Ломоносова" style="max-height: 70px; max-width: 150px; object-fit: contain;">
+                                </div>
+                            </a>
+                            
+                            <!-- Дублируем партнеров для бесконечной прокрутки -->
+                            <a href="https://technopark.moscow" target="_blank" class="partner-link" style="flex-shrink: 0; transition: transform 0.3s ease;" title="Технополис - technopark.moscow">
+                                <div class="partner-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 180px; height: 100px; display: flex; align-items: center; justify-content: center; border: 2px solid transparent; transition: all 0.3s ease;">
+                                    <img src="Лого партнеры/Технополис.jpg" alt="Технополис" style="max-height: 70px; max-width: 150px; object-fit: contain;">
+                                </div>
+                            </a>
+                            
+                            <a href="https://sk.ru" target="_blank" class="partner-link" style="flex-shrink: 0; transition: transform 0.3s ease;" title="Сколково - sk.ru">
+                                <div class="partner-card" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 180px; height: 100px; display: flex; align-items: center; justify-content: center; border: 2px solid transparent; transition: all 0.3s ease;">
+                                    <img src="Лого партнеры/Сколково.jpg" alt="Сколково" style="max-height: 70px; max-width: 150px; object-fit: contain;">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -1965,7 +2095,7 @@
                                     </p>
                                     
                                     <p style="font-size: 16px; color: #666; line-height: 1.4; margin: 0;" id="leader-achievement-3-about">
-                                        Директор лаборатории нейрофизики. Профессор, К. Э. Н.
+                                        Профессор, к.э.н., директор лаборатории нейрофизики
                                     </p>
                                 </div>
                             </div>
@@ -2616,6 +2746,11 @@
             document.querySelector('.hero-title').textContent = t.home.title;
             document.querySelector('.hero-subtitle').innerHTML = t.home.subtitle;
             // Statistics removed from home page
+            
+            // Update partners section
+            if (document.getElementById('partners-title')) {
+                document.getElementById('partners-title').textContent = t.home.partnersTitle;
+            }
             
             // Update projects section
             document.getElementById('projects-title').textContent = t.projects.title;

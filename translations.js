@@ -17,7 +17,8 @@ const translations = {
                 dataProcessed: "Investment Volume"
             },
             ourDirections: "Our Directions",
-            ourTechnologies: "Our Technologies"
+            ourTechnologies: "Our Technologies",
+            partnersTitle: "Our Partners"
         },
         projects: {
             title: "Projects",
@@ -176,7 +177,8 @@ const translations = {
                 dataProcessed: "Объем инвестиций"
             },
             ourDirections: "Наши направления",
-            ourTechnologies: "Наши технологии"
+            ourTechnologies: "Наши технологии",
+            partnersTitle: "Наши партнеры"
         },
         projects: {
             title: "Решения", 
@@ -339,7 +341,8 @@ const translations = {
                 dataProcessed: "Όγκος επενδύσεων"
             },
             ourDirections: "Οι κατευθύνσεις μας",
-            ourTechnologies: "Οι τεχνολογίες μας"
+            ourTechnologies: "Οι τεχνολογίες μας",
+            partnersTitle: "Οι συνεργάτες μας"
         },
         projects: {
             title: "Έργα",
