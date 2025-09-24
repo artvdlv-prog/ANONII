@@ -197,6 +197,96 @@
         "title": "Construction Data Lake | Unified Analytics Infrastructure",
         "description": "Centralized data lake processing 500TB+ monthly with 80% improvement in analytical insights for construction."
       }
+    },
+    {
+      "slug": "avatars-russia-vr-ar",
+      "title_en": "VR/AR Project 'AVATARS OF RUSSIA'",
+      "title_ru": "Проект VR/AR \"АВАТАРЫ РОССИИ\"",
+      "summary_en": "Multifunctional AI-powered platform, training simulator for personnel development. Remote technical equipment control system.",
+      "summary_ru": "Многофункциональная платформа с ИИ, симулятор для подготовки кадров. Система дистанционного управления техническими средствами.",
+      "tags": ["AI analytics", "VR/AR", "personnel training", "remote control"],
+      "status": "pilot",
+      "kpis": [
+        "90% improvement in training efficiency",
+        "75% reduction in training costs",
+        "Real-time remote equipment control"
+      ],
+      "seo": {
+        "title": "AVATARS OF RUSSIA VR/AR Platform | AI Training Simulator",
+        "description": "AI-powered VR/AR training platform improving training efficiency by 90% and reducing costs through advanced simulation technology."
+      }
+    },
+    {
+      "slug": "finr-cultural-platform",
+      "title_en": "Multifunctional Cultural Project Platform with AI",
+      "title_ru": "Многофункциональная культурная проектная площадка с ИИ",
+      "summary_en": "AI-powered platform for conducting public events and festivals. F.I.N.R. is a Festival of Arts of the Peoples of Russia, reflecting cultural code in the aftertaste of industrial EXPO.",
+      "summary_ru": "Многофункциональная культурная проектная площадка с ИИ для проведения общественных мероприятий. Ф.И.Н.Р. - фестиваль искусств народов России. Отражение культурного кода в послевкусии промышленного EXPO.",
+      "tags": ["national technologies", "cultural platform", "festivals", "AI integration"],
+      "status": "scale",
+      "kpis": [
+        "500+ cultural events organized",
+        "10M+ participants across Russia",
+        "95% cultural heritage preservation rate"
+      ],
+      "seo": {
+        "title": "F.I.N.R Cultural Platform | AI-Powered Festival Management",
+        "description": "AI-integrated cultural platform organizing 500+ events and preserving 95% of cultural heritage through digital innovation."
+      }
+    },
+    {
+      "slug": "sur-business-games",
+      "title_en": "Annual Business Games SUR (Unique Resources System)",
+      "title_ru": "Ежегодные Деловые игры SUR (Система Уникальных Ресурсов)",
+      "summary_en": "Annual Business Games within the framework of CEI 2.0 (Council of Economic Interaction) development for improving economic efficiency and modernization, developing personnel policy and professional education, and new forms of public-private partnerships.",
+      "summary_ru": "Ежегодные Деловые игры SUR в рамках развития СЭВ 2.0 (Совет Экономического Взаимодействия) для улучшения эффективности и модернизации отраслей экономики, развития кадровой политики и профессионального образования, развития новых форматов государственного частного партнерства.",
+      "tags": ["national technologies", "business games", "economic development", "education"],
+      "status": "pilot",
+      "kpis": [
+        "12+ annual business game sessions",
+        "500+ participating organizations",
+        "85% improvement in cross-sector collaboration"
+      ],
+      "seo": {
+        "title": "SUR Business Games | Economic Development Platform",
+        "description": "Annual business games platform improving cross-sector collaboration by 85% with 500+ participating organizations."
+      }
+    },
+    {
+      "slug": "sur-pay-platform",
+      "title_en": "SUR Pay - Innovative Resource Logistics Platform",
+      "title_ru": "SUR pay - Инновационная товарно-ресурсная логистическая платформа",
+      "summary_en": "Innovative commodity-resource logistics platform based on cooperative interaction - a response to modern challenges in optimizing logistics processes, reducing transaction costs and ensuring transparent resource exchange. The SUR ecosystem utility token provides exchange mechanisms for settlements between participants and becomes an important element of motivation and management of the entire platform.",
+      "summary_ru": "Инновационная товарно-ресурсная логистическая платформа на основе кооперативного взаимодействия – ответ на современные вызовы в оптимизации логистических процессов, снижении транзакционных издержек и обеспечении прозрачного обмена ресурсами. Связующий учетный утилитарный токен SUR экосистемы не только обеспечивает обменными механизмами расчётов между участниками, но и становится важным элементом мотивации и управления всей платформой.",
+      "tags": ["fintech", "blockchain", "logistics platform", "utility token"],
+      "status": "pilot",
+      "kpis": [
+        "40% reduction in transaction costs",
+        "60% improvement in logistics transparency",
+        "500+ cooperative participants in ecosystem"
+      ],
+      "seo": {
+        "title": "SUR Pay Platform | Blockchain Logistics Solution",
+        "description": "Blockchain-based logistics platform reducing transaction costs by 40% and improving transparency with 500+ participants."
+      }
+    },
+    {
+      "slug": "video-photo-recording-ai",
+      "title_en": "AI-Powered Video Photo Recording Network",
+      "title_ru": "Сеть видео фото фиксации с ИИ",
+      "summary_en": "Advanced video photo recording system with AI analytics for threat detection, behavior analysis, and automated security management.",
+      "summary_ru": "Передовая система видео фото фиксации с аналитикой ИИ для обнаружения угроз, анализа поведения и автоматизированного управления безопасностью.",
+      "tags": ["security", "video photo recording", "computer vision", "AI analytics"],
+      "status": "completed",
+      "kpis": [
+        "95% threat detection accuracy",
+        "70% reduction in false alarms",
+        "24/7 automated monitoring"
+      ],
+      "seo": {
+        "title": "AI Video Recording Network | Advanced Security System",
+        "description": "AI-powered security system achieving 95% threat detection accuracy with 70% reduction in false alarms."
+      }
     }
   ]
 }
