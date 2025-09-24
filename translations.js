@@ -10,7 +10,7 @@ const translations = {
         home: {
             title: "Digital Innovation & Technology Solutions",
             subtitle: "We unite science, technology and education to shape a new digital reality.<br><br><strong>Our strategic directions:</strong><br><br><div class='home-directions-grid'><div style='background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #007bff;'><strong>Science and Research</strong><br><span style='font-size: 0.9em; color: #555;'>Developing advanced solutions in the digital economy</span></div><div style='background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #28a745;'><strong>Education</strong><br><span style='font-size: 0.9em; color: #555;'>Courses, programs and new learning models for future generations</span></div><div style='background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #17a2b8;'><strong>Process Digitization</strong><br><span style='font-size: 0.9em; color: #555;'>Digital assets, project management, AI and blockchain technology implementation</span></div></div><div style='text-align: justify; line-height: 1.5; margin-top: 20px;'>Our mission is to create artificial intelligence and digital systems based on life development science. We envision a future where knowledge becomes the main resource, and digital platforms serve as the framework for societal, economic, and governmental development.</div>",
-            description: "Our institute specializes in creating <strong>cutting-edge digital ecosystems</strong> that integrate construction management, financial technology solutions, comprehensive security and surveillance systems, and <strong>advanced data analytics platforms</strong>.",
+            description: "Our institute specializes in creating <strong>cutting-edge digital ecosystems</strong> that integrate construction management, financial technology solutions, comprehensive security and video photo recording systems, and <strong>advanced data analytics platforms</strong>.",
             stats: {
                 activeProjects: "Active Projects",
                 efficiency: "Efficiency Improvement", 
@@ -23,20 +23,20 @@ const translations = {
         projects: {
             title: "Projects",
             mainTitle: "Comprehensive Digital Solutions",
-            subtitle: "Comprehensive digital solutions across construction, fintech, security, and government technology sectors",
+            subtitle: "Comprehensive digital solutions across construction, fintech, security, and national technology sectors",
             tabs: {
                 digitalConstruction: "Digital Construction",
                 fintech: "Financial Technology",
-                security: "Security & Surveillance", 
+                security: "Security & Video Photo Recording", 
                 aiAnalytics: "AI & Analytics",
-                govtech: "GovTech"
+                govtech: "National Technologies"
             },
             categories: {
                 digitalConstruction: "Comprehensive construction management platforms integrating BIM, IoT sensors and automated quality control.",
                 fintech: "Secure payment processing systems, blockchain platforms and advanced fraud detection mechanisms.",
-                security: "Advanced video surveillance networks with AI analytics and integrated security management platforms.",
+                security: "Advanced video photo recording networks with AI analytics and integrated security management platforms.",
                 aiAnalytics: "Machine learning algorithms for predictive analytics and intelligent automation solutions.",
-                govtech: "Digital government platforms improving transparency and efficiency of public services."
+                govtech: "National cultural project platforms for public events and cultural heritage preservation."
             },
             filters: {
                 all: "All Projects",
@@ -66,16 +66,16 @@ const translations = {
                     text: "Secure payment processing systems, blockchain-based transaction platforms, digital wallet solutions, and advanced fraud detection mechanisms for both consumer and enterprise applications."
                 },
                 security: {
-                    title: "Security & Surveillance Systems",
-                    text: "Advanced video surveillance networks with AI-powered analytics, access control systems, biometric authentication, and integrated security management platforms for critical infrastructure protection."
+                    title: "Security & Video Photo Recording Systems",
+                    text: "Advanced video photo recording networks with AI-powered analytics, access control systems, biometric authentication, and integrated security management platforms for critical infrastructure protection."
                 },
                 aiAnalytics: {
                     title: "AI & Advanced Analytics", 
                     text: "Machine learning algorithms for predictive analytics, computer vision systems, natural language processing, and intelligent automation solutions across multiple industry verticals."
                 },
                 govTech: {
-                    title: "Government Technology Solutions",
-                    text: "Digital government platforms enhancing citizen services, administrative efficiency, transparency initiatives, and data-driven policy making through comprehensive digital transformation frameworks."
+                    title: "National Technology Solutions",
+                    text: "Multifunctional cultural project platforms with AI for conducting public events, festivals and preserving cultural heritage of Russian peoples."
                 },
                 dataInfrastructure: {
                     title: "Data Infrastructure & Integration",
@@ -92,7 +92,7 @@ const translations = {
             investBtn: "Invest",
             detailsBtn: "Learn More",
             detailsTitle: "Digital Technologies and Crowdfunding",
-            detailsDescription: "We attract investments to launch and develop innovative digital technology projects. Our solutions optimize construction, finance, security, and government management.",
+            detailsDescription: "We attract investments to launch and develop innovative digital technology projects. Our solutions optimize construction, finance, security, and national cultural projects.",
             whyNeeded: "Why is this in demand?",
             whyDescription: "Digital technologies are becoming a key competitiveness tool. Companies, cities, and people need our solutions because growth and development are impossible without future technologies.",
             forInvestors: "For Investors and Participants",
@@ -121,6 +121,9 @@ const translations = {
             address: "Address",
             email: "Email",
             workingHours: "Working Hours",
+            organizationDetails: {
+                title: "Organization Details"
+            },
             contactForm: "Contact Form",
             name: "Name",
             subject: "Subject",
@@ -188,20 +191,20 @@ const translations = {
         projects: {
             title: "Решения", 
             mainTitle: "Комплексные цифровые решения",
-            subtitle: "Комплексные цифровые решения в сферах строительства, финтеха, безопасности и государственных технологий",
+            subtitle: "Комплексные цифровые решения в сферах строительства, финтеха, безопасности и национальных технологий",
             tabs: {
                 digitalConstruction: "Цифровое строительство",
                 fintech: "Финансовые технологии",
                 security: "Безопасность и наблюдение",
                 aiAnalytics: "ИИ и аналитика", 
-                govtech: "Государственные технологии"
+                govtech: "Национальные технологии"
             },
             categories: {
                 digitalConstruction: "Комплексные платформы управления строительством, интегрирующие BIM, IoT-датчики и автоматизированный контроль качества.",
                 fintech: "Безопасные системы обработки платежей, блокчейн-платформы и продвинутые механизмы обнаружения мошенничества.",
-                security: "Продвинутые сети видеонаблюдения с ИИ-аналитикой и интегрированные платформы управления безопасностью.",
+                security: "Продвинутые сети видео фото фиксации с ИИ-аналитикой и интегрированные платформы управления безопасностью.",
                 aiAnalytics: "Алгоритмы машинного обучения для предиктивной аналитики и решения интеллектуальной автоматизации.",
-                govtech: "Цифровые государственные платформы, улучшающие прозрачность и эффективность государственных услуг."
+                govtech: "Национальные культурные проектные платформы для проведения общественных мероприятий и сохранения культурного наследия."
             },
             filters: {
                 all: "Все проекты",
@@ -231,16 +234,16 @@ const translations = {
                     text: "Безопасные системы обработки платежей, блокчейн-платформы для транзакций, решения цифровых кошельков и продвинутые механизмы обнаружения мошенничества для потребительских и корпоративных приложений."
                 },
                 security: {
-                    title: "Системы безопасности и видеонаблюдения",
-                    text: "Передовые сети видеонаблюдения с ИИ-аналитикой, системы контроля доступа, биометрическая аутентификация и интегрированные платформы управления безопасностью для защиты критической инфраструктуры."
+                    title: "Системы безопасности и видео фото фиксации",
+                    text: "Передовые сети видео фото фиксации с ИИ-аналитикой, системы контроля доступа, биометрическая аутентификация и интегрированные платформы управления безопасностью для защиты критической инфраструктуры."
                 },
                 aiAnalytics: {
                     title: "ИИ и продвинутая аналитика",
                     text: "Алгоритмы машинного обучения для предиктивной аналитики, системы компьютерного зрения, обработка естественного языка и решения интеллектуальной автоматизации для различных отраслевых направлений."
                 },
                 govTech: {
-                    title: "Государственные технологические решения",
-                    text: "Цифровые государственные платформы, улучшающие гражданские услуги, административную эффективность, инициативы прозрачности и принятие решений на основе данных через комплексные фреймворки цифровой трансформации."
+                    title: "Национальные технологические решения",
+                    text: "Многофункциональные культурные проектные платформы с ИИ для проведения общественных мероприятий, фестивалей и сохранения культурного наследия народов России."
                 },
                 dataInfrastructure: {
                     title: "Инфраструктура данных и интеграция",
@@ -281,6 +284,9 @@ const translations = {
             address: "Адрес",
             email: "Email",
             workingHours: "Часы работы",
+            organizationDetails: {
+                title: "Реквизиты организации"
+            },
             contactForm: "Форма обратной связи",
             name: "Имя",
             subject: "Тема",
