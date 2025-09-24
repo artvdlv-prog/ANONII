@@ -6,7 +6,7 @@
       "title_ru": "ЦиПУС (Цифровая платформа управления строительством)",
       "summary_en": "Unified digital environment for construction project participants. Provides end-to-end data exchange between customers, contractors and regulatory authorities. Features project management, resource planning, quality control, document workflow (KS-2, KS-3, AOSR), plan-fact analytics, and integrated procurement with AI and predictive analytics.",
       "summary_ru": "Единая цифровая среда для участников строительных проектов. Обеспечивает сквозной обмен данными между заказчиком, подрядчиком и контролирующими органами. Реализует управление проектами, планирование ресурсов, контроль качества, документооборот и аналитику с применением ИИ.",
-      "tags": ["digital construction", "project management", "AI analytics", "document workflow", "resource planning"],
+      "tags": ["digital construction", "project management", "document workflow", "resource planning"],
       "status": "scale",
       "kpis": [
         "50% reduction in project documentation time",
