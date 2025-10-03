@@ -10,7 +10,13 @@
       "Bash(git commit:*)",
       "Bash(git push:*)",
       "WebFetch(domain:www.consortium-solutionbank.ru)",
-      "WebFetch(domain:maginnov.ru)"
+      "WebFetch(domain:maginnov.ru)",
+      "Bash(curl:*)",
+      "Bash(nslookup:*)",
+      "WebFetch(domain:niiit.org)",
+      "WebSearch",
+      "Bash(git fetch:*)",
+      "Bash(git pull:*)"
     ],
     "deny": [],
     "ask": []
