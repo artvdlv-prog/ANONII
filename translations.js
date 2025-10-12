@@ -162,7 +162,13 @@ const translations = {
             projectOffice: {
                 title: "Project Office",
                 member1Name: "Vladimir Gonchar",
-                member1Position: "Head of Convergent Technologies Integration"
+                member1Position: "Head of Convergent Technologies Integration",
+                member2Name: "Petr Alexandrovich Krivokhizhin",
+                member2Position: "Netocrat",
+                member2Description: "Startup creator and leader, co-founder of \"Vibecoding\" project and other AI-based educational projects",
+                member3Name: "Dmitry Dmitrievich Ustinov",
+                member3Position: "Robotics and programming expert (Python, C++)",
+                member3Description: "Instructor and lead author of the \"Vibe Coding\" course at emkod.ru. The course teaches how to create applications and automate tasks using modern AI agents and neural networks, from idea to launch — simple, fast, effective. The advanced course includes deploying offline models on servers and development automation"
             }
         },
         logo: "ANO RIT and Digital Economy"
@@ -334,7 +340,13 @@ const translations = {
             projectOffice: {
                 title: "Проектный офис",
                 member1Name: "Гончар Владимир",
-                member1Position: "Руководитель по направлению интеграции конвергентных технологий"
+                member1Position: "Руководитель по направлению интеграции конвергентных технологий",
+                member2Name: "Кривохижин Петр Александрович",
+                member2Position: "Нетократ",
+                member2Description: "Создатель и руководитель стартапов, сооснователь проекта \"Вайбкодинг\" и других обучающих проектов на основе ИИ",
+                member3Name: "Устинов Дмитрий Дмитриевич",
+                member3Position: "Эксперт по робототехнике и программированию (Python, C++)",
+                member3Description: "Преподаватель и главный автор курса «Вайб кодинг» на emkod.ru. Курс обучает создавать приложения и автоматизировать задачи с помощью современных AI-агентов и нейросетей, от идеи до запуска — просто, быстро, эффективно. Расширенный курс включает запуск своих оффлайн моделей на серверах и автоматизацию разработки"
             }
         },
         logo: "АНО НИИ РИТиЦЭ"
@@ -499,7 +511,13 @@ const translations = {
             projectOffice: {
                 title: "Γραφείο Έργου",
                 member1Name: "Βλαντιμίρ Γκόντσαρ",
-                member1Position: "Επικεφαλής Ολοκλήρωσης Συγκλίνουσων Τεχνολογιών"
+                member1Position: "Επικεφαλής Ολοκλήρωσης Συγκλίνουσων Τεχνολογιών",
+                member2Name: "Πέτρ Αλεξάντροβιτς Κριβοχίζιν",
+                member2Position: "Νετοκράτης",
+                member2Description: "Δημιουργός και ηγέτης startups, συνιδρυτής του έργου \"Vibecoding\" και άλλων εκπαιδευτικών έργων βασισμένων σε AI",
+                member3Name: "Ντμίτρι Ντμιτριέβιτς Ουστίνοφ",
+                member3Position: "Ειδικός ρομποτικής και προγραμματισμού (Python, C++)",
+                member3Description: "Εκπαιδευτής και κύριος συγγραφέας του μαθήματος \"Vibe Coding\" στο emkod.ru. Το μάθημα διδάσκει πώς να δημιουργείτε εφαρμογές και να αυτοματοποιείτε εργασίες με σύγχρονους AI agents και νευρωνικά δίκτυα, από την ιδέα έως την εκκίνηση — απλά, γρήγορα, αποτελεσματικά. Το προηγμένο μάθημα περιλαμβάνει ανάπτυξη offline μοντέλων σε servers και αυτοματοποίηση ανάπτυξης"
             }
         },
         logo: "ΜΚΟ ΕΙ ΤΠ και Ψηφιακής Οικονομίας"

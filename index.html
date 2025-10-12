@@ -2352,17 +2352,61 @@
                             <!-- Project Office Member 1: Гончар Владимир -->
                             <div style="background: #f8f9fa; border: 1px solid #e5e5e5; border-radius: 8px; padding: 16px; display: flex; gap: 16px; align-items: flex-start;" class="project-office-card">
                                 <div style="flex-shrink: 0;">
-                                    <img src="Гончар.jpg" 
-                                         alt="Гончар Владимир" 
+                                    <img src="Гончар.jpg"
+                                         alt="Гончар Владимир"
                                          style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                                 </div>
-                                
+
                                 <div style="flex: 1;">
                                     <h4 style="font-size: 22px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px;" id="project-office-member-1-name">
                                         Гончар Владимир
                                     </h4>
                                     <p style="font-size: 17px; color: #007bff; font-weight: 600; margin-bottom: 6px;" id="project-office-member-1-position">
                                         Руководитель по направлению интеграции конвергентных технологий
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Project Office Member 2: Кривохижин Петр Александрович -->
+                            <div style="background: #f8f9fa; border: 1px solid #e5e5e5; border-radius: 8px; padding: 16px; display: flex; gap: 16px; align-items: flex-start;" class="project-office-card">
+                                <div style="flex-shrink: 0;">
+                                    <img src="Кривохижин.jpeg"
+                                         alt="Кривохижин Петр Александрович"
+                                         style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                                </div>
+
+                                <div style="flex: 1;">
+                                    <h4 style="font-size: 22px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px;" id="project-office-member-2-name">
+                                        Кривохижин Петр Александрович
+                                    </h4>
+                                    <p style="font-size: 17px; color: #007bff; font-weight: 600; margin-bottom: 6px;" id="project-office-member-2-position">
+                                        Нетократ
+                                    </p>
+
+                                    <p style="font-size: 16px; color: #666; line-height: 1.4; margin: 0;" id="project-office-member-2-description">
+                                        Создатель и руководитель стартапов, сооснователь проекта "Вайбкодинг" и других обучающих проектов на основе ИИ
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Project Office Member 3: Устинов Дмитрий Дмитриевич -->
+                            <div style="background: #f8f9fa; border: 1px solid #e5e5e5; border-radius: 8px; padding: 16px; display: flex; gap: 16px; align-items: flex-start;" class="project-office-card">
+                                <div style="flex-shrink: 0;">
+                                    <img src="Устинов.jpeg"
+                                         alt="Устинов Дмитрий Дмитриевич"
+                                         style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                                </div>
+
+                                <div style="flex: 1;">
+                                    <h4 style="font-size: 22px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px;" id="project-office-member-3-name">
+                                        Устинов Дмитрий Дмитриевич
+                                    </h4>
+                                    <p style="font-size: 17px; color: #007bff; font-weight: 600; margin-bottom: 6px;" id="project-office-member-3-position">
+                                        Эксперт по робототехнике и программированию (Python, C++)
+                                    </p>
+
+                                    <p style="font-size: 16px; color: #666; line-height: 1.4; margin: 0;" id="project-office-member-3-description">
+                                        Преподаватель и главный автор курса «Вайб кодинг» на emkod.ru. Курс обучает создавать приложения и автоматизировать задачи с помощью современных AI-агентов и нейросетей, от идеи до запуска — просто, быстро, эффективно. Расширенный курс включает запуск своих оффлайн моделей на серверах и автоматизацию разработки
                                     </p>
                                 </div>
                             </div>
@@ -3020,7 +3064,7 @@
                 // Update leadership section in about page (only if elements exist)
                 if (t.contacts.leadership && document.getElementById('leadership-title-about')) {
                     document.getElementById('leadership-title-about').textContent = t.contacts.leadership.title;
-                    
+
                     // Leader 1
                     if (document.getElementById('leader-name-about')) {
                         document.getElementById('leader-name-about').textContent = t.contacts.leadership.name;
@@ -3028,34 +3072,36 @@
                     if (document.getElementById('leader-position-about')) {
                         document.getElementById('leader-position-about').textContent = t.contacts.leadership.position;
                     }
-                    
+
                     // Leader 2 - Zaporizher (moved from board)
                     if (document.getElementById('leader-name-2-about')) {
                         document.getElementById('leader-name-2-about').textContent = 'Запорожец Андрей Викторович';
                         document.getElementById('leader-position-2-about').textContent = 'Первый заместитель председателя правления';
                     }
-                    
+
                     // Leader 3 - Kuznetsov
                     if (document.getElementById('leader-name-3-about')) {
                         document.getElementById('leader-name-3-about').textContent = t.contacts.leadership.name3;
                         document.getElementById('leader-position-3-about').textContent = t.contacts.leadership.position3;
                         document.getElementById('leader-achievement-3-about').textContent = t.contacts.leadership.achievement3;
                     }
-                    
+
                     // Leader 4 - Bauer
                     if (document.getElementById('leader-name-4-about')) {
                         document.getElementById('leader-name-4-about').textContent = t.contacts.leadership.name2;
                         document.getElementById('leader-position-4-about').textContent = t.contacts.leadership.position2;
                     }
-                    
-                    // Update board of trustees section
-                    if (document.getElementById('board-title-about')) {
-                        document.getElementById('board-title-about').textContent = currentLanguage === 'ru' ? 'Попечительский совет' :
-                                                                               currentLanguage === 'en' ? 'Board of Trustees' :
-                                                                               'Διοικητικό Συμβούλιο';
-                    }
-                    
-                    // Update project office section
+                }
+
+                // Update board of trustees section
+                if (document.getElementById('board-title-about')) {
+                    document.getElementById('board-title-about').textContent = currentLanguage === 'ru' ? 'Попечительский совет' :
+                                                                           currentLanguage === 'en' ? 'Board of Trustees' :
+                                                                           'Διοικητικό Συμβούλιο';
+                }
+
+                // Update project office section
+                if (t.contacts.projectOffice) {
                     if (document.getElementById('project-office-title-about')) {
                         document.getElementById('project-office-title-about').textContent = t.contacts.projectOffice.title;
                     }
@@ -3064,6 +3110,24 @@
                     }
                     if (document.getElementById('project-office-member-1-position')) {
                         document.getElementById('project-office-member-1-position').textContent = t.contacts.projectOffice.member1Position;
+                    }
+                    if (document.getElementById('project-office-member-2-name')) {
+                        document.getElementById('project-office-member-2-name').textContent = t.contacts.projectOffice.member2Name;
+                    }
+                    if (document.getElementById('project-office-member-2-position')) {
+                        document.getElementById('project-office-member-2-position').textContent = t.contacts.projectOffice.member2Position;
+                    }
+                    if (document.getElementById('project-office-member-2-description')) {
+                        document.getElementById('project-office-member-2-description').textContent = t.contacts.projectOffice.member2Description;
+                    }
+                    if (document.getElementById('project-office-member-3-name')) {
+                        document.getElementById('project-office-member-3-name').textContent = t.contacts.projectOffice.member3Name;
+                    }
+                    if (document.getElementById('project-office-member-3-position')) {
+                        document.getElementById('project-office-member-3-position').textContent = t.contacts.projectOffice.member3Position;
+                    }
+                    if (document.getElementById('project-office-member-3-description')) {
+                        document.getElementById('project-office-member-3-description').textContent = t.contacts.projectOffice.member3Description;
                     }
                 }
             }
