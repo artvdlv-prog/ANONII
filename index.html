@@ -2019,6 +2019,59 @@
                 padding: 16px !important;
             }
         }
+
+        /* New Digital Life Banner Mobile Optimization */
+        @media (max-width: 768px) {
+            .ndl-banner {
+                flex-direction: column !important;
+                padding: 24px !important;
+                gap: 20px !important;
+                text-align: center;
+            }
+
+            .ndl-content {
+                text-align: center;
+            }
+
+            .ndl-title {
+                font-size: 28px !important;
+            }
+
+            .ndl-description {
+                font-size: 14px !important;
+            }
+
+            .ndl-button-wrapper {
+                width: 100%;
+            }
+
+            .ndl-button {
+                width: 100%;
+                justify-content: center !important;
+                padding: 12px 20px !important;
+                font-size: 14px !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ndl-banner {
+                padding: 20px !important;
+                gap: 16px !important;
+            }
+
+            .ndl-title {
+                font-size: 24px !important;
+            }
+
+            .ndl-description {
+                font-size: 13px !important;
+            }
+
+            .ndl-button {
+                padding: 10px 16px !important;
+                font-size: 13px !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -2177,6 +2230,42 @@
                                 </a>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Event Banner: New Digital Life -->
+                <div class="ndl-banner-container" style="margin-top: 40px; padding: 0 20px;">
+                    <div style="max-width: 1400px; margin: 0 auto;">
+                        <a href="https://newdigital.life" target="_blank" style="text-decoration: none; display: block; transition: all 0.3s ease;" onmouseover="this.style.opacity='0.95'" onmouseout="this.style.opacity='1'">
+                            <div class="ndl-banner" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); border-radius: 12px; padding: 32px 48px; box-shadow: 0 8px 24px rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: space-between; gap: 32px; position: relative; overflow: hidden;">
+                                <!-- Decorative elements -->
+                                <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(0,150,255,0.15) 0%, transparent 70%); border-radius: 50%;"></div>
+                                <div style="position: absolute; bottom: -30px; left: -30px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(138,43,226,0.1) 0%, transparent 70%); border-radius: 50%;"></div>
+
+                                <!-- Content -->
+                                <div class="ndl-content" style="flex: 1; z-index: 1;">
+                                    <div style="display: inline-block; background: linear-gradient(90deg, #0096ff 0%, #8a2be2 100%); color: white; padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: 12px; letter-spacing: 1px; text-transform: uppercase;">
+                                        Международный IT-Форум
+                                    </div>
+                                    <h2 class="ndl-title" style="font-size: 36px; font-weight: 700; color: #ffffff; margin-bottom: 8px; line-height: 1.2;">
+                                        NEW DIGITAL LIFE
+                                    </h2>
+                                    <p class="ndl-description" style="font-size: 16px; color: #b8c5d6; line-height: 1.5; margin: 0;">
+                                        Форум о цифровых, инновационных и блокчейн технологиях • Искусственный интеллект • Кибербезопасность • Blockchain
+                                    </p>
+                                </div>
+
+                                <!-- CTA Button -->
+                                <div class="ndl-button-wrapper" style="z-index: 1;">
+                                    <div class="ndl-button" style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(90deg, #0096ff 0%, #8a2be2 100%); color: white; padding: 14px 28px; border-radius: 8px; font-size: 16px; font-weight: 600; box-shadow: 0 4px 15px rgba(0,150,255,0.4); white-space: nowrap;">
+                                        <span>Подробнее о форуме</span>
+                                        <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 </div>
